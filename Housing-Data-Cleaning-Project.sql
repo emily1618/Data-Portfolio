@@ -14,6 +14,9 @@ ADD SaleDateConverted Date
 UPDATE NashvilleHousing
 SET SaleDateConverted = CONVERT(Date, SaleDate)
 
+--Alternative way using ALTER COLUMN
+ALTER TABLE PortfolioProjects..Nashville_Housing
+ALTER COLUMN SaleDate DATE
 
 
 -- Populate Property Address data (when there is NULL, populate an address)
