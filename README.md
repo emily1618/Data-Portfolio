@@ -34,4 +34,4 @@ Editing...
 - Analyze 12 months of Divvy data to see how we can convert casual riders into annual members.
 - Use tidyverse to wrangle data, dplyr to clean data, lubridate to wrangle date attributes, ggplot2 to visualize data, and readr to save csv for further analysis.
 - Built a presentation in Tableau with the marketing analytic team and primary skateholder audience in mind.
-✔ [View the project here.](https://github.com/xtenix88/Google-Data-Analytics-Cyclistic-Case-Study)
+- [View the project here ✔](https://github.com/xtenix88/Google-Data-Analytics-Cyclistic-Case-Study)
