@@ -17,6 +17,11 @@
 
 Editing...
 
+- Analyze and clean covid data from January 2020 to September 2021 in SQL using CTW and Temp Table.
+- Built a dashboard in Tableau showing global death percentage, death toll per continent, infection rate per country and infection prediction into 2022.
+- [View the project here ✔](https://github.com/xtenix88/Data-Portfolio/blob/main/Covid-Portfolio-Project.sql)
+
+
 ### Housing Data Cleaning in SQL
 
 Editing...
