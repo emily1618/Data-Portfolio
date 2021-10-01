@@ -18,6 +18,7 @@
 - Analyze and clean covid data from January 2020 to September 2021 in SQL using CTW and Temp Table.
 - Built a dashboard in Tableau showing global death percentage, death toll per continent, infection rate per country and infection prediction into 2022.
 - [View the project here ✔](https://github.com/xtenix88/Data-Portfolio/blob/main/Covid-Portfolio-Project.sql)
+- [View visualization here ✔](https://public.tableau.com/app/profile/emily.liang7497/viz/Covid-Dashboard-September-2021/Dashboard1)
 
 
 ### Housing Data Cleaning in SQL
@@ -38,3 +39,4 @@ Editing...
 - Use tidyverse to wrangle data, dplyr to clean data, lubridate to wrangle date attributes, ggplot2 to visualize data, and readr to save csv for further analysis.
 - Built a presentation in Tableau with the marketing analytic team and primary skateholder audiences in mind.
 - [View the project here ✔](https://github.com/xtenix88/Google-Data-Analytics-Cyclistic-Case-Study)
+- [View the presentation here ✔](https://public.tableau.com/app/profile/emily.liang7497/viz/CyclistBikeShareAnalysis/Story1)
