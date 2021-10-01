@@ -10,6 +10,8 @@
 
 🎬 [Python: Movies Correlation](#amazon-web-scraping-in-python)
 
+🚲 [R + Tableau: Cyclistic Bike Share Analysis](#cyclistic-bike-share-analysis)
+
 
 ### Covid Data in SQL and Visualization in Tableau
 
