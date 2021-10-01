@@ -1,4 +1,4 @@
-# Python, SQL and Tableau Projects
+# Python, R, SQL and Tableau Projects
 
 
 ## Table of Contents
