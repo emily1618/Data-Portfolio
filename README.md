@@ -10,7 +10,7 @@
 
 🎬 [Python: Movies Correlation](#amazon-web-scraping-in-python)
 
-🚲 [R + Tableau: Cyclistic Bike Share Analysis](#cyclistic-bike-share-analysis)
+🚲 [R + Tableau: Cyclistic Bike Share Analysis](#bike-share-marketing-analysis-in-r-and-presentation-in-tableau)
 
 
 ### Covid Data in SQL and Visualization in Tableau
@@ -29,6 +29,6 @@ Editing...
 
 Editing...
 
-### Bike Share Marketing Analysis in R and Visualization in Tableau
+### Bike Share Marketing Analysis in R and Presentation in Tableau
 
 Editing...
