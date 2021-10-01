@@ -8,6 +8,8 @@
 
 🛒 [Python: Amazon Web Scraping](#amazon-web-scraping-in-python)
 
+🎬 [Python: Movies Correlation](#amazon-web-scraping-in-python)
+
 
 ### Covid Data in SQL and Visualization in Tableau
 
@@ -21,4 +23,4 @@ Editing...
 
 Editing...
 
-
+### Movies Correlation Analysis in Python
