@@ -2,8 +2,11 @@
 
 
 ## Table of Contents
-🍩 [Delicious treats with plot3d](#creating-delicious-treats-with-plot3d)
+📉 [Covid Data Cleaning and Visualization](#covid-data-in-sql-and-visualization-in-tableau)
 
-🏠 [PCA with using the almanac](#principal-components-with-almanac-data)
+🛒 [Amazon Web Scraping in Python](#amazon-web-scraping-in-python)
 
-🐧 [Clusters with penguin dataset](#how-many-clusters-of-penguin-cuteness)
+
+### Covid Data in SQL and Visualization in Tableau
+
+### Amazon Web Scraping in Python
