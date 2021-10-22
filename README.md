@@ -14,6 +14,8 @@
 
 🏊‍♀️ [R + Tableau: Bellabeat Fitness Data Analysis](#bellabeat-fitness-data-analysis-in-r-and-visualization-in-tableau)
 
+📈 [R: Regression Models](#regression-models)
+
 
 ### Covid Data in SQL and Visualization in Tableau
 
@@ -49,3 +51,9 @@ Editing...
 - Built a presentation in Tableau with the marketing analytic team and primary skateholder audiences in mind.
 - [View the project here ✔](https://github.com/xtenix88/Google-Data-Analytics-Bellabeat-Case-Study)
 - [View the presentation here ✔](https://public.tableau.com/app/profile/emily.liang7497/viz/BellabeatFitnessDataAnalysis-GoogleDataAnalyticsCapstone/Story1)
+
+### Regression Models
+- Examine the predictor and response variables by building a linear regression model
+- Check influential and leverage points 
+- Transform the data to further improve the model and build a prediction table using predict.lm
+- [View the project here ✔](https://github.com/xtenix88/Statistical-Learning-in-R/tree/main/Regression)
