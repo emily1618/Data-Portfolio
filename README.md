@@ -12,6 +12,8 @@
 
 🚲 [R + Tableau: Cyclistic Bike Share Analysis](#bike-share-marketing-analysis-in-r-and-presentation-in-tableau)
 
+🏊‍♀️ [R + Tableau: Bellabeat Fitness Data Analysis](#bellabeat-fitness-data-analysis-in-r-and-visualization-in-tableau)
+
 
 ### Covid Data in SQL and Visualization in Tableau
 
@@ -40,3 +42,10 @@ Editing...
 - Built a presentation in Tableau with the marketing analytic team and primary skateholder audiences in mind.
 - [View the project here ✔](https://github.com/xtenix88/Google-Data-Analytics-Cyclistic-Case-Study)
 - [View the presentation here ✔](https://public.tableau.com/app/profile/emily.liang7497/viz/CyclistBikeShareAnalysis/Story1)
+
+### Bellabeat Fitness Data Analysis in R and Visualization in Tableau
+- Analyze fitness trend for 30 user data to see how we can help guide marketing strategy for the company.
+- Use tidyverse to wrangle data, dplyr to clean data, lubridate to wrangle date attributes, ggplot2 to visualize data, and readr to save csv for further analysis.
+- Built a presentation in Tableau with the marketing analytic team and primary skateholder audiences in mind.
+- [View the project here ✔](https://github.com/xtenix88/Google-Data-Analytics-Bellabeat-Case-Study)
+- [View the presentation here ✔](https://public.tableau.com/app/profile/emily.liang7497/viz/BellabeatFitnessDataAnalysis-GoogleDataAnalyticsCapstone/Story1)
