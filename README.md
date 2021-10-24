@@ -53,7 +53,7 @@ Editing...
 - [View the presentation here ✔](https://public.tableau.com/app/profile/emily.liang7497/viz/BellabeatFitnessDataAnalysis-GoogleDataAnalyticsCapstone/Story1)
 
 ### Regression Models
-- Examine the predictor and response variables by building a linear regression model
-- Check influential and leverage points 
-- Transform the data to further improve the model and build a prediction table using predict.lm
+- Examine the predictor and response variable, and the validity of the regression model.
+- Check influential, leverage points and outliers. 
+- Transform the data to improve the model and build a prediction interval table.
 - [View the project here ✔](https://github.com/xtenix88/Statistical-Learning-in-R/tree/main/Regression)
