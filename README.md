@@ -14,7 +14,7 @@
 
 🏊‍♀️ [R + Tableau: Bellabeat Fitness Data Analysis](#bellabeat-fitness-data-analysis-in-r-and-visualization-in-tableau)
 
-📈 [R: Regression Models](#regression-models)
+📈 [R: Regression Models and Data Transformation](#regression-models)
 
 
 ### Covid Data in SQL and Visualization in Tableau
