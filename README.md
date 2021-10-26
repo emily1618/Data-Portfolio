@@ -14,7 +14,7 @@
 
 🏊‍♀️ [R + Tableau: Bellabeat Fitness Data Analysis](#bellabeat-fitness-data-analysis-in-r-and-visualization-in-tableau)
 
-📈 [R: Regression Models and Data Transformation](#regression-models)
+📈 [R: Regression Models and Data Transformation](#regression-models-and-data-transformation)
 
 
 ### Covid Data in SQL and Visualization in Tableau
@@ -52,7 +52,7 @@ Editing...
 - [View the project here ✔](https://github.com/xtenix88/Google-Data-Analytics-Bellabeat-Case-Study)
 - [View the presentation here ✔](https://public.tableau.com/app/profile/emily.liang7497/viz/BellabeatFitnessDataAnalysis-GoogleDataAnalyticsCapstone/Story1)
 
-### Regression Models
+### Regression Models and Data Transformation
 - Examine the predictor and response variable, and the validity of the regression model.
 - Check influential, leverage points and outliers. 
 - Transform the data to improve the model and build a prediction interval table.
