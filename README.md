@@ -17,26 +17,6 @@
 📈 [R: Regression Models and Data Transformation](#regression-models-and-data-transformation)
 
 
-### Covid Data in SQL and Visualization in Tableau
-
-- Analyze and clean covid data from January 2020 to September 2021 in SQL using CTW and Temp Table.
-- Built a dashboard in Tableau showing global death percentage, death toll per continent, infection rate per country and infection prediction into 2022.
-- [View the project here ✔](https://github.com/xtenix88/Data-Portfolio/blob/main/Covid-Portfolio-Project.sql)
-- [View visualization here ✔](https://public.tableau.com/app/profile/emily.liang7497/viz/Covid-Dashboard-September-2021/Dashboard1)
-
-
-### Housing Data Cleaning in SQL
-
-Editing...
-
-### Amazon Web Scraping in Python
-
-Editing...
-
-### Movies Correlation Analysis in Python
-
-Editing...
-
 ### Bike Share Marketing Analysis in R and Presentation in Tableau
 
 - Analyze 12 months of Divvy data to see how we can convert casual riders into annual members.
@@ -57,3 +37,23 @@ Editing...
 - Check influential, leverage points and outliers. 
 - Transform the data to improve the model and build a prediction interval table.
 - [View the project here ✔](https://github.com/xtenix88/Statistical-Learning-in-R/tree/main/Regression)
+
+### Covid Data in SQL and Visualization in Tableau
+
+- Analyze and clean covid data from January 2020 to September 2021 in SQL using CTW and Temp Table.
+- Built a dashboard in Tableau showing global death percentage, death toll per continent, infection rate per country and infection prediction into 2022.
+- [View the project here ✔](https://github.com/xtenix88/Data-Portfolio/blob/main/Covid-Portfolio-Project.sql)
+- [View visualization here ✔](https://public.tableau.com/app/profile/emily.liang7497/viz/Covid-Dashboard-September-2021/Dashboard1)
+
+
+### Housing Data Cleaning in SQL
+
+Editing...
+
+### Amazon Web Scraping in Python
+
+Editing...
+
+### Movies Correlation Analysis in Python
+
+Editing...
