@@ -1,6 +1,6 @@
 Just some random things now...
 
-This is an ongoing business problem a current non-profit organization is dealing with. 
+This is an ongoing business problem a current non-profit organization is facing now. 
 
 Data: Real utility assistance program data in Harris County, TX.
 
