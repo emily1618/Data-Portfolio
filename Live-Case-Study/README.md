@@ -1,6 +1,6 @@
-Just some random things now...
+Just some random things now. There will be ongoing updates. 
 
-This is an ongoing business problem a current non-profit organization is facing now. 
+This is an ongoing business problem a current non-profit organization is facing now. My responsibility is not only able to sustain this program, but also make it run smoothly and efficiently. 
 
 Data: Real utility assistance program data in Harris County, TX.
 
