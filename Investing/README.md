@@ -591,7 +591,8 @@ plt.xticks(plt.xticks()[0], labels=xticks)
 
 plt.show()
 ```
-![corr](https://user-images.githubusercontent.com/62857660/154621594-65462187-aa53-49b1-879e-c55730797888.png)
+![download](https://user-images.githubusercontent.com/62857660/154622274-9c9e43fb-1f43-4bb6-bf3d-c6463fe9ac25.png)
+
 
 
 
@@ -636,7 +637,7 @@ We will be using the **Sharpe Ratio**. In a nutshell (details provided by invest
 - A high Sharpe ratio is good when compared to similar portfolios or funds with lower returns.
 - The Sharpe ratio has several weaknesses, including an assumption that investment returns are normally distributed.
 - Read more here for a example where you will use the Sharpe Ratio: https://www.investopedia.com/terms/s/sharperatio.asp
-![sharpe](https://user-images.githubusercontent.com/62857660/154617793-b430eed3-e48c-4c52-a593-6382713fb7e2.jpg)
+![sharpe-ratio-formula](https://user-images.githubusercontent.com/62857660/154622330-23f7934c-d35f-41f8-9e86-4238c7f4ac6b.jpg)
 
 Let's calculate the Sharpe Ratio:
 ```
@@ -652,7 +653,6 @@ while i < num_stocks:
 print('\nVolatility:', p_vol[SR_idx])
 print("Return: ", p_ret[SR_idx])
 ```
-![Sharpe](https://user-images.githubusercontent.com/62857660/154621607-79b939fb-67fc-420b-b36b-3f1eb076f69b.jpg)
 
 
 Getting the shares needed and total investment cost. We will need to obtain the closing price of the ticker with the lowest Sharpe ratio. 
@@ -757,7 +757,7 @@ get_port_val_by_date(E_DATE, tot_shares, port_list)
 ```
 ![final](https://user-images.githubusercontent.com/62857660/154621351-94f3e7b5-4c0f-410f-a94c-8e62eb29a5f0.jpg)
 
-### Summary
+### 🌟Summary
 
 Closing price of the tickers in the portfolio list:`port_df_start`
 ![list](https://user-images.githubusercontent.com/62857660/154621770-1ea6a3bc-ed75-4e01-ab74-a1f65b9e8734.jpg)
