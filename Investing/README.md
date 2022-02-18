@@ -118,32 +118,6 @@ Checking to see which company has the **least net change**:
 Checking to see the make up of sectors:
 ```
 print(nasdaq['Sector'].value_counts(normalize=True)*100
-
-print("Rows, Columns:",nasdaq.shape)
-Sector = nasdaq.groupby('Sector').size()
-labels = Sector.index.values
-sizes = Sector.values
-muestra = []
-for k in range(0,labels.size):
-  texto = labels[k]+': '+str(sizes[k])+' ({:,.2f} %)'.format((100*sizes[k]/sum(sizes)))
-  muestra.append(texto)
-colors = ['#E6B0AA','#D7BDE2','#A9CCE3','#A3E4D7','#F9E79F','#D5DBDB','#AEB6BF','#EDBB99','#5DADE2','#F4D03F','#27AE60']
-bbox_props = dict(boxstyle="square,pad=0.3", fc="w", ec="k", lw=0.72)
-kw = dict(arrowprops=dict(arrowstyle="-"),bbox=bbox_props, zorder=0, va="center")
-fig,ax1 = plt.subplots(figsize=(18,9),ncols=1,nrows=1)
-wedges, texts = ax1.pie(sizes, shadow=True, colors=colors, startangle=90)
-ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
-
-for i, p in enumerate(wedges):
-    ang = (p.theta2 - p.theta1)/2. + p.theta1
-    y = np.sin(np.deg2rad(ang))
-    x = np.cos(np.deg2rad(ang))
-    horizontalalignment = {-1: "right", 1: "left"}[int(np.sign(x))]
-    connectionstyle = "angle,angleA=0,angleB={}".format(ang)
-    kw["arrowprops"].update({"connectionstyle": connectionstyle})
-    ax1.annotate(muestra[i], xy=(x, y), xytext=(1.35*np.sign(x), 1.4*y),
-                horizontalalignment=horizontalalignment, **kw)
-plt.show()
 ```
 ![2](https://user-images.githubusercontent.com/62857660/154600608-d19f8b30-a738-4e90-a97e-feb7beef571a.png)
 
@@ -161,39 +135,28 @@ country[0:21]
 
 Ichimoku is a technical indicator. The 5 lines of the cloud are:
 
-Tenkan Sen = Conversion Line: determine the direction of the short-term trend (yellow). Faster line.
+- Tenkan Sen = Conversion Line: determine the direction of the short-term trend (yellow). Faster line.
+- Kijun Sen = Base Line: avg for medium point and shows mid-term trend (red). Slower line.
+- Senkou Span A = Leading Span A (green)
+- Senkou Span B = Leading Span B (red)
+- Chikou Line = Lagging Span (teal): helps to confirm signal.
 
-Kijun Sen = Base Line: avg for medium point and shows mid-term trend (red). Slower line.
+**Few important concepts:**
 
-Senkou Span A = Leading Span A (green)
-
-Senkou Span B = Leading Span B (red)
-
-Chikou Line = Lagging Span (teal): helps to confirm signal.
-
-*Few important concepts:
-
-Formed between Span A and Span B, the cloud shows support and resistance.
-
-Span A and Span B are set 26 periods into the future.
-
-Chikou represents the closing price and set 26 periods in the past.
-
-Wider the cloud, the stronger the trend.
+- Formed between Span A and Span B, the cloud shows support and resistance.
+- Span A and Span B are set 26 periods into the future.
+- Chikou represents the closing price and set 26 periods in the past.
+- Wider the cloud, the stronger the trend.
 
 Try to not use the strategy for less than 1 hour.
 
-*Reading the cloud:
+**Reading the cloud:**
 
-Price is above the cloud: UP trend. Green color. Top of cloud is the support.
-
-Price is below the cloud: DOWN trend. Red color. Bottom of cloud is the resistant.
-
-Not recommended to trade when price is inside the cloud. Market is not trending. Use top of cloud as resistance and bottom as support.
-
-Tk/Golden Cross: when conversion past base from bottom to up, a ***BUY*** signal. If the price is above the cloud during this cross, it is a strong buy signal. If the price is below the cloud, you may want to wait until price is on top of the cloud. If the lagging span is crossing the price at the same time at the same direction, it's also another signal on buy. Set the stop loss at the narest local minimum.
-
-Death Cross: when conversion past base from top to bottom, a ***SELL*** signal. If the price is below the cloud during this cross, it is a strong sell signal. If the price is above the cloud, you may want to wait until price is on bottom of the cloud before entering short positions. Set the stop loss at the narest local maximum.
+- Price is above the cloud: **UP** trend. Green color. Top of cloud is the support.
+- Price is below the cloud: **DOWN** trend. Red color. Bottom of cloud is the resistant.
+- Not recommended to trade when price is inside the cloud. Market is not trending. Use top of cloud as resistance and bottom as support.
+- Tk/Golden Cross: when conversion past base from bottom to up, a **BUY** signal. If the price is above the cloud during this cross, it is a strong buy signal. If the price is below the cloud, you may want to wait until price is on top of the cloud. If the lagging span is crossing the price at the same time at the same direction, it's also another signal on buy. Set the stop loss at the narest local minimum.
+- Death Cross: when conversion past base from top to bottom, a **SELL** signal. If the price is below the cloud during this cross, it is a strong sell signal. If the price is above the cloud, you may want to wait until price is on bottom of the cloud before entering short positions. Set the stop loss at the narest local maximum.
 
 Functions preparing the tickers and csv:
 ```
