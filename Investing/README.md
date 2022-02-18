@@ -408,7 +408,7 @@ Testing the plot on a TSLA ticker:
 ticker_wanted = get_stock_df_from_csv('TSLA')
 get_ichimoku(ticker_wanted)
 ```
-![2](https://user-images.githubusercontent.com/62857660/154612764-ad08551b-b001-4b09-a868-b95bd5a4d921.jpg)
+![cloud](https://user-images.githubusercontent.com/62857660/154622774-61b453c4-26fd-449e-8ab9-d1f3ede018ea.jpg)
 
 
 
