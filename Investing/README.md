@@ -89,27 +89,27 @@ duplicated_value_df = nasdaq.duplicated(keep=False).value_counts(normalize=True)
 ```
 ![4](https://user-images.githubusercontent.com/62857660/154598907-d79f8be5-03a1-45bf-b3a4-2a6f44179abb.jpg)
 
-Checking to see which company has the IPO year 1972 as that's the earliest year for IPO:
+Checking to see which company has the IPO year 1972 as that's the **earliest year** for IPO:
 
 ```nasdaq.loc[nasdaq['IPO Year'] == 1972]```
 
 ![5](https://user-images.githubusercontent.com/62857660/154599781-b2d6adc9-4920-41a5-a380-cf9b67c02152.jpg)
 
 
-Checking to see which company has the most market cap: 
+Checking to see which company has the **most market cap**: 
 
 ```nasdaq.loc[nasdaq['Market Cap'] == 3.000000e+12]```
 
 ![6](https://user-images.githubusercontent.com/62857660/154599785-2dd1e3d6-b5af-4a9a-b1f6-c34d719e502a.jpg)
 
 
-Checking to see which company has the max net change: 
+Checking to see which company has the **max net change**: 
 
 ```nasdaq.loc[nasdaq['Net Change'] == 1570]```
 
 ![7](https://user-images.githubusercontent.com/62857660/154599794-dffbe2bd-cbcb-4730-a13e-6754500d1f6e.jpg)
 
-Checking to see which company has the least net change:
+Checking to see which company has the **least net change**:
 
 ```nasdaq.loc[nasdaq['Net Change'] == -86.16]```
 
@@ -146,6 +146,74 @@ for i, p in enumerate(wedges):
 plt.show()
 ```
 ![2](https://user-images.githubusercontent.com/62857660/154600608-d19f8b30-a738-4e90-a97e-feb7beef571a.png)
+
+Each sector has different industries: `nasdaq['Industry'].groupby(nasdaq['Sector']).value_counts()`
+![3](https://user-images.githubusercontent.com/62857660/154601922-228a77c5-e008-488a-8e6c-10d3f5298780.jpg)
+
+To 20 represented countries: 
+'''
+country = nasdaq['Country'].value_counts()
+country[0:21]
+```
+![1](https://user-images.githubusercontent.com/62857660/154602659-0f2849ab-c377-4af1-8a86-371668838e83.jpg)
+
+# Ichimoku Cloud
+
+Functions preparing the tickers and csv:
+```
+def get_column_from_csv(file, col_name):
+    # Try to get the file and if it doesn't exist issue a warning
+    try:
+        df = pd.read_csv(file)
+    except FileNotFoundError:
+        print("File Doesn't Exist")
+    else:
+        return df[col_name]
+        
+tickers = get_column_from_csv("/content/Nasdaq.csv", "Symbol")
+ 
+def save_to_csv_from_yahoo(folder, ticker):
+    stock = yf.Ticker(ticker)
+    
+    try:
+        print("Get Data for : ", ticker)
+        # Get historical closing price data
+        df = stock.history(period="5y")
+    
+        # Wait 2 seconds
+        time.sleep(2)
+        
+        # Remove the period for saving the file name
+        # Save data to a CSV file
+        # File to save to 
+        the_file = folder + ticker.replace(".", "_") + '.csv'
+        print(the_file, " Saved")
+        df.to_csv(the_file)
+    except Exception as ex:
+        print("Couldn't Get Data for :", ticker)
+        
+PATH = "/content/"
+  
+for x in range(0, 300):
+    save_to_csv_from_yahoo(PATH, tickers[x])
+    print("Finished")
+    
+def get_stock_df_from_csv(tickers):
+  try:
+    df = pd.read_csv(PATH + tickers + '.csv', index_col=0)
+  except FileNotFoundError:
+    print("File Doesn't Exist")
+  else:
+    return df
+```
+
+Testing the above code:
+
+```get_stock_df_from_csv('COST')```
+![1](https://user-images.githubusercontent.com/62857660/154604004-4a13e613-f18c-400b-8204-21aa847349c0.jpg)
+
+
+
 
 
 
