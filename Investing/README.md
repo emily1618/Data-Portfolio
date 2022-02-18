@@ -11,7 +11,7 @@
 This project is not set out to recommend any stocks. I'm not a trader, not even close. However, it is my interest to learn more about how to read charts and using technical indicators. I learned the ichimoku code from Derek Banas, an Udemy instructor. He is an awesome coder and I will be continuing learning from his videos. I recommend anyone interested in the same topic NOT to just copy the code. It helps to type out all the code, google/stackoverflow anything you don't understand, and most importantly, google the concept behind ichimoku cloud, moving average, etc. Once you have a more than a basic understanding, try to use the code to build your own portfolio and use the ichimoku cloud to test trades. I built upon Derek Banas original ichimoku code. I added the EDA, modified the ichimoku code and run it differently for the optimal portfolio based on my preference. I only scratched the surface and there are so much more to learn! 
 
 The code is seperated into 3 parts:
-### 📊 [EDA on NASDAQ](#eda-on-nasdaq)
+### 📊 [EDA on Nasdaq](#eda-on-nasdaq)
 ### 🌦 [Ichimoku Cloud](#ichimoku-cloud)
 ### 💯 [Finding a Optimal Portfolio](#finding-a-optimal-portfolio)
 
