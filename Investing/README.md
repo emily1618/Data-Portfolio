@@ -12,15 +12,42 @@ This project is not set out to recommend any stocks. I'm not a trader, not even 
 
 Dataset:
 - From `import yfinance as yf` and https://www.nasdaq.com/market-activity/stocks/screener
-- Due to the amount of time it required to download all the stocks from NASDAQ, I only picked the top 300 based on market cap. If you have time, please run on all of the NASDAQ tickers!
-- I used a 5 year timeframe. To enhance your analysis, please also run a 6 months and 1 year analysis to compare. 
+- I only picked the top 300 based on market cap. If you have time, please run on all of the NASDAQ tickers!
+- I used a 5 year timeframe. To enhance your analysis, please also run a 6 months and 1 year comparison.
 
 The code is seperated into 3 parts:
 ### 📊 [EDA on NYSE and NASDAQ](#eda-on-nyse-and-nasdaq)
-### 🌦 [Downloading Stock Data and Building the Ichimoku Cloud](#downloading-stock-data-and-building-the-ichimoku-cloud)
-### 🧗‍ [Finding a Optimal Portfolio with Sharpe Ratio](#finding-a-optimal-portfolio-with-sharpe-ratio)
+### 🌦 [Ichimoku Cloud](#ichimoku-cloud)
+### 🧗‍ [Finding a Optimal Portfolio](#finding-a-optimal-portfolio)
 
+## EDA on NYSE and NASDAQ
+We will import the necessary libraries:
+```
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+import datetime as datetime
+import time
+import os
+import seaborn as sns
+```
 
-**WARNING:** This code is pretty long!
+Set a start and end date:
+```
+S_DATE = "2017-02-01"
+E_DATE = "2023-02-01"
+S_DATE_DT = pd.to_datetime(S_DATE)
+E_DATE_DT = pd.to_datetime(E_DATE)
+```
+
+Downloading the data from yfinance and saving to csv:
+```
+for ticker in tickers:
+  stock = yf.Ticker(ticker)
+  df = stock.history(period="5y")
+  df.sort_index(axis = 0.,  ascending=False)
+  df.to_csv(ticker + '.csv')
+```
 
 
