@@ -17,8 +17,8 @@ The code is seperated into 3 parts:
 
 Dataset:
 - From `import yfinance as yf` and https://www.nasdaq.com/market-activity/stocks/screener
-- I only picked the top 300 based on market cap. If you have time, please run on all of the NASDAQ tickers!
-- I used a 5 year timeframe. To enhance your analysis, please also run a 6 months and 1 year comparison.
+- For the optimal portfolio, I only picked the top 300 based on market cap in descending order. If you have time, please run on all of the NASDAQ tickers. Alternatively, you can handpick your own list of tickers. 
+- For the optimal portfolio, I used a 5 year timeframe. To enhance your analysis, please also run a 6 months and 1 year comparison.
 
 
 
