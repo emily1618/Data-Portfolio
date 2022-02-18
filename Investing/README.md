@@ -159,6 +159,42 @@ country[0:21]
 
 # Ichimoku Cloud
 
+Ichimoku is a technical indicator. The 5 lines of the cloud are:
+
+Tenkan Sen = Conversion Line: determine the direction of the short-term trend (yellow). Faster line.
+
+Kijun Sen = Base Line: avg for medium point and shows mid-term trend (red). Slower line.
+
+Senkou Span A = Leading Span A (green)
+
+Senkou Span B = Leading Span B (red)
+
+Chikou Line = Lagging Span (teal): helps to confirm signal.
+
+*Few important concepts:
+
+Formed between Span A and Span B, the cloud shows support and resistance.
+
+Span A and Span B are set 26 periods into the future.
+
+Chikou represents the closing price and set 26 periods in the past.
+
+Wider the cloud, the stronger the trend.
+
+Try to not use the strategy for less than 1 hour.
+
+*Reading the cloud:
+
+Price is above the cloud: UP trend. Green color. Top of cloud is the support.
+
+Price is below the cloud: DOWN trend. Red color. Bottom of cloud is the resistant.
+
+Not recommended to trade when price is inside the cloud. Market is not trending. Use top of cloud as resistance and bottom as support.
+
+Tk/Golden Cross: when conversion past base from bottom to up, a ***BUY*** signal. If the price is above the cloud during this cross, it is a strong buy signal. If the price is below the cloud, you may want to wait until price is on top of the cloud. If the lagging span is crossing the price at the same time at the same direction, it's also another signal on buy. Set the stop loss at the narest local minimum.
+
+Death Cross: when conversion past base from top to bottom, a ***SELL*** signal. If the price is below the cloud during this cross, it is a strong sell signal. If the price is above the cloud, you may want to wait until price is on bottom of the cloud before entering short positions. Set the stop loss at the narest local maximum.
+
 Functions preparing the tickers and csv:
 ```
 def get_column_from_csv(file, col_name):
@@ -212,7 +248,52 @@ Testing the above code:
 ```get_stock_df_from_csv('COST')```
 ![1](https://user-images.githubusercontent.com/62857660/154604004-4a13e613-f18c-400b-8204-21aa847349c0.jpg)
 
+Functions to add the bands and returns:
+```
+from os import listdir
+from os.path import isfile, join
 
+files = [x for x in listdir(PATH) if isfile(join(PATH, x))]
+tickers = [os.path.splitext(x)[0] for x in files]
+
+def add_daily_return_to_df(df):
+  df['daily_return'] = (df['Close'] / df['Close'].shift(1)) - 1
+  return df
+
+def add_cum_return_to_df(df):
+  df['cum_return'] = (1 + df['daily_return']).cumprod()
+  return df
+
+def add_bollinger_bands(df):
+  df['middle_band'] = df['Close'].rolling(window=20).mean()
+  df['upper_band'] = df['middle_band'] + 1.96 * df['Close'].rolling(window=20).std()
+  df['lower_band'] = df['middle_band'] - 1.96 * df['Close'].rolling(window=20).std()
+  return df
+  
+def add_ichimoku(df):
+  #Conversion line
+  hi_val = df['High'].rolling(window=9).max()
+  lo_val = df['Low'].rolling(window=9).min()
+  df['Conversion'] = (hi_val+lo_val)/2
+
+  #Base Line
+  hi_val2 = df['High'].rolling(window=26).max()
+  lo_val2 = df['Low'].rolling(window=26).min()
+  df['Baseline'] = (hi_val2+lo_val2)/2
+
+  #Span A
+  df['SpanA'] = ((df['Conversion'] + df['Baseline']) / 2)
+
+  #Span B
+  hi_val3 = df['High'].rolling(window=52).max()
+  lo_val3 = df['Low'].rolling(window=52).min()
+  df['SpanB'] = ((hi_val3 + lo_val3)/2).shift(26)
+
+  #Laggine Span
+  df['Lagging'] = df['Close'].shift(-26)
+  return df
+
+```
 
 
 
