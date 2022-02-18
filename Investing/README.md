@@ -46,7 +46,7 @@ E_DATE_DT = pd.to_datetime(E_DATE)
 risk_free_rate = 0.0125
 ```
 
-Testing yfinance and saving to csv (only do this way if you want to manually pick your own tickers):
+Testing yfinance and saving to csv (manually pick your own tickers now):
 ```
 tickers = ['AMZN', 'COST', 'ADBE', 'QQQ', 'NVDA', 'VUG', 'VGT', 'VOO', 'SPY', 'ARKK', 'ADBE','NVDA', 'AMD', 'MSFT', 'DIS', 'WMT', 'TGT', 'HD']
 
