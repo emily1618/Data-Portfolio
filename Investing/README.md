@@ -8,17 +8,20 @@
 
 ### INTRODUCTION
 
-This project is not set out to recommend any stocks. I'm not a trader, not even close. However, it is my interest to learn more about how to read charts and using technical indicators. I learned the ichimoku code from Derek Banas, an Udemy instructor. He is an awesome coder and I will be continuing learning from his videos. I recommend anyone interested in the same topic NOT to just copy the code. It helps to type out all the code, google/stackoverflow anything you don't understand, and most importantly, google the concept behind ichimoku cloud, moving average, etc. Once you have a more than a basic understanding, try to use the code to build your own portfolio and use the ichimoku cloud to test trades. I only scratched the surface and there are so much more to learn! 
+This project is not set out to recommend any stocks. I'm not a trader, not even close. However, it is my interest to learn more about how to read charts and using technical indicators. I learned the ichimoku code from Derek Banas, an Udemy instructor. He is an awesome coder and I will be continuing learning from his videos. I recommend anyone interested in the same topic NOT to just copy the code. It helps to type out all the code, google/stackoverflow anything you don't understand, and most importantly, google the concept behind ichimoku cloud, moving average, etc. Once you have a more than a basic understanding, try to use the code to build your own portfolio and use the ichimoku cloud to test trades. I built upon Derek Banas original ichimoku code. I added the EDA, modified the ichimoku code and run it a little differently for the optimal portfolio based on my preference. I only scratched the surface and there are so much more to learn! 
+
+The code is seperated into 3 parts:
+### 📊 [EDA on NYSE and NASDAQ](#eda-on-nyse-and-nasdaq)
+### 🌦 [Ichimoku Cloud](#ichimoku-cloud)
+### 💯 [Finding a Optimal Portfolio](#finding-a-optimal-portfolio)
 
 Dataset:
 - From `import yfinance as yf` and https://www.nasdaq.com/market-activity/stocks/screener
 - I only picked the top 300 based on market cap. If you have time, please run on all of the NASDAQ tickers!
 - I used a 5 year timeframe. To enhance your analysis, please also run a 6 months and 1 year comparison.
 
-The code is seperated into 3 parts:
-### 📊 [EDA on NYSE and NASDAQ](#eda-on-nyse-and-nasdaq)
-### 🌦 [Ichimoku Cloud](#ichimoku-cloud)
-### 🧗‍ [Finding a Optimal Portfolio](#finding-a-optimal-portfolio)
+
+
 
 ## EDA on NYSE and NASDAQ
 We will import the necessary libraries:
@@ -57,5 +60,17 @@ Read the data
 nasdaq = pd.read_csv("/content/Nasdaq.csv")
 nasdaq.head(3)
 ```
+![1](https://user-images.githubusercontent.com/62857660/154596067-179b2ee5-3483-4a30-89a6-eeb89ade275b.jpg)
+
+Then run some basic EDA to check for interesting data: `nasdaq.shape` and `nasdaq.describe()`. From there I noticed that the IPO Year is float64 due to NaN. It may be better to convert to a integer after you fix the NaN data. 2021 is also the year with the most IPO. Significantly more!
+```
+ipo_year = nasdaq['IPO Year'].value_counts().sort_values(ascending=False)
+ax = ipo_year.plot(kind='barh', figsize=(25, 10), color='#86bf91', zorder=2, width=0.85)
+```
+![2](https://user-images.githubusercontent.com/62857660/154597871-ed2c2eb4-d7af-48db-9937-7af614eaff0f.png)
+
+
+
+
 
 
