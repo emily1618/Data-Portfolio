@@ -150,8 +150,8 @@ plt.show()
 Each sector has different industries: `nasdaq['Industry'].groupby(nasdaq['Sector']).value_counts()`
 ![3](https://user-images.githubusercontent.com/62857660/154601922-228a77c5-e008-488a-8e6c-10d3f5298780.jpg)
 
-To 20 represented countries: 
-'''
+Top 20 represented countries: 
+```
 country = nasdaq['Country'].value_counts()
 country[0:21]
 ```
