@@ -62,12 +62,97 @@ nasdaq.head(3)
 ```
 ![1](https://user-images.githubusercontent.com/62857660/154596067-179b2ee5-3483-4a30-89a6-eeb89ade275b.jpg)
 
-Then run some basic EDA to check for interesting data: `nasdaq.shape` and `nasdaq.describe()`. From there I noticed that the IPO Year is float64 due to NaN. It may be better to convert to a integer after you fix the NaN data. 2021 is also the year with the most IPO. Significantly more!
+Check for interesting data using `nasdaq.describe()`. From there I noticed that the IPO Year is float64 due to NaN. It may be better to convert to a integer after you fix the NaN data. 
+
+![9](https://user-images.githubusercontent.com/62857660/154600055-ac66b924-5848-476d-8a82-8851177b51ab.jpg)
+
+
+
+2021 is the year with the most IPO. Significantly more!
 ```
 ipo_year = nasdaq['IPO Year'].value_counts().sort_values(ascending=False)
 ax = ipo_year.plot(kind='barh', figsize=(25, 10), color='#86bf91', zorder=2, width=0.85)
 ```
 ![2](https://user-images.githubusercontent.com/62857660/154597871-ed2c2eb4-d7af-48db-9937-7af614eaff0f.png)
+
+Using `nasdaq.loc[nasdaq['IPO Year'] == 2021]` to see some of the companies that IPO in 2021.
+![3](https://user-images.githubusercontent.com/62857660/154598065-daaa00b8-3d69-4e4f-8678-c694c6ea3b20.jpg)
+
+Check to see how much data contains missing value. IPO Year contains 40% of the missing data, which is alot! 
+```
+percent_missing = nasdaq.isnull().sum() * 100 / len(nasdaq)
+missing_value_df = pd.DataFrame({'percent_missing': percent_missing})
+missing_value_df.sort_values(by=['percent_missing'], ascending=False)
+
+#duplicated values
+duplicated_value_df = nasdaq.duplicated(keep=False).value_counts(normalize=True) * 100
+```
+![4](https://user-images.githubusercontent.com/62857660/154598907-d79f8be5-03a1-45bf-b3a4-2a6f44179abb.jpg)
+
+Checking to see which company has the IPO year 1972 as that's the earliest year for IPO:
+
+```nasdaq.loc[nasdaq['IPO Year'] == 1972]```
+
+![5](https://user-images.githubusercontent.com/62857660/154599781-b2d6adc9-4920-41a5-a380-cf9b67c02152.jpg)
+
+
+Checking to see which company has the most market cap: 
+
+```nasdaq.loc[nasdaq['Market Cap'] == 3.000000e+12]```
+
+![6](https://user-images.githubusercontent.com/62857660/154599785-2dd1e3d6-b5af-4a9a-b1f6-c34d719e502a.jpg)
+
+
+Checking to see which company has the max net change: 
+
+```nasdaq.loc[nasdaq['Net Change'] == 1570]```
+
+![7](https://user-images.githubusercontent.com/62857660/154599794-dffbe2bd-cbcb-4730-a13e-6754500d1f6e.jpg)
+
+Checking to see which company has the least net change:
+
+```nasdaq.loc[nasdaq['Net Change'] == -86.16]```
+
+![8](https://user-images.githubusercontent.com/62857660/154599796-fa937e84-74e3-4a0e-94d8-f610ba618767.jpg)
+
+Checking to see the make up of sectors:
+```
+print(nasdaq['Sector'].value_counts(normalize=True)*100
+
+print("Rows, Columns:",nasdaq.shape)
+Sector = nasdaq.groupby('Sector').size()
+labels = Sector.index.values
+sizes = Sector.values
+muestra = []
+for k in range(0,labels.size):
+  texto = labels[k]+': '+str(sizes[k])+' ({:,.2f} %)'.format((100*sizes[k]/sum(sizes)))
+  muestra.append(texto)
+colors = ['#E6B0AA','#D7BDE2','#A9CCE3','#A3E4D7','#F9E79F','#D5DBDB','#AEB6BF','#EDBB99','#5DADE2','#F4D03F','#27AE60']
+bbox_props = dict(boxstyle="square,pad=0.3", fc="w", ec="k", lw=0.72)
+kw = dict(arrowprops=dict(arrowstyle="-"),bbox=bbox_props, zorder=0, va="center")
+fig,ax1 = plt.subplots(figsize=(18,9),ncols=1,nrows=1)
+wedges, texts = ax1.pie(sizes, shadow=True, colors=colors, startangle=90)
+ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+
+for i, p in enumerate(wedges):
+    ang = (p.theta2 - p.theta1)/2. + p.theta1
+    y = np.sin(np.deg2rad(ang))
+    x = np.cos(np.deg2rad(ang))
+    horizontalalignment = {-1: "right", 1: "left"}[int(np.sign(x))]
+    connectionstyle = "angle,angleA=0,angleB={}".format(ang)
+    kw["arrowprops"].update({"connectionstyle": connectionstyle})
+    ax1.annotate(muestra[i], xy=(x, y), xytext=(1.35*np.sign(x), 1.4*y),
+                horizontalalignment=horizontalalignment, **kw)
+plt.show()
+```
+![2](https://user-images.githubusercontent.com/62857660/154600608-d19f8b30-a738-4e90-a97e-feb7beef571a.png)
+
+
+
+
+
+
+
 
 
 
