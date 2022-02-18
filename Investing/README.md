@@ -8,7 +8,7 @@
 
 ### INTRODUCTION
 
-This project is not set out to recommend any stocks. I'm not a trader, not even close. However, it is my interest to learn more about how to read charts and using technical indicators. I learned the ichimoku code from Derek Banas, an Udemy instructor. He is an awesome coder and I will be continuing learning from his videos. I recommend anyone interested in the same topic NOT to just copy the code. It helps to type out all the code, google/stackoverflow anything you don't understand, and most importantly, google the concept behind ichimoku cloud, moving average, etc. Once you have a more than a basic understanding, try to use the code to build your own portfolio and use the ichimoku cloud to test trades. I built upon Derek Banas original ichimoku code. I added the EDA, modified the ichimoku code and run it a little differently for the optimal portfolio based on my preference. I only scratched the surface and there are so much more to learn! 
+This project is not set out to recommend any stocks. I'm not a trader, not even close. However, it is my interest to learn more about how to read charts and using technical indicators. I learned the ichimoku code from Derek Banas, an Udemy instructor. He is an awesome coder and I will be continuing learning from his videos. I recommend anyone interested in the same topic NOT to just copy the code. It helps to type out all the code, google/stackoverflow anything you don't understand, and most importantly, google the concept behind ichimoku cloud, moving average, etc. Once you have a more than a basic understanding, try to use the code to build your own portfolio and use the ichimoku cloud to test trades. I built upon Derek Banas original ichimoku code. I added the EDA, modified the ichimoku code and run it differently for the optimal portfolio based on my preference. I only scratched the surface and there are so much more to learn! 
 
 The code is seperated into 3 parts:
 ### 📊 [EDA on NYSE and NASDAQ](#eda-on-nyse-and-nasdaq)
@@ -156,7 +156,12 @@ Try to not use the strategy for less than 1 hour.
 - Price is below the cloud: **DOWN** trend. Red color. Bottom of cloud is the resistant.
 - Not recommended to trade when price is inside the cloud. Market is not trending. Use top of cloud as resistance and bottom as support.
 - Tk/Golden Cross: when conversion past base from bottom to up, a **BUY** signal. If the price is above the cloud during this cross, it is a strong buy signal. If the price is below the cloud, you may want to wait until price is on top of the cloud. If the lagging span is crossing the price at the same time at the same direction, it's also another signal on buy. Set the stop loss at the narest local minimum.
+- ![Screenshot 2022-02-16 004928](https://user-images.githubusercontent.com/62857660/154605360-e4baa24e-a6a0-43e3-b5e0-32c24dee65ec.jpg)
 - Death Cross: when conversion past base from top to bottom, a **SELL** signal. If the price is below the cloud during this cross, it is a strong sell signal. If the price is above the cloud, you may want to wait until price is on bottom of the cloud before entering short positions. Set the stop loss at the narest local maximum.
+- ![Screenshot 2022-02-16 005252](https://user-images.githubusercontent.com/62857660/154605375-95f9a898-1ddb-4baf-8411-c550f273e9f9.jpg)
+
+
+
 
 Functions preparing the tickers and csv:
 ```
@@ -257,6 +262,141 @@ def add_ichimoku(df):
   return df
 
 ```
+Getting the tickers
+```
+for x in tickers:
+  try:
+    print("Working on:", x)
+    new_df = get_stock_df_from_csv(x)
+    new_df = add_daily_return_to_df(new_df)
+    new_df = add_cum_return_to_df(new_df)
+    new_df = add_bollinger_bands(new_df)
+    new_df = add_ichimoku(new_df)
+    new_df.to_csv(PATH + x + '.csv')
+  except Exception as ex:
+    print(ex)
+```
+Preparing the plot abd bollinger band:
+```
+def plot_with_boll_bands(df, ticker):
+  fig = go.Figure()
+
+  candle = go.Candlestick(x=df.index, open=df['Open'], high=df['High'], low=df['Low'], close=df['Close'], name='Candlestick')
+
+  upper_line = go.Scatter(x=df.index, y=df['upper_band'], 
+                          line=dict(color='rgba(250,0,0,0.75)',
+                          width=1), name='Upper Band')
+
+  mid_line = go.Scatter(x=df.index, y=df['middle_band'], 
+                          line=dict(color='rgba(0,0,250,0.75)',
+                          width=1), name='Middle Band')
+  
+  lower_line = go.Scatter(x=df.index, y=df['lower_band'], 
+                          line=dict(color='rgba(0,25,0,0.75)',
+                          width=1), name='Lower Band')
+  
+  fig.add_trace(candle)
+  fig.add_trace(upper_line)
+  fig.add_trace(mid_line)
+  fig.add_trace(lower_line)
+
+  fig.update_xaxes(title='Date', rangeslider_visible=True)
+  fig.update_yaxes(title='Price')
+
+  fig.update_layout(title="Bollinger Bands", height=1200, width=1800, showlegend=True)
+
+  fig.show()
+  ```
+  ```
+  import plotly.graph_objs as go
+
+fig = go.Figure()
+
+candle = go.Candlestick(x=df.index, open=df['Open'], high=df['High'], low=df['Low'], close=df['Close'], name='Candlestick')
+
+upper_line = go.Scatter(x=df.index, y=df['upper_band'], 
+                          line=dict(color='rgba(250,0,0,0.75)',
+                          width=1), name='Upper Band')
+
+mid_line = go.Scatter(x=df.index, y=df['middle_band'], 
+                          line=dict(color='rgba(0,0,250,0.75)',
+                          width=1), name='Middle Band')
+  
+lower_line = go.Scatter(x=df.index, y=df['lower_band'], 
+                          line=dict(color='rgba(0,25,0,0.75)',
+                          width=1), name='Lower Band')
+  
+fig.add_trace(candle)
+fig.add_trace(upper_line)
+fig.add_trace(mid_line)
+fig.add_trace(lower_line)
+
+fig.update_xaxes(title='Date', rangeslider_visible=True)
+fig.update_yaxes(title='Price')
+
+fig.update_layout(title="Bollinger Bands", height=800, width=1200, showlegend=True)
+```
+Creating the cloud colors:
+```
+def get_fill_color(label):
+    if label >= 1:
+        return 'rgba(0,250,0,0.2)'
+    else:
+        return 'rgba(250,0,0,0.2)'
+```
+Putting it all together to plot the ichimoku cloud:
+```
+def get_ichimoku(df):
+  candle = go.Candlestick(x=df.index, open=df['Open'], high=df['High'], low=df['Low'], close=df['Close'], name='Candlestick')
+
+  df1 = df.copy()
+  fig = go.Figure()
+  df['label'] = np.where(df['SpanA'] > df['SpanB'], 1, 0) #return 1 for green, return 0 for red
+  df['group'] = df['label'].ne(df['label'].shift()).cumsum()
+  df = df.groupby('group')
+
+  dfs = []
+  for name, data in df:
+    dfs.append(data)
+  for df in dfs:
+    fig.add_traces(go.Scatter(x=df.index, y=df.SpanA,
+        line=dict(color='rgba(0,0,0,0)')))
+
+    fig.add_traces(go.Scatter(x=df.index, y=df.SpanB,
+        line=dict(color='rgba(0,0,0,0)'),
+        fill='tonexty',
+        fillcolor=get_fill_color(df['label'].iloc[0])))
+    
+  baseline = go.Scatter(x=df1.index, y=df1['Baseline'],
+                        line=dict(color='red', width=3), name='Baseline')
+  
+  conversion = go.Scatter(x=df1.index, y=df1['Conversion'],
+                          line=dict(color='gold', width=3), name='Conversion')
+  
+  lagging = go.Scatter(x=df1.index, y=df1['Lagging'],
+                          line=dict(color='purple', width=2), name='Lagging')
+  
+  span_a = go.Scatter(x=df1.index, y=df1['SpanA'],
+                          line=dict(color='green', width=2, dash='dot'), name='Span A')
+  
+  span_b = go.Scatter(x=df1.index, y=df1['SpanB'],
+                          line=dict(color='red', width=2, dash='dot'), name='Span B')
+  
+  fig.add_trace(candle)
+  fig.add_trace(baseline)
+  fig.add_trace(conversion)
+  fig.add_trace(lagging)
+  fig.add_trace(span_a)
+  fig.add_trace(span_b)
+
+  fig.update_layout(height=800, width=1400, showlegend=True)
+```
+Testing the plot on a TSLA ticker:
+```
+ticker_wanted = get_stock_df_from_csv('TSLA')
+get_ichimoku(ticker_wanted)
+```
+  
 
 
 
