@@ -1,12 +1,13 @@
 # Ichimoku Cloud and Optimal Portfolio
+
+![flat-happy-man-with-golden-coin-head_88138-806](https://user-images.githubusercontent.com/62857660/154740772-247c0850-62e0-450d-bb9c-b5330216bfdf.jpg)
+
 ##### Author: Emi Ly
 
 ##### Date: Feb 18, 2022
 
 ##### [Tableau Dashboard]-Coming Soon
 #
-
-![flat-happy-man-with-golden-coin-head_88138-806](https://user-images.githubusercontent.com/62857660/154740772-247c0850-62e0-450d-bb9c-b5330216bfdf.jpg)
 
 ### INTRODUCTION
 
