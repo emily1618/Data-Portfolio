@@ -64,10 +64,6 @@ nasdaq.head(3)
 ```
 ![1](https://user-images.githubusercontent.com/62857660/154596067-179b2ee5-3483-4a30-89a6-eeb89ade275b.jpg)
 
-Check for interesting data using `nasdaq.describe()`. From there I noticed that the IPO Year is float64 due to NaN. It may be better to convert to a integer after you fix the NaN data. 
-
-![9](https://user-images.githubusercontent.com/62857660/154600055-ac66b924-5848-476d-8a82-8851177b51ab.jpg)
-
 
 
 2021 is the year with the most IPO. Significantly more!
@@ -90,6 +86,11 @@ missing_value_df.sort_values(by=['percent_missing'], ascending=False)
 duplicated_value_df = nasdaq.duplicated(keep=False).value_counts(normalize=True) * 100
 ```
 ![4](https://user-images.githubusercontent.com/62857660/154598907-d79f8be5-03a1-45bf-b3a4-2a6f44179abb.jpg)
+
+
+Check for interesting data using `nasdaq.describe()`. From there I noticed that the IPO Year is float64 due to NaN. It may be better to convert to a integer after you fix the NaN data. 
+
+![9](https://user-images.githubusercontent.com/62857660/154600055-ac66b924-5848-476d-8a82-8851177b51ab.jpg)
 
 Checking to see which company has the IPO year 1972 as that's the **earliest year** for IPO:
 
