@@ -64,17 +64,7 @@ nasdaq.head(3)
 ```
 ![1](https://user-images.githubusercontent.com/62857660/154596067-179b2ee5-3483-4a30-89a6-eeb89ade275b.jpg)
 
-
-
-2021 is the year with the most IPO. Significantly more!
-```
-ipo_year = nasdaq['IPO Year'].value_counts().sort_values(ascending=False)
-ax = ipo_year.plot(kind='barh', figsize=(25, 10), color='#86bf91', zorder=2, width=0.85)
-```
-![2](https://user-images.githubusercontent.com/62857660/154597871-ed2c2eb4-d7af-48db-9937-7af614eaff0f.png)
-
-Using `nasdaq.loc[nasdaq['IPO Year'] == 2021]` to see some of the companies that IPO in 2021.
-![3](https://user-images.githubusercontent.com/62857660/154598065-daaa00b8-3d69-4e4f-8678-c694c6ea3b20.jpg)
+We can begin with exploring the data with `nasdaq.info()`, `nasdaq.shape` and `nasdaq.columns`.
 
 Check to see how much data contains missing value. IPO Year contains 40% of the missing data, which is alot! 
 ```
@@ -86,6 +76,17 @@ missing_value_df.sort_values(by=['percent_missing'], ascending=False)
 duplicated_value_df = nasdaq.duplicated(keep=False).value_counts(normalize=True) * 100
 ```
 ![4](https://user-images.githubusercontent.com/62857660/154598907-d79f8be5-03a1-45bf-b3a4-2a6f44179abb.jpg)
+
+
+2021 is the year with the most IPO. Significantly more!
+```
+ipo_year = nasdaq['IPO Year'].value_counts().sort_values(ascending=False)
+ax = ipo_year.plot(kind='barh', figsize=(25, 10), color='#86bf91', zorder=2, width=0.85)
+```
+![2](https://user-images.githubusercontent.com/62857660/154597871-ed2c2eb4-d7af-48db-9937-7af614eaff0f.png)
+
+Using `nasdaq.loc[nasdaq['IPO Year'] == 2021]` to see some of the companies that IPO in 2021.
+![3](https://user-images.githubusercontent.com/62857660/154598065-daaa00b8-3d69-4e4f-8678-c694c6ea3b20.jpg)
 
 
 Check for interesting data using `nasdaq.describe()`. From there I noticed that the IPO Year is float64 due to NaN. It may be better to convert to a integer after you fix the NaN data. 
