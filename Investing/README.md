@@ -41,13 +41,21 @@ S_DATE_DT = pd.to_datetime(S_DATE)
 E_DATE_DT = pd.to_datetime(E_DATE)
 ```
 
-Downloading the data from yfinance and saving to csv:
+Downloading the data from yfinance and saving to csv (only do this way if you want to manually pick your own tickers):
 ```
+tickers = ['AMZN', 'COST', 'ADBE', 'QQQ', 'NVDA', 'VUG', 'VGT', 'VOO', 'SPY', 'ARKK', 'ADBE','NVDA', 'AMD', 'MSFT', 'DIS', 'WMT', 'TGT', 'HD']
+
 for ticker in tickers:
   stock = yf.Ticker(ticker)
   df = stock.history(period="5y")
   df.sort_index(axis = 0.,  ascending=False)
   df.to_csv(ticker + '.csv')
+```
+
+Read the data
+```
+nasdaq = pd.read_csv("/content/Nasdaq.csv")
+nasdaq.head(3)
 ```
 
 
