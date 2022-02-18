@@ -42,6 +42,8 @@ S_DATE = "2017-02-01"
 E_DATE = "2023-02-01"
 S_DATE_DT = pd.to_datetime(S_DATE)
 E_DATE_DT = pd.to_datetime(E_DATE)
+
+risk_free_rate = 0.0125
 ```
 
 Downloading the data from yfinance and saving to csv (only do this way if you want to manually pick your own tickers):
@@ -130,6 +132,10 @@ country = nasdaq['Country'].value_counts()
 country[0:21]
 ```
 ![1](https://user-images.githubusercontent.com/62857660/154602659-0f2849ab-c377-4af1-8a86-371668838e83.jpg)
+
+Bar plot representation:
+![3](https://user-images.githubusercontent.com/62857660/154611331-9c5c5bd1-4944-4cbb-896e-c8a4c1450bc8.png)
+
 
 # Ichimoku Cloud
 
@@ -336,6 +342,12 @@ fig.update_yaxes(title='Price')
 
 fig.update_layout(title="Bollinger Bands", height=800, width=1200, showlegend=True)
 ```
+![1](https://user-images.githubusercontent.com/62857660/154610521-ebee1cbc-b4a6-4993-ab47-1c7a6d734dc6.jpg)
+
+
+
+
+
 Creating the cloud colors:
 ```
 def get_fill_color(label):
@@ -396,15 +408,381 @@ Testing the plot on a TSLA ticker:
 ticker_wanted = get_stock_df_from_csv('TSLA')
 get_ichimoku(ticker_wanted)
 ```
+![2](https://user-images.githubusercontent.com/62857660/154612764-ad08551b-b001-4b09-a868-b95bd5a4d921.jpg)
+
+
+
+# Finding a Optimal Portfolio
+
+The attempt is to try the find a portfolio that have higher return and low risk. We will see which tickers perform the best in cumulative return for the 5 years and analyze those tickers in each sector. You can pick out your own tickers from the sector analysis. For the portfolio, we will use the Sharpe Ratio to calculate the percentage of each ticker, check how many shares of each ticker's stock you will need to purchase and what is the total cost of investment. The price will be based on yesterday's closing price. 
+
+
+Create a new df use the Nasdaq.csv: `sec_df = pd.read_csv('/content/Nasdaq.csv')`. Because the stock symbol column is named 'Symbol', we will change to 'Ticker' to keep it consistent: `sec_df.rename(columns={'Symbol': 'Ticker'}, inplace=True)`. Here is our sectors again:
+![sector](https://user-images.githubusercontent.com/62857660/154612004-8e27ea47-9e63-4952-9cfd-1752b3fc2e87.jpg)
+
+Create df for each sector:
+```
+finance_df = sec_df.loc[sec_df['Sector'] == "Finance"]
+health_df = sec_df.loc[sec_df['Sector'] == "Health Care"]
+tech_df = sec_df.loc[sec_df['Sector'] == "Technology"]
+consumer_df = sec_df.loc[sec_df['Sector'] == "Consumer Services"]
+goods_df = sec_df.loc[sec_df['Sector'] == "Capital Goods"]
+nondurables_df = sec_df.loc[sec_df['Sector'] == "Consumer Non-Durables"]
+energy_df = sec_df.loc[sec_df['Sector'] == "Energy"]
+public_utilities_df = sec_df.loc[sec_df['Sector'] == "Public Utilities"]
+industries_df = sec_df.loc[sec_df['Sector'] == "Basic Industries"]
+misc_df = sec_df.loc[sec_df['Sector'] == "Miscellaneous"]
+durables_df = sec_df.loc[sec_df['Sector'] == "Consumer Durables"]
+transportation_df = sec_df.loc[sec_df['Sector'] == "Transportation"]
+```
+
+Calculate the cumulative return for each sector:
+```
+def get_cum_ret_for_stocks(stock_df):
+    tickers = []
+    cum_rets = []
+
+    for index, row in stock_df.iterrows():
+        df = get_stock_df_from_csv(row['Ticker'])
+        if df is None:
+            pass
+        else:
+            tickers.append(row['Ticker'])
+            cum = df['cum_return'].iloc[-1]
+            cum_rets.append(cum)
+    return pd.DataFrame({'Ticker':tickers, 'CUM_RET':cum_rets})
   
+finance_df = get_cum_ret_for_stocks(finance_df)
+health_df = get_cum_ret_for_stocks(health_df)
+tech_df = get_cum_ret_for_stocks(tech_df)
+consumer_df = get_cum_ret_for_stocks(consumer_df)
+goods_df = get_cum_ret_for_stocks(goods_df)
+nondurables_df = get_cum_ret_for_stocks(nondurables_df)
+energy_df = get_cum_ret_for_stocks(energy_df)
+public_utilities_df = get_cum_ret_for_stocks(public_utilities_df)
+industries_df = get_cum_ret_for_stocks(industries_df)
+misc_df = get_cum_ret_for_stocks(misc_df)
+durables_df = get_cum_ret_for_stocks(durables_df)
+transportation_df = get_cum_ret_for_stocks(transportation_df)
+```
+
+Cumulative Return Performance Per Sector. I will pick a few sectors and show what the df look like. First up is the information technology sector:
+```
+print('Tech:')
+print(tech_df.sort_values(by=['CUM_RET'], ascending=False).head(10))
+```
+![tech](https://user-images.githubusercontent.com/62857660/154612237-aac7a18f-ec7f-484a-9f16-befb9c9228f3.jpg)
+
+
+For consumer services sector:
+```
+print('Consumer Services:')
+print(consumer_df.sort_values(by=['CUM_RET'], ascending=False).head(10))
+```
+![consumerservices](https://user-images.githubusercontent.com/62857660/154612398-5e624329-88c1-41eb-83ab-4d868907c6ff.jpg)
+
+For the health sector:
+```
+print('Health:')
+print(health_df.sort_values(by=['CUM_RET'], ascending=False).head(10))
+```
+![health](https://user-images.githubusercontent.com/62857660/154612514-9fc4becb-6c23-49ce-a1df-6aa6c2f284c9.jpg)
+
+
+For the capital goods sector:
+```
+print('Capital Goods:')
+print(goods_df.sort_values(by=['CUM_RET'], ascending=False).head(10))
+```
+![capitalgoods](https://user-images.githubusercontent.com/62857660/154612848-4016a265-81a9-4e9d-90cc-327229ec837a.jpg)
+
+For all the sectors combined, use `sec_cumret_df = get_cum_ret_for_stocks(sec_df)`
+
+Grab the tickers to a list:
+
+```
+files = [x for x in listdir(PATH) if isfile(join(PATH, x))]
+tickers = [os.path.splitext(x)[0] for x in files]
+tickers
+```
+
+Create a df with the tickers from previous saved csv:
+```
+def get_stock_df_from_csv(tickers):
+  try:
+    df = pd.read_csv(PATH + tickers + '.csv', index_col=0)
+  except FileNotFoundError:
+    print("File Doesn't Exist")
+  else:
+    return df
+
+def merge_df_by_column_name(col_name, sdate, edate, *tickers):
+  mult_df = pd.DataFrame()
+
+  for x in tickers:
+    df = get_stock_df_from_csv(x)
+    mask = (df.index >= sdate) & (df.index <=edate)
+    mult_df[x] = df.loc[mask][col_name]
+  
+  return mult_df
+```
+
+Creating a portfolio list. As the introduction stated, this project is not set out to recommend any stocks. I'm not a trader, not even close. Ideally, you should pick out some tickers from each sector and create a diverify portofolio. In this notebook, I just picked the top 20 based on cumulative return of the last 5 year. The top 20 may be different if you run your analysis on a 6 month, 1 year, 26 weeks, ettc etc.
+
+```
+print('ALL sectors:')
+top_10 = sec_cumret_df.sort_values(by=['CUM_RET'], ascending=False).head(20)
+top_10
+```
+
+![top20](https://user-images.githubusercontent.com/62857660/154615520-fe1f7340-0521-4df0-92ff-a679cf31676e.jpg)
+
+Getting the portfolio list from the top 20 tickers, create df for the tickers containing the 5 years data, 
+
+```
+mult_df = merge_df_by_column_name('Close', S_DATE, E_DATE, *port_list)
+mult_df
+```
+![plot0](https://user-images.githubusercontent.com/62857660/154617068-039c7498-7a3c-4168-900c-835d6496c918.jpg)
+
+```
+import plotly.express as px
+
+fig = px.line(mult_df, x=mult_df.index, y=mult_df.columns)
+fig.update_xaxes(title="Date", rangeslider_visible=True)
+fig.update_yaxes(title="Price")
+fig.update_layout(height=900, width=1500, 
+                  showlegend=True)
+fig.show()
+```
+![plot](https://user-images.githubusercontent.com/62857660/154617079-ecaec72d-68c7-4ccb-b6de-d0ab0cd5edf9.jpg)
+
+
+Obtain the average return for a 252 trading days:
+```
+returns = np.log(mult_df / mult_df.shift(1))
+mean_ret = returns.mean()*100 * 252  #252 trading days
+mean_ret
+```
+![mean_return](https://user-images.githubusercontent.com/62857660/154617222-e9ed281b-591f-4673-92ff-e142e441d383.jpg)
+
+In general, you may want to pick a portfolio combination with correlaton less than 0.50. However, I generally don't follow this rule. If you want to stay focus and be a disciplined trader to pick out your optimal portfolio, then a correlation matrix definitely helps.
+```
+corr = returns.corr()
+
+# Correlation heatmap
+import seaborn as sns
+fig, ax = plt.subplots(figsize=(15, 12))
+mask = np.triu(np.ones_like(corr, dtype=np.bool))
+
+mask = mask[1:, :-1]
+corr = corr.iloc[1:,:-1].copy()
+
+cmap = sns.color_palette("hls", 8)
+
+sns.heatmap(corr, mask=mask, annot=True, fmt=".2f", 
+           linewidths=5, cmap=cmap, vmin=-1, vmax=1, 
+           cbar_kws={"shrink": .8}, square=True)
+
+yticks = [i.upper() for i in corr.index]
+xticks = [i.upper() for i in corr.columns]
+plt.yticks(plt.yticks()[0], labels=yticks, rotation=0)
+plt.xticks(plt.xticks()[0], labels=xticks)
+
+plt.show()
+```
+![corr](https://user-images.githubusercontent.com/62857660/154621594-65462187-aa53-49b1-879e-c55730797888.png)
 
 
 
+Return and Risk of 10000 Combinations
+```
+p_ret = []   #return list
+p_vol = []   #volatility risk, std from mean
+p_SR = []
+p_wt = []     #amt of each stock we have
+
+for x in range(10000):
+  p_weights = np.random.random(num_stocks)
+  p_weights /= np.sum(p_weights)
+
+  ret_1 = np.sum(p_weights * returns.mean()) * 252
+  p_ret.append(ret_1)
+
+  vol_1 = np.sqrt(np.dot(p_weights.T, np.dot(returns.cov() * 252, p_weights)))
+  p_vol.append(vol_1)
+
+  SR_1 = (ret_1 - risk_free_rate) / vol_1
+  p_SR.append(SR_1)
+
+  p_wt.append(p_weights)
+
+p_ret = np.array(p_ret)
+p_vol = np.array(p_vol)
+p_SR = np.array(p_SR)
+p_wt = np.array(p_wt)
+
+p_ret, p_vol, p_SR, p_wt
+```
+```
+ports = pd.DataFrame({'Return': p_ret, 'Volatility': p_vol})
+print(ports)
+ports.plot(x='Volatility', y='Return', kind='scatter', figsize=(30,15))
+```
+![download (1)](https://user-images.githubusercontent.com/62857660/154617545-ec8c0d15-7312-44d7-906b-fe2cdce20e31.png)
+
+We will be using the **Sharpe Ratio**. In a nutshell (details provided by investopedia.com), the Sharpe ratio was developed by Nobel laureate William F. Sharpe and is used to help investors understand the return of an investment compared to its risk.
+- The Sharpe ratio adjusts a portfolio’s past performance—or expected future performance—for the excess risk that was taken by the investor.
+- A high Sharpe ratio is good when compared to similar portfolios or funds with lower returns.
+- The Sharpe ratio has several weaknesses, including an assumption that investment returns are normally distributed.
+- Read more here for a example where you will use the Sharpe Ratio: https://www.investopedia.com/terms/s/sharperatio.asp
+![sharpe](https://user-images.githubusercontent.com/62857660/154617793-b430eed3-e48c-4c52-a593-6382713fb7e2.jpg)
+
+Let's calculate the Sharpe Ratio:
+```
+SR_idx = np.argmax(p_SR)
+
+i = 0
+
+while i < num_stocks: 
+  print('Stock : %s : %2.2f' % (port_list[i],
+                                (p_wt[SR_idx][i] * 100)))
+  i+=1
+
+print('\nVolatility:', p_vol[SR_idx])
+print("Return: ", p_ret[SR_idx])
+```
+![Sharpe](https://user-images.githubusercontent.com/62857660/154621607-79b939fb-67fc-420b-b36b-3f1eb076f69b.jpg)
 
 
+Getting the shares needed and total investment cost. We will need to obtain the closing price of the ticker with the lowest Sharpe ratio. 
+```
+def get_port_shares(one_price, force_one, wts, prices):
+  num_stocks = len(wts)
+  shares = []
+
+  cost_shares = []
+
+  i = 0
+  while i < num_stocks: 
+    max_price = one_price * wts[i]
+    num_shares = int(max_price / prices[i])
+    if(force_one & (num_shares == 0)):
+      num_shares = 1
+    shares.append(num_shares)
+    cost = num_shares * prices[i]
+    cost_shares.append(cost)
+    i += 1
+  return shares, cost_shares
+  
+def get_port_weighting(share_cost):
+    
+    # Holds weights for stocks
+    stock_wts = []
+    # All values summed
+    tot_val = sum(share_cost)
+    print("Total Investment :", tot_val)
+    
+    for x in share_cost:
+        stock_wts.append(x / tot_val)
+    return stock_wts
+ 
+def get_port_val_by_date(date, shares, tickers):
+    port_prices = merge_df_by_column_name('Close',  date, 
+                                  date, *port_list)
+    # Convert from dataframe to Python list
+    port_prices = port_prices.values.tolist()
+    # Trick that converts a list of lists into a single list
+    port_prices = sum(port_prices, [])
+    return port_prices
+    
+#Convert the weights to percentage
+port_wts = p_wt[SR_idx].tolist()
+port_wts = [i*100 for i in port_wts]
+```
+
+In the final output, we will need to find the price of the stock with the minimal weight (or weight closest to 1). This is the one_price of function.
+```
+get_port_shares(one_price, force_one, wts, prices)
+
+def get_price_at_min_weight(ticker_list,weights,price):
+  df = pd.DataFrame({'Ticker': ticker_list,
+                   'Weights': weights,
+                   'Price': price})
+
+  min = df[df['Weights'] == df['Weights'].min()]
+  min_price = min['Price']
+  return(min_price)
+
+min_price = get_price_at_min_weight(port_list, port_wts, port_prices)
+```
+
+Getting the previous trading day and convert back to string to use in the next function.
+```
+from datetime import timedelta
+from datetime import datetime
+ 
+# Get today's date
+today = datetime.today()
+ 
+# Yesterday date
+yesterday = today - timedelta(days = 1)
+yesterday = yesterday.strftime('%Y-%m-%d')
+type(yesterday)
+yesterday
+```
+
+Final output:
+```
+# Get all stock prices on the starting date
+port_df_start = merge_df_by_column_name('Close',  yesterday, 
+                                  yesterday, *port_list)
+
+# Convert from dataframe to Python list
+port_prices = port_df_start.values.tolist()
+
+# Trick that converts a list of lists into a single list
+port_prices = sum(port_prices, [])
+
+tot_shares, share_cost = get_port_shares(min_price, True, port_wts, port_prices)
+print("Shares :", tot_shares)
+print("Share Cost :", share_cost)
+
+# Get list of weights for stocks
+stock_wts = get_port_weighting(share_cost)
+print("Stock Weights :", stock_wts)
+
+# Get value at end of year
+get_port_val_by_date(E_DATE, tot_shares, port_list)
+```
+![final](https://user-images.githubusercontent.com/62857660/154621351-94f3e7b5-4c0f-410f-a94c-8e62eb29a5f0.jpg)
+
+### Summary
+
+Closing price of the tickers in the portfolio list:`port_df_start`
+![list](https://user-images.githubusercontent.com/62857660/154621770-1ea6a3bc-ed75-4e01-ab74-a1f65b9e8734.jpg)
 
 
+Return and volatility for this portfolio list:
+```
+print('Volatility:', p_vol[SR_idx]*100)
+print('Return: ', p_ret[SR_idx]*100)
+print('Total Share Needed: ', sum(tot_shares))
+print('Total Share Cost: ', sum(share_cost))
+```
+![return](https://user-images.githubusercontent.com/62857660/154621853-947145cd-b9d7-4306-8166-7b8b3ffe4801.jpg)
 
+Summary dataframe:
+```
+df = pd.DataFrame({'Ticker': port_list,
+                   'Weights': port_wts,
+                   'Shares': tot_shares,
+                   'Closing Price': port_prices,
+                   'Share Cost': share_cost,
+                   'Cumulative Return': top_10['CUM_RET'],
+                   'Mean Return': mean_ret.tolist()})
+```
+![df](https://user-images.githubusercontent.com/62857660/154621941-ee551af9-c7c9-466d-9aaf-65d86c973838.jpg)
 
 
 
