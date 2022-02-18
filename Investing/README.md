@@ -824,9 +824,9 @@ df = pd.DataFrame({'Ticker': port_list,
 ```
 ![df](https://user-images.githubusercontent.com/62857660/154621941-ee551af9-c7c9-466d-9aaf-65d86c973838.jpg)
 
-![happy](https://user-images.githubusercontent.com/62857660/154739516-79c0f12a-c81b-4a53-9a91-6b64224fd867.jpg)
 
 
+![happy](https://user-images.githubusercontent.com/62857660/154741070-e4e08e6e-5f17-482f-9e64-9276e79687bb.jpg)
 
 
-Image Source: https://www.freepik.com/free-vector/happy-rich-people-growing-financial-plant-watering-money-tree-pile-cash-analyzing-wealth-prosperity_13146550.htm#query=happy%20investor&position=31&from_view=search
+Image Source: https://www.freepik.com/free-vector/happy-rich-people-growing-financial-plant-watering-money-tree-pile-cash-analyzing-wealth-prosperity_13146550.htm#query=happy%20investor&position=31&from_view=search and https://www.freepik.com/free-vector/flat-happy-man-with-golden-coin-head_22654320.htm#query=happy%20investor&position=18&from_view=search
