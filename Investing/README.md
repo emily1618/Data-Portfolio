@@ -6,7 +6,7 @@
 
 ##### Date: Feb 18, 2022
 
-##### [Tableau Dashboard: Colorful NASDAQ Ticker Picker](https://public.tableau.com/app/profile/emily.liang7497/viz/NASDAQTickerPicker/Dash)
+##### 🌈[Tableau Dashboard: Colorful NASDAQ Ticker Picker](https://public.tableau.com/app/profile/emily.liang7497/viz/NASDAQTickerPicker/Dash)
 #
 
 ### INTRODUCTION
