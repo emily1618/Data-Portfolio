@@ -17,6 +17,7 @@ The code is seperated into 3 parts:
 ### 📊 [EDA on Nasdaq](#eda-on-nasdaq)
 ### 🌦 [Ichimoku Cloud](#ichimoku-cloud)
 ### 💯 [Finding an Efficient Portfolio](#finding-an-efficient-portfolio)
+### 🌟 [Portfolio Summary](#portfolio-summary)
 
 Dataset:
 - From `import yfinance as yf` and https://www.nasdaq.com/market-activity/stocks/screener
@@ -799,7 +800,7 @@ get_port_val_by_date(E_DATE, tot_shares, port_list)
 
 
 
-## 🌟Summary 🌟
+# Portfolio Summary
 
 Closing price of the tickers in the portfolio list:`port_df_start`
 ![list](https://user-images.githubusercontent.com/62857660/154621770-1ea6a3bc-ed75-4e01-ab74-a1f65b9e8734.jpg)
