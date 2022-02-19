@@ -172,6 +172,7 @@ Ichimoku is a technical indicator. The 5 lines of the cloud are:
 - ![Screenshot 2022-02-16 005252](https://user-images.githubusercontent.com/62857660/154605375-95f9a898-1ddb-4baf-8411-c550f273e9f9.jpg)
 
 
+**Source**:https://www.youtube.com/watch?v=PDPXvJ8W1G0
 
 
 Functions preparing the tickers and csv:
