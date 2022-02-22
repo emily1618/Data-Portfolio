@@ -27,7 +27,7 @@
 ##### [Feature Selection](#feature-selection)
 ##### [Confusion-Matrix](#confusion-matrix)
 ##### [F1 Score](#f1-score)
-##### [Accuracy Score](#accuracy)
+##### [Accuracy](#accuracy)
 ##### [Cross Validation](#cross-validation)
 ##### [KNN](#knn)
 ##### [Naive Bayes](#naive-bayes)
@@ -149,7 +149,7 @@ print(classification_report(y_test, y_pred_knn))
 F score of 1 indicates a perfect balance as precision and the recall are inversely related. A high F1 score is useful where both high recall and precision is important. 
 - Support is the number of actual occurrences of the class in the test data set. Imbalanced support in the training data may indicate the need for stratified sampling or rebalancing.
 
-**Accuracy**
+### Accuracy
 - Accuracy is used when the True Positives and True negatives are more important while F1-score is used when the False Negatives and False Positives are crucial.
  ```
 from sklearn.metrics import accuracy_score
