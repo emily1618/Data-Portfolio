@@ -118,6 +118,20 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random
 - Parameter tuning
   - It is difficult to know which combination of hyperparameters will work best based only on theory because there are complex interactions between hyperparameters. Hence the need for hyperparameter tuning: the only way to find the optimal hyperparameter values is to try many different combinations on a dataset.
   - LightGBM library faster than scikit one
+  ```
+  param_grid_nb = {
+    'var_smoothing': np.logspace(0,-9, num=100)
+}
+
+from sklearn.model_selection import GridSearchCV
+nbModel_grid = GridSearchCV(estimator=GaussianNB(), param_grid=param_grid_nb, verbose=1, cv=5, n_jobs=-1)
+nbModel_grid.fit(X_train, y_train)
+
+print(nbModel_grid.best_estimator_)
+
+y_pred = nbModel_grid.predict(X_test)
+print(y_pred)
+```
  
 - Predictions, Confusion matrix and accuracy score
 
@@ -145,6 +159,33 @@ Xfi_Train = X_Train.drop(columns = zero_features)
 Xfi_Test = X_Test.drop(columns = zero_features)
 ```
 
+- Removing zero-variance features
+```
+from sklearn.feature_selection import VarianceThreshold
+v_thres = VarianceThreshold(threshold=0)
+v_thres.fit(X)
+Cols = X.columns[v_thres.get_support()]
+X = v_thres.transform(X)
+X = pd.DataFrame(X,columns=Cols)
+X
+```
+
+- To improve the model generalization (working with new data), in the feature selection process, those features that present a high collinearity with others were eliminated by means of a correlation matrix, taking a threshold value of 0.9 for this case (i.e., closely related features).
+```
+#Threshold for removing correlated variables
+threshold = 0.9
+
+# Absolute value correlation matrix
+corr_matrix = X.corr().abs()
+upper = corr_matrix.where(np.triu(np.ones(corr_matrix.shape), k=1).astype(np.bool))
+
+#Select the colums with high threshold
+to_drop = [column for column in upper.columns if any(upper[column] > threshold)]
+print('There are %d columns to remove.' % (len(to_drop)))
+print(to_drop)
+
+X = X.drop(to_drop, axis=1)
+```
 
 **Confusion Matrix**
 [Back to Top](#machine-learning)
@@ -223,8 +264,22 @@ y_pred_knn
   - Gaussian Naive Bayes – This is a variant of Naive Bayes which supports continuous values and has an assumption that each class is normally distributed. 
   - Multinomial Naive Bayes – Has features as vectors where sample(feature) represents frequencies with which certain events have occurred.
     - Multinomial naive Bayes assumes to have feature vector where each element represents the number of times it appears (or, very often, its frequency). ... The Gaussian Naive Bayes, instead, is based on a continuous distribution and it's suitable for more generic classification tasks.
+```
+GB = GaussianNB()
+GB.fit(X_train, y_train)
+predictions = GB.predict(X_test)
+print(accuracy_score(y_test, predictions))
+print(confusion_matrix(y_test, predictions))
+print(classification_report(y_test, predictions))
+```
 
 #### PCA
+```
+from sklearn.decomposition import PCA
+pca = PCA(n_components=3)
+
+pc = pca.fit_transform(X)
+```
 
 ## Statistics 
 - Coming Soon
