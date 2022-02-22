@@ -279,10 +279,12 @@ life_cycle = pd.DataFrame(randn(8,5),index = 'Land Seismic Geology Drilling Comp
 #### Loc vs iloc
 - loc is label based
 - iloc is index based
+- 
 ![loc iloc](https://user-images.githubusercontent.com/62857660/155054577-708bbdce-0b1c-4e69-8768-70374ec3552f.png)
 
 
 - loc:
+- 
 ![loc](https://user-images.githubusercontent.com/62857660/155054621-b8b67eb6-1d91-474b-8f6f-7a7bd3fbf690.png)
 
 - iloc:
@@ -294,6 +296,7 @@ life_cycle = pd.DataFrame(randn(8,5),index = 'Land Seismic Geology Drilling Comp
 
 #### SNS
 ```sns.pairplot(df,hue ='CLASS')```
+
 ![snspair](https://user-images.githubusercontent.com/62857660/155054774-39e51323-07e2-4b8a-ba6e-f6ba09dbd104.png)
 
 ``` 
@@ -301,12 +304,14 @@ print(df['VAR1'].describe())
 plt.figure(figsize=(9, 8))
 sns.distplot(df['VAR1'], color='g', bins=100, hist_kws={'alpha': 0.4});
 ```
+
 ![displot](https://user-images.githubusercontent.com/62857660/155054804-18a72861-60cf-4996-965d-a047cb210de8.jpg)
 
 - SNS heatmap
 ```sns.heatmap(corr[(corr >= 0.01) | (corr <= -0.01)], 
  cmap='viridis', vmax=1.0, vmin=-1.0, linewidths=0.1,
-  annot=True, annot_kws={"size": 10}, square=True);```
+  annot=True, annot_kws={"size": 10}, square=True);
+```
 
 ![heatmap](https://user-images.githubusercontent.com/62857660/155054824-69356c18-ea92-4ff4-ac04-899b591d5e66.png)
 
