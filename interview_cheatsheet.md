@@ -109,6 +109,7 @@ X_test_scaled = scaler.fit(X_test).transform(X_test)
 X = df.drop(['FlowPattern'], axis=1)
 y = df['FlowPattern']
 ```
+
 ```
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random_state= 10)
@@ -118,7 +119,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random
 - Parameter tuning
   - It is difficult to know which combination of hyperparameters will work best based only on theory because there are complex interactions between hyperparameters. Hence the need for hyperparameter tuning: the only way to find the optimal hyperparameter values is to try many different combinations on a dataset.
   - LightGBM library faster than scikit one
-  ```
+```
   param_grid_nb = {
     'var_smoothing': np.logspace(0,-9, num=100)
 }
