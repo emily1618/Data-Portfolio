@@ -20,16 +20,27 @@
 
 ## MACHINE LEARNING
 [Supervised-vs-Unsupervised](#supervised-vs-unsupervised)
+
 [Missing Values](#missing-values)
+
 [Bias and Variance, Overfit and Underfit](#bias-and-variance-overfit-and-underfit)
+
 [Dimension Reduction](#dimension-reduction)
+
 [Flow](#flow)
+
 [Feature Selection](#feature-selection)
+
 [Confusion-Matrix](#confusion-matrix)
+
 [F1 Score](#f1-score)
+
 [Accuracy](#accuracy)
+
 [Cross Validation](#cross-validation)
+
 [KNN](#knn)
+
 [Naive Bayes](#naive-bayes)
 
 #### Supervised vs Unsupervised
