@@ -19,20 +19,20 @@
 
 
 ## MACHINE LEARNING
-##### [Supervised-vs-Unsupervised](#supervised-vs-unsupervised)
+[Supervised-vs-Unsupervised](#supervised-vs-unsupervised)
 [Missing Values](#missing-values)
-##### [Bias and Variance, Overfit and Underfit](#bias-and-variance-overfit-and-underfit)
-##### [Dimension Reduction](#dimension-reduction)
-##### [Flow](#flow)
-##### [Feature Selection](#feature-selection)
-##### [Confusion-Matrix](#confusion-matrix)
-##### [F1 Score](#f1-score)
+[Bias and Variance, Overfit and Underfit](#bias-and-variance-overfit-and-underfit)
+[Dimension Reduction](#dimension-reduction)
+[Flow](#flow)
+[Feature Selection](#feature-selection)
+[Confusion-Matrix](#confusion-matrix)
+[F1 Score](#f1-score)
 [Accuracy](#accuracy)
-##### [Cross Validation](#cross-validation)
-##### [KNN](#knn)
-##### [Naive Bayes](#naive-bayes)
+[Cross Validation](#cross-validation)
+[KNN](#knn)
+[Naive Bayes](#naive-bayes)
 
-### Supervised vs Unsupervised
+#### Supervised vs Unsupervised
 - Supervised: Input and output data are provided 
   - A supervised learning model produces an accurate result. It allows you to collect data or produce a data output from the previous experience. The drawback of this model is that decision boundaries might be overstrained if your training set doesn't have examples that you want to have in a class.
 - Unsupervised: Input data are provided
@@ -49,7 +49,7 @@ Needs to normalize data before applying KNN
 - Don’t forget to df_filling_mean.fillna(value = df_filling_mean.mean(), inplace = True)
 
 
-**Bias and Variance, Overfit and Underfit**
+#### Bias and Variance, Overfit and Underfit
 - The inability of a ML model to capture the true relationship is called “bias.” Models with high bias are unable to capture the true relationship between input and output features, and it usually leads to oversimplification of the model.
 Under fit
   - An underfit model has high bias and low variance.
@@ -59,13 +59,13 @@ Under fit
   - ![fit](https://user-images.githubusercontent.com/62857660/155050192-fa6ff06c-5271-43a9-8054-cdb5464b0404.jpg)
 
 
-**Dimension Reduction**
+#### Dimension Reduction
 - Dimensionality reduction is the process of reducing the number of variables by obtaining a set of important variables.
 - PCA 
 
 
 
-**Flow**
+#### Flow
 - EDA on data
 - Detect outliers
 - Extract features
@@ -111,7 +111,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random
   - ![what to do after confusion matrix](https://user-images.githubusercontent.com/62857660/155050708-70d3312a-14e2-4710-8afa-64ca4f7bb23f.jpg)
 
 
-**Feature Selection**
+#### Feature Selection
 ![feature](https://user-images.githubusercontent.com/62857660/155051328-8c9f20ce-3beb-4fa0-88bf-940ee2fa52b1.jpg)
 
 
@@ -136,7 +136,7 @@ Xfi_Test = X_Test.drop(columns = zero_features)
 - Each column represents the instances in an actual class.
 - ![confusion](https://user-images.githubusercontent.com/62857660/155051392-1d96187e-70d7-418f-8f19-cc2d91e7f3ab.jpg)
 
-**F1 Score**
+#### F1 Score
 `
 from sklearn.metrics import classification_report
 print(classification_report(y_test, y_pred_knn))
@@ -149,7 +149,7 @@ print(classification_report(y_test, y_pred_knn))
 F score of 1 indicates a perfect balance as precision and the recall are inversely related. A high F1 score is useful where both high recall and precision is important. 
 - Support is the number of actual occurrences of the class in the test data set. Imbalanced support in the training data may indicate the need for stratified sampling or rebalancing.
 
-### Accuracy
+#### Accuracy
 - Accuracy is used when the True Positives and True negatives are more important while F1-score is used when the False Negatives and False Positives are crucial.
  ```
 from sklearn.metrics import accuracy_score
@@ -158,9 +158,9 @@ score_knn = accuracy_score(y_test, y_pred_knn)
 print("accuracy score: %0.3f" % score_knn)
 ```
 
-**Cross Validation**
+#### Cross Validation
 
-**KNN**
+#### KNN
 - ![Screenshot 2022-02-20 233754](https://user-images.githubusercontent.com/62857660/155051720-3fefa406-9fe6-4f67-8dbb-28b5edb16670.jpg)
 - Supervised
 - Based on feature similarity
