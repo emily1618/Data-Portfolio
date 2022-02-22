@@ -58,10 +58,10 @@ Needs to normalize data before applying KNN
 - Fill with mean: dataset['some column']=dataset['some column'].fillna((dataset['some column'].mean()))
 - Fill with nearby value: dataset['some column'] = dataset[‘some volumn'].fillna(method='ffill')
 - Don’t forget to df_filling_mean.fillna(value = df_filling_mean.mean(), inplace = True)
+[Back to Top](#machine-learning)
 
 
 #### Bias and Variance, Overfit and Underfit
-[Back to Top](#machine-learning)
 - The inability of a ML model to capture the true relationship is called “bias.” Models with high bias are unable to capture the true relationship between input and output features, and it usually leads to oversimplification of the model.
 Under fit
   - An underfit model has high bias and low variance.
@@ -69,7 +69,7 @@ Under fit
   - Over fit
   - An overfit model means it has high variance and low bias.
   - ![fit](https://user-images.githubusercontent.com/62857660/155050192-fa6ff06c-5271-43a9-8054-cdb5464b0404.jpg)
-
+[Back to Top](#machine-learning)
 
 #### Dimension Reduction
 - Dimensionality reduction is the process of reducing the number of variables by obtaining a set of important variables.
@@ -110,7 +110,7 @@ y = df['FlowPattern']
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random_state= 10)
 ```
-
+[Back to Top](#machine-learning)
 
 - Model and pipeline
 - Parameter tuning
@@ -121,7 +121,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random
 
 - Predict on new dataset
   - ![what to do after confusion matrix](https://user-images.githubusercontent.com/62857660/155050708-70d3312a-14e2-4710-8afa-64ca4f7bb23f.jpg)
-
+[Back to Top](#machine-learning)
 
 #### Feature Selection
 ![feature](https://user-images.githubusercontent.com/62857660/155051328-8c9f20ce-3beb-4fa0-88bf-940ee2fa52b1.jpg)
@@ -141,12 +141,14 @@ print('There are %d features with 0.0 importance' % len(zero_features))
 Xfi_Train = X_Train.drop(columns = zero_features)
 Xfi_Test = X_Test.drop(columns = zero_features)
 ```
-
+[Back to Top](#machine-learning)
 
 **Confusion Matrix**
 - Each row of the matrix represents the instances in a predicted class,.
 - Each column represents the instances in an actual class.
 - ![confusion](https://user-images.githubusercontent.com/62857660/155051392-1d96187e-70d7-418f-8f19-cc2d91e7f3ab.jpg)
+[Back to Top](#machine-learning)
+
 
 #### F1 Score
 `
@@ -160,6 +162,8 @@ print(classification_report(y_test, y_pred_knn))
 -  Recall (tp / (tp + fn) is the ability of a classifier to find all correct instances per class. 
 F score of 1 indicates a perfect balance as precision and the recall are inversely related. A high F1 score is useful where both high recall and precision is important. 
 - Support is the number of actual occurrences of the class in the test data set. Imbalanced support in the training data may indicate the need for stratified sampling or rebalancing.
+[Back to Top](#machine-learning)
+
 
 #### Accuracy
 - Accuracy is used when the True Positives and True negatives are more important while F1-score is used when the False Negatives and False Positives are crucial.
@@ -169,6 +173,8 @@ print(accuracy_score(y_test, y_pred_knn))
 score_knn = accuracy_score(y_test, y_pred_knn)
 print("accuracy score: %0.3f" % score_knn)
 ```
+[Back to Top](#machine-learning)
+
 
 #### Cross Validation
 
@@ -194,6 +200,6 @@ knn.fit(X_train_scaled, y_train)
 y_pred_knn = knn.predict(X_test_scaled)
 y_pred_knn
 ```
-
+[Back to Top](#machine-learning)
 
 
