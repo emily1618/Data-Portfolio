@@ -8,6 +8,7 @@
 
 *Overview of the concept from theory, statistics, machine learning model, SQL, and coding. I created this notebook to prepare for interview. Source is from everywhere from google search to class room lecture slides.*
 ### 💻 [Machine Learning](#machine-learning)
+  - #### [Supervised-vs-Unsupervised](#supervised-vs-unsupervised)
 ### 🛠 [Statistics](#statistics)
 ### 📊 [Coding](#coding)
 ### 📋 [SQL](#sql)
@@ -50,44 +51,125 @@ Under fit
 - Dimensionality reduction is the process of reducing the number of variables by obtaining a set of important variables.
 - PCA 
 
+
+
 **Flow**
-1. EDA on data
-2. Detect outliers
-3. Extract features
+- EDA on data
+- Detect outliers
+- Extract features
   - Use domain expertise
-Feature ranking, selection
-Feature collinearity
-If the features are collinear, providing the model with the same information could potentially result in model confusion. Simply drop one of the collinear inputs. If both inputs are important to understand, it is advised to train two separate models with each collinear feature
-Removing zero-variance features
-Dummy variables for categorical vars
-Scale data
-The general rule of thumb is that algorithms that exploit distances or similarities between data samples, such as artificial neural network (ANN), KNN, support vector machine (SVM), and k-means clustering, are sensitive to feature transformations. 
-However, some tree-based algorithms such as decision tree (DT), RF, and GB are not affected by feature scaling. This is because tree-based models are not distance-based models and can easily handle varying range of features.
-Feature normalization: Feature normalization guarantees that each feature will be scaled to [0,1] interval. 
-Feature standardization (z-Score normalization): Standardization transforms each feature with Gaussian distribution to Gaussian distribution with a mean of 0 and a standard deviation of 1
-In clustering algorithms such as k-means clustering, hierarchical clustering, density-based spatial clustering of applications with noise (DBSCAN), etc., standardization is important due to comparing feature similarities based on distance measures. On the other hand, normalization becomes more important with certain algorithms such as ANN and image processing 
+  - Feature ranking, selection
+  - Feature collinearity
+    - If the features are collinear, providing the model with the same information could potentially result in model confusion. Simply drop one of the collinear inputs. If both inputs are important to understand, it is advised to train two separate models with each collinear feature
+   - Removing zero-variance features
+- Dummy variables for categorical vars
+- Scale data
+  - The general rule of thumb is that algorithms that exploit distances or similarities between data samples, such as artificial neural network (ANN), KNN, support vector machine (SVM), and k-means clustering, are sensitive to feature transformations. 
+  - However, some tree-based algorithms such as decision tree (DT), RF, and GB are not affected by feature scaling. This is because tree-based models are not distance-based models and can easily handle varying range of features.
+  - Feature normalization: Feature normalization guarantees that each feature will be scaled to [0,1] interval. 
+  - Feature standardization (z-Score normalization): Standardization transforms each feature with Gaussian distribution to Gaussian distribution with a mean of 0 and a standard deviation of 1
+  - In clustering algorithms such as k-means clustering, hierarchical clustering, density-based spatial clustering of applications with noise (DBSCAN), etc., standardization is important due to comparing feature similarities based on distance measures. On the other hand, normalization becomes more important with certain algorithms such as ANN and image processing .
+```
 from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 X_train_scaled = scaler.fit(X_train).transform(X_train)
 X_test_scaled = scaler.fit(X_test).transform(X_test)
+```
 
 
-Set train, validation and testing data
+- Set train, validation and testing data
+```
 X = df.drop(['FlowPattern'], axis=1)
 y = df['FlowPattern']
-
-
+```
+```
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random_state= 10)
+```
 
 
-Model and pipeline
-Parameter turning
-It is difficult to know which combination of hyperparameters will work best based only on theory because there are complex interactions between hyperparameters. Hence the need for hyperparameter tuning: the only way to find the optimal hyperparameter values is to try many different combinations on a dataset.
-LightGBM library faster than scikit one
-Predictions
-Confusin matrix and accuracy score
-Predict on new dataset
+- Model and pipeline
+- Parameter tuning
+  - It is difficult to know which combination of hyperparameters will work best based only on theory because there are complex interactions between hyperparameters. Hence the need for hyperparameter tuning: the only way to find the optimal hyperparameter values is to try many different combinations on a dataset.
+  - LightGBM library faster than scikit one
+ 
+- Predictions, Confusin matrix and accuracy score
+
+- Predict on new dataset
+  - ![what to do after confusion matrix](https://user-images.githubusercontent.com/62857660/155050708-70d3312a-14e2-4710-8afa-64ca4f7bb23f.jpg)
+
+
+**Feature Selection**
+![feature](https://user-images.githubusercontent.com/62857660/155051328-8c9f20ce-3beb-4fa0-88bf-940ee2fa52b1.jpg)
+
+
+`
+import lightgbm as lgb
+`
+
+- Find the features with zero importance
+```
+zero_features = list(feature_importances[feature_importances['importance'] == 0.0]['feature'])
+print('There are %d features with 0.0 importance' % len(zero_features))
+```
+- Well, it also looks like many of the features we made have literally 0 importance. For the gradient boosting machine, features with 0 importance are not used at all to make any splits. Therefore, we can remove these features from the model with no effect on performance (except for faster training).
+```
+Xfi_Train = X_Train.drop(columns = zero_features)
+Xfi_Test = X_Test.drop(columns = zero_features)
+```
+
+
+**Confusion Matrix**
+- Each row of the matrix represents the instances in a predicted class,.
+- Each column represents the instances in an actual class.
+- ![confusion](https://user-images.githubusercontent.com/62857660/155051392-1d96187e-70d7-418f-8f19-cc2d91e7f3ab.jpg)
+
+**F1 Score**
+`
+from sklearn.metrics import classification_report
+print(classification_report(y_test, y_pred_knn))
+`
+![classification](https://user-images.githubusercontent.com/62857660/155051557-02149529-09a5-4ca6-b71b-4e2ad00584a8.jpg)
+
+- average returns the average without considering the proportion for each label in the dataset. weighted returns the average considering the proportion for each label in the dataset.
+-  Precision (tp / (tp + fp) ) measures the ability of a classifier to identify only the correct instances for each class.
+-  Recall (tp / (tp + fn) is the ability of a classifier to find all correct instances per class. 
+F score of 1 indicates a perfect balance as precision and the recall are inversely related. A high F1 score is useful where both high recall and precision is important. 
+- Support is the number of actual occurrences of the class in the test data set. Imbalanced support in the training data may indicate the need for stratified sampling or rebalancing.
+
+**Accuracy**
+- Accuracy is used when the True Positives and True negatives are more important while F1-score is used when the False Negatives and False Positives are crucial.
+ ```
+from sklearn.metrics import accuracy_score
+print(accuracy_score(y_test, y_pred_knn))
+score_knn = accuracy_score(y_test, y_pred_knn)
+print("accuracy score: %0.3f" % score_knn)
+```
+
+**Cross Validation**
+
+**KNN**
+- ![Screenshot 2022-02-20 233754](https://user-images.githubusercontent.com/62857660/155051720-3fefa406-9fe6-4f67-8dbb-28b5edb16670.jpg)
+- Supervised
+- Based on feature similarity
+- The algorithm can be used to solve both classification and regression problem 
+- The advantage of nearest-neighbor classification is its simplicity. There are only two choices a user must make: (1) the number of neighbors, k, and (2) the distance metric to be used. Common choices of distance metrics include Euclidean distance and city-block Manhattan distance.
+- K-NN is a lazy learner because it doesn't learn a discriminative function from the training data but “memorizes” the training dataset instead. 
+- KNN works well with smaller datasets because it is a lazy learner. It needs to store all the data and then make a decision only at run time. So if the dataset is large, there will be a lot of processing which may adversely impact the performance of the algorithm. Each input variable can be considered a dimension of a p-dimensional input space. In high dimensions, points that may be similar may have very large distances.
+- It is advised to use the KNN algorithm for multiclass classification if the number of samples of the data is less than 50,000. 
+- How we choose k: parameter tuning. Improve accuracy. We can use the square root of n (number of samples) or choose an odd value of k.
+- Sample: https://www.youtube.com/watch?v=4HKqjENq9OU
+ ```
+from sklearn.neighbors import KNeighborsClassifier
+ 
+knn = KNeighborsClassifier()
+knn.fit(X_train_scaled, y_train)
+ ```
+ ```
+# Testing the model using X_test and storing the output in y_pred
+y_pred_knn = knn.predict(X_test_scaled)
+y_pred_knn
+```
 
 
 
