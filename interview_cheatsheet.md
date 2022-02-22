@@ -61,6 +61,7 @@ Needs to normalize data before applying KNN
 
 
 #### Bias and Variance, Overfit and Underfit
+[Back to Top](#author-emi-ly)
 - The inability of a ML model to capture the true relationship is called “bias.” Models with high bias are unable to capture the true relationship between input and output features, and it usually leads to oversimplification of the model.
 Under fit
   - An underfit model has high bias and low variance.
