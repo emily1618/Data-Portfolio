@@ -43,6 +43,8 @@
 
 [Naive Bayes](#naive-bayes)
 
+[PCA](#pca)
+
 #### Supervised vs Unsupervised
 - Supervised: Input and output data are provided 
   - A supervised learning model produces an accurate result. It allows you to collect data or produce a data output from the previous experience. The drawback of this model is that decision boundaries might be overstrained if your training set doesn't have examples that you want to have in a class.
@@ -62,6 +64,7 @@ Needs to normalize data before applying KNN
 
 
 #### Bias and Variance, Overfit and Underfit
+[Back to Top](#machine-learning)
 - The inability of a ML model to capture the true relationship is called “bias.” Models with high bias are unable to capture the true relationship between input and output features, and it usually leads to oversimplification of the model.
 Under fit
   - An underfit model has high bias and low variance.
@@ -69,15 +72,15 @@ Under fit
   - Over fit
   - An overfit model means it has high variance and low bias.
   - ![fit](https://user-images.githubusercontent.com/62857660/155050192-fa6ff06c-5271-43a9-8054-cdb5464b0404.jpg)
-[Back to Top](#machine-learning)
+
 
 #### Dimension Reduction
 - Dimensionality reduction is the process of reducing the number of variables by obtaining a set of important variables.
 - PCA 
 
 
-
 #### Flow
+[Back to Top](#machine-learning)
 - EDA on data
 - Detect outliers
 - Extract features
@@ -110,7 +113,6 @@ y = df['FlowPattern']
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random_state= 10)
 ```
-[Back to Top](#machine-learning)
 
 - Model and pipeline
 - Parameter tuning
@@ -124,6 +126,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random
 [Back to Top](#machine-learning)
 
 #### Feature Selection
+[Back to Top](#machine-learning)
 ![feature](https://user-images.githubusercontent.com/62857660/155051328-8c9f20ce-3beb-4fa0-88bf-940ee2fa52b1.jpg)
 
 
@@ -141,16 +144,17 @@ print('There are %d features with 0.0 importance' % len(zero_features))
 Xfi_Train = X_Train.drop(columns = zero_features)
 Xfi_Test = X_Test.drop(columns = zero_features)
 ```
-[Back to Top](#machine-learning)
+
 
 **Confusion Matrix**
+[Back to Top](#machine-learning)
 - Each row of the matrix represents the instances in a predicted class,.
 - Each column represents the instances in an actual class.
 - ![confusion](https://user-images.githubusercontent.com/62857660/155051392-1d96187e-70d7-418f-8f19-cc2d91e7f3ab.jpg)
-[Back to Top](#machine-learning)
 
 
 #### F1 Score
+[Back to Top](#machine-learning)
 `
 from sklearn.metrics import classification_report
 print(classification_report(y_test, y_pred_knn))
@@ -162,24 +166,27 @@ print(classification_report(y_test, y_pred_knn))
 -  Recall (tp / (tp + fn) is the ability of a classifier to find all correct instances per class. 
 F score of 1 indicates a perfect balance as precision and the recall are inversely related. A high F1 score is useful where both high recall and precision is important. 
 - Support is the number of actual occurrences of the class in the test data set. Imbalanced support in the training data may indicate the need for stratified sampling or rebalancing.
-[Back to Top](#machine-learning)
+
 
 
 #### Accuracy
+[Back to Top](#machine-learning)
 - Accuracy is used when the True Positives and True negatives are more important while F1-score is used when the False Negatives and False Positives are crucial.
  ```
 from sklearn.metrics import accuracy_score
 print(accuracy_score(y_test, y_pred_knn))
 score_knn = accuracy_score(y_test, y_pred_knn)
 print("accuracy score: %0.3f" % score_knn)
-```
-[Back to Top](#machine-learning)
 
+```
 
 #### Cross Validation
+[Back to Top](#machine-learning)
 
 #### KNN
-- ![Screenshot 2022-02-20 233754](https://user-images.githubusercontent.com/62857660/155051720-3fefa406-9fe6-4f67-8dbb-28b5edb16670.jpg)
+[Back to Top](#machine-learning)
+
+![Screenshot 2022-02-20 233754](https://user-images.githubusercontent.com/62857660/155051720-3fefa406-9fe6-4f67-8dbb-28b5edb16670.jpg)
 - Supervised
 - Based on feature similarity
 - The algorithm can be used to solve both classification and regression problem 
@@ -200,6 +207,106 @@ knn.fit(X_train_scaled, y_train)
 y_pred_knn = knn.predict(X_test_scaled)
 y_pred_knn
 ```
+
+
+#### Naive Bayes
 [Back to Top](#machine-learning)
 
+![Bayes-Theorem](https://user-images.githubusercontent.com/62857660/155053920-a5f71f97-98c3-401f-afc2-3770f14b2dde.png)
+![download](https://user-images.githubusercontent.com/62857660/155053935-18afc22b-ecea-4aae-8188-0f84db6d1d89.png)
+
+- It predicts membership probabilities for each class such as the probability that given record or data point belongs to a particular class.
+- Typical applications include filtering spam, classifying documents, face recognition, weather prediction, news classification, medical diagnosis. It works well with high-dimensional data such as text classification, email spam detection.
+- Naive Bayes is called naive because it assumes that each input variable is independent. This is a strong assumption and unrealistic for real data. In some cases, speed is preferred over higher accuracy.
+- https://www.youtube.com/watch?v=l3dZ6ZNFjo0&t=28s
+- 3 types of Naive Bayes models: Gaussian, Multinomial, and Bernoulli. 
+  - Gaussian Naive Bayes – This is a variant of Naive Bayes which supports continuous values and has an assumption that each class is normally distributed. 
+  - Multinomial Naive Bayes – Has features as vectors where sample(feature) represents frequencies with which certain events have occurred.
+    - Multinomial naive Bayes assumes to have feature vector where each element represents the number of times it appears (or, very often, its frequency). ... The Gaussian Naive Bayes, instead, is based on a continuous distribution and it's suitable for more generic classification tasks.
+
+#### PCA
+
+## Statistics
+
+## Coding
+[Theory](#theory)
+
+[Numpy](#numpy)
+
+[Dataframe](#dataframe)
+
+[loc vs iloc](#loc-vs-iloc)
+
+[SNS](#sns)
+
+#### Theory:
+The primary difference between vectors and matrices is that vectors are 1d array while matrices are 2d arrays.
+
+#### Numpy:
+```
+B =[[4,5,6],[7,8,9],[10,11,12]] 
+np.array(B)
+```
+```
+np.arange(0,40,5)
+
+A =np.arange(20,30) 
+A.reshape(5,2)
+```
+- The numpy random seed is a numerical value that generates a new set or repeats pseudo-random numbers. The value in the numpy random seed saves the state of randomness. If we call the seed function using value 1 multiple times, the computer displays the same random numbers.
+
+
+#### Set, Tuple, Dictionary and List:
+- Set is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Tuple, and Dictionary
+- Set items are unordered, unchangeable, and do not allow duplicate values.
+
+#### Dataframe:
+- Create a dataframe: 
+ ```
+from numpy.random import randn
+life_cycle = pd.DataFrame(randn(8,5),index = 'Land Seismic Geology Drilling Completions Production Facilities Midstream'.split(), columns = 'Cycle_1 Cycle_2 Cycle_3 Cycle_4 Cycle_5'.split())
+```
+- 8 rows, 5 columns
+- Combine dataframe: `pd.concat()`
+- Select columns: 
+`life_cycle[['Cycle_2','Cycle_3','Cycle_4']]`
+
+![list out column name](https://user-images.githubusercontent.com/62857660/155054706-5a0bccd3-c27e-41f1-9928-ad83a4f32fa9.jpg)
+
+- If this drop is going to be permanent, please make sure to include `inplace = True`. To drop rows, use axis = 0 (which is the default in Python’s pandas) and to drop columns, use axis = 1 .
+```life_cycle.drop(labels = ['Cycle_Total','Cycle_1_2_Mult'], axis=1, inplace=True)```
+
+#### Loc vs iloc
+- loc is label based
+- iloc is index based
+![loc iloc](https://user-images.githubusercontent.com/62857660/155054577-708bbdce-0b1c-4e69-8768-70374ec3552f.png)
+
+
+- loc:
+![loc](https://user-images.githubusercontent.com/62857660/155054621-b8b67eb6-1d91-474b-8f6f-7a7bd3fbf690.png)
+
+- iloc:
+```matrix.iloc[[0,2,4],[0,2,4]]```
+
+![iloc](https://user-images.githubusercontent.com/62857660/155054741-624ee0ba-d287-4542-b669-51c845928858.jpg)
+
+
+
+#### SNS
+```sns.pairplot(df,hue ='CLASS')```
+![snspair](https://user-images.githubusercontent.com/62857660/155054774-39e51323-07e2-4b8a-ba6e-f6ba09dbd104.png)
+
+``` 
+print(df['VAR1'].describe())
+plt.figure(figsize=(9, 8))
+sns.distplot(df['VAR1'], color='g', bins=100, hist_kws={'alpha': 0.4});
+```
+![displot](https://user-images.githubusercontent.com/62857660/155054804-18a72861-60cf-4996-965d-a047cb210de8.jpg)
+
+- SNS heatmap
+```sns.heatmap(corr[(corr >= 0.01) | (corr <= -0.01)], 
+ cmap='viridis', vmax=1.0, vmin=-1.0, linewidths=0.1,
+  annot=True, annot_kws={"size": 10}, square=True);```
+
+![heatmap](https://user-images.githubusercontent.com/62857660/155054824-69356c18-ea92-4ff4-ac04-899b591d5e66.png)
 
