@@ -226,7 +226,8 @@ y_pred_knn
 
 #### PCA
 
-## Statistics
+## Statistics 
+- Coming Soon
 
 ## Coding
 [Theory](#theory)
@@ -334,3 +335,14 @@ sns.distplot(df['VAR1'], color='g', bins=100, hist_kws={'alpha': 0.4});
 
 ![heatmap](https://user-images.githubusercontent.com/62857660/155054824-69356c18-ea92-4ff4-ac04-899b591d5e66.png)
 
+## Coding
+- Coming Soon
+
+## SQL
+- Coming Soon
+
+## Tableau 
+- Coming Soon
+
+## Learning Video Links
+- Coming Soon
