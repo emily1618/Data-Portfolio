@@ -20,19 +20,19 @@
 
 ## MACHINE LEARNING
 ##### [Supervised-vs-Unsupervised](#supervised-vs-unsupervised)
-##### [Missing Values](#missing-values)
+[Missing Values](#missing-values)
 ##### [Bias and Variance, Overfit and Underfit](#bias-and-variance-overfit-and-underfit)
 ##### [Dimension Reduction](#dimension-reduction)
 ##### [Flow](#flow)
 ##### [Feature Selection](#feature-selection)
 ##### [Confusion-Matrix](#confusion-matrix)
 ##### [F1 Score](#f1-score)
-##### [Accuracy](#accuracy)
+[Accuracy](#accuracy)
 ##### [Cross Validation](#cross-validation)
 ##### [KNN](#knn)
 ##### [Naive Bayes](#naive-bayes)
 
-**Supervised vs Unsupervised**
+### Supervised vs Unsupervised
 - Supervised: Input and output data are provided 
   - A supervised learning model produces an accurate result. It allows you to collect data or produce a data output from the previous experience. The drawback of this model is that decision boundaries might be overstrained if your training set doesn't have examples that you want to have in a class.
 - Unsupervised: Input data are provided
