@@ -248,12 +248,22 @@ The primary difference between vectors and matrices is that vectors are 1d array
 B =[[4,5,6],[7,8,9],[10,11,12]] 
 np.array(B)
 ```
+![numpy](https://user-images.githubusercontent.com/62857660/155055484-783dd1f1-bf38-466e-ac39-6893178033bb.jpg)
+
+
 ```
 np.arange(0,40,5)
+```
+![numpy2](https://user-images.githubusercontent.com/62857660/155055537-a0bc1f60-2a74-42dc-aa6a-0a30298aed12.jpg)
 
+
+```
 A =np.arange(20,30) 
 A.reshape(5,2)
 ```
+![numpy3](https://user-images.githubusercontent.com/62857660/155055512-a7b25ff0-e349-4e4c-89ba-89381d7fd43a.jpg)
+
+
 - The numpy random seed is a numerical value that generates a new set or repeats pseudo-random numbers. The value in the numpy random seed saves the state of randomness. If we call the seed function using value 1 multiple times, the computer displays the same random numbers.
 
 
