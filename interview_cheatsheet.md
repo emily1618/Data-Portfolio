@@ -243,6 +243,7 @@ y_pred_knn
 The primary difference between vectors and matrices is that vectors are 1d array while matrices are 2d arrays.
 
 #### Numpy:
+[Back to Top](#coding)
 ```
 B =[[4,5,6],[7,8,9],[10,11,12]] 
 np.array(B)
@@ -261,6 +262,8 @@ A.reshape(5,2)
 - Set items are unordered, unchangeable, and do not allow duplicate values.
 
 #### Dataframe:
+[Back to Top](#coding)
+
 - Create a dataframe: 
  ```
 from numpy.random import randn
@@ -277,14 +280,16 @@ life_cycle = pd.DataFrame(randn(8,5),index = 'Land Seismic Geology Drilling Comp
 ```life_cycle.drop(labels = ['Cycle_Total','Cycle_1_2_Mult'], axis=1, inplace=True)```
 
 #### Loc vs iloc
+[Back to Top](#coding)
+
 - loc is label based
 - iloc is index based
-- 
+
 ![loc iloc](https://user-images.githubusercontent.com/62857660/155054577-708bbdce-0b1c-4e69-8768-70374ec3552f.png)
 
 
 - loc:
-- 
+
 ![loc](https://user-images.githubusercontent.com/62857660/155054621-b8b67eb6-1d91-474b-8f6f-7a7bd3fbf690.png)
 
 - iloc:
@@ -295,6 +300,7 @@ life_cycle = pd.DataFrame(randn(8,5),index = 'Land Seismic Geology Drilling Comp
 
 
 #### SNS
+[Back to Top](#coding)
 ```sns.pairplot(df,hue ='CLASS')```
 
 ![snspair](https://user-images.githubusercontent.com/62857660/155054774-39e51323-07e2-4b8a-ba6e-f6ba09dbd104.png)
