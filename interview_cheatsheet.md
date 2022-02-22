@@ -188,7 +188,9 @@ print(to_drop)
 X = X.drop(to_drop, axis=1)
 ```
 
+
 **Confusion Matrix**
+
 [Back to Top](#machine-learning)
 - Each row of the matrix represents the instances in a predicted class,.
 - Each column represents the instances in an actual class.
@@ -210,7 +212,6 @@ F score of 1 indicates a perfect balance as precision and the recall are inverse
 - Support is the number of actual occurrences of the class in the test data set. Imbalanced support in the training data may indicate the need for stratified sampling or rebalancing.
 
 
-
 #### Accuracy
 [Back to Top](#machine-learning)
 - Accuracy is used when the True Positives and True negatives are more important while F1-score is used when the False Negatives and False Positives are crucial.
@@ -222,8 +223,11 @@ print("accuracy score: %0.3f" % score_knn)
 
 ```
 
+
 #### Cross Validation
 [Back to Top](#machine-learning)
+
+
 
 #### KNN
 [Back to Top](#machine-learning)
@@ -282,8 +286,10 @@ pca = PCA(n_components=3)
 pc = pca.fit_transform(X)
 ```
 
+
 ## Statistics 
 - Coming Soon
+
 
 ## Coding
 [Theory](#theory)
@@ -296,8 +302,10 @@ pc = pca.fit_transform(X)
 
 [SNS](#sns)
 
+
 #### Theory:
 The primary difference between vectors and matrices is that vectors are 1d array while matrices are 2d arrays.
+
 
 #### Numpy:
 
@@ -330,6 +338,7 @@ A.reshape(5,2)
 - Set is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Tuple, and Dictionary
 - Set items are unordered, unchangeable, and do not allow duplicate values.
 
+
 #### Dataframe:
 [Back to Top](#coding)
 
@@ -347,6 +356,7 @@ life_cycle = pd.DataFrame(randn(8,5),index = 'Land Seismic Geology Drilling Comp
 
 - If this drop is going to be permanent, please make sure to include `inplace = True`. To drop rows, use axis = 0 (which is the default in Python’s pandas) and to drop columns, use axis = 1 .
 ```life_cycle.drop(labels = ['Cycle_Total','Cycle_1_2_Mult'], axis=1, inplace=True)```
+
 
 #### Loc vs iloc
 [Back to Top](#coding)
