@@ -82,17 +82,17 @@ Under fit
 
 #### Flow
 [Back to Top](#machine-learning)
-- 1. EDA on data
-- 2. Detect outliers
-- 3. Extract features
+- 1 EDA on data
+- 2 Detect outliers
+- 3 Extract features
   - Use domain expertise
   - Feature ranking, selection
   - Feature collinearity
     - If the features are collinear, providing the model with the same information could potentially result in model confusion. Simply drop one of the collinear inputs. If both inputs are important to understand, it is advised to train two separate models with each collinear feature
    - Removing zero-variance features
-- 4. Dummy variables for categorical vars
+- 4 Dummy variables for categorical vars
   - One hot encoding
-- 5. Scale data
+- 5 Scale data
   - The general rule of thumb is that algorithms that exploit distances or similarities between data samples, such as artificial neural network (ANN), KNN, support vector machine (SVM), and k-means clustering, are sensitive to feature transformations. 
   - However, some tree-based algorithms such as decision tree (DT), RF, and GB are not affected by feature scaling. This is because tree-based models are not distance-based models and can easily handle varying range of features.
   - Feature normalization: Feature normalization guarantees that each feature will be scaled to [0,1] interval. 
@@ -106,7 +106,7 @@ X_test_scaled = scaler.fit(X_test).transform(X_test)
 ```
 
 
-- 6. Set train, validation and testing data
+- 6 Set train, validation and testing data
 ```
 X = df.drop(['FlowPattern'], axis=1)
 y = df['FlowPattern']
@@ -117,8 +117,8 @@ from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random_state= 10)
 ```
 
-- 7. Model and pipeline
-- 8. Parameter tuning
+- 7 Model and pipeline
+- 8 Parameter tuning
   - It is difficult to know which combination of hyperparameters will work best based only on theory because there are complex interactions between hyperparameters. Hence the need for hyperparameter tuning: the only way to find the optimal hyperparameter values is to try many different combinations on a dataset.
   - LightGBM library faster than scikit one
 ```
@@ -136,9 +136,9 @@ y_pred = nbModel_grid.predict(X_test)
 print(y_pred)
 ```
  
-- 9. Predictions, Confusion matrix and accuracy score
+- 9 Predictions, Confusion matrix and accuracy score
 
-- 10. Predict on new dataset
+- 10 Predict on new dataset
   - ![what to do after confusion matrix](https://user-images.githubusercontent.com/62857660/155050708-70d3312a-14e2-4710-8afa-64ca4f7bb23f.jpg)
 [Back to Top](#machine-learning)
 
