@@ -1,4 +1,4 @@
-# Interview Cheatsheet For Data Analyst Position
+# Interview Cheatsheet For Entry Level Data Analyst Jobs
 ##### Author: Emi Ly
 
 ##### Date: Feb 2022
