@@ -200,7 +200,7 @@ X = X.drop(to_drop, axis=1)
 
 
 #### F1 Score
-[Back to Top](#machine-learning)
+
 `
 from sklearn.metrics import classification_report
 print(classification_report(y_test, y_pred_knn))
