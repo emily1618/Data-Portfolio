@@ -243,7 +243,7 @@ y_pred_knn
 The primary difference between vectors and matrices is that vectors are 1d array while matrices are 2d arrays.
 
 #### Numpy:
-[Back to Top](#coding)
+
 ```
 B =[[4,5,6],[7,8,9],[10,11,12]] 
 np.array(B)
@@ -258,6 +258,8 @@ A.reshape(5,2)
 
 
 #### Set, Tuple, Dictionary and List:
+[Back to Top](#coding)
+
 - Set is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Tuple, and Dictionary
 - Set items are unordered, unchangeable, and do not allow duplicate values.
 
@@ -301,6 +303,7 @@ life_cycle = pd.DataFrame(randn(8,5),index = 'Land Seismic Geology Drilling Comp
 
 #### SNS
 [Back to Top](#coding)
+
 ```sns.pairplot(df,hue ='CLASS')```
 
 ![snspair](https://user-images.githubusercontent.com/62857660/155054774-39e51323-07e2-4b8a-ba6e-f6ba09dbd104.png)
