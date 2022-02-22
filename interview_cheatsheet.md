@@ -8,17 +8,29 @@
 
 *Overview of the concept from theory, statistics, machine learning model, SQL, and coding. I created this notebook to prepare for interview. Source is from everywhere from google search to class room lecture slides.*
 ### 💻 [Machine Learning](#machine-learning)
-  - #### [Supervised-vs-Unsupervised](#supervised-vs-unsupervised)
-### 🛠 [Statistics](#statistics)
-### 📊 [Coding](#coding)
-### 📋 [SQL](#sql)
-### 🧗‍♀️ [Tableau](#tableau)
+### 🔢 [Statistics](#statistics)
+### 👩‍💻 [Coding](#coding)
+### 📊 [SQL](#sql)
+### 🎨 [Tableau](#tableau)
+### 📺[Learning Video Links](#learning-video-links)
 
 
 
 
 
 ## MACHINE LEARNING
+##### [Supervised-vs-Unsupervised](#supervised-vs-unsupervised)
+##### [Missing Values](#missing-values)
+##### [Bias and Variance, Overfit and Underfit](#bias-and-variance-overfit-and-underfit)
+##### [Dimension Reduction](#dimension-reduction)
+##### [Flow](#flow)
+##### [Feature Selection](#feature-selection)
+##### [Confusion-Matrix](#confusion-matrix)
+##### [F1 Score](#f1-score)
+##### [Accuracy Score](#accuracy)
+##### [Cross Validation](#cross-validation)
+##### [KNN](#knn)
+##### [Naive Bayes](#naive-bayes)
 
 **Supervised vs Unsupervised**
 - Supervised: Input and output data are provided 
@@ -93,7 +105,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random
   - It is difficult to know which combination of hyperparameters will work best based only on theory because there are complex interactions between hyperparameters. Hence the need for hyperparameter tuning: the only way to find the optimal hyperparameter values is to try many different combinations on a dataset.
   - LightGBM library faster than scikit one
  
-- Predictions, Confusin matrix and accuracy score
+- Predictions, Confusion matrix and accuracy score
 
 - Predict on new dataset
   - ![what to do after confusion matrix](https://user-images.githubusercontent.com/62857660/155050708-70d3312a-14e2-4710-8afa-64ca4f7bb23f.jpg)
