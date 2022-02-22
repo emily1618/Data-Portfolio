@@ -346,3 +346,5 @@ sns.distplot(df['VAR1'], color='g', bins=100, hist_kws={'alpha': 0.4});
 
 ## Learning Video Links
 - Coming Soon
+
+[Back to Top](#machine-learning)
