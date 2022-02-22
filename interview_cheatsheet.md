@@ -6,7 +6,7 @@
 ##### [Tableau Dashboard] Coming Soon
 #
 
-*Overview of the concept from theory, statistics, machine learning model, SQL, and coding. I created this notebook to prepare for interview. Source is from everywhere from google search to class room lecture slides.*
+*Overview of the concept from theory, statistics, machine learning model, SQL, and coding. I created this notebook to prepare for interview. Not all concept is covered. Source is everywhere from google search to class room lecture slides.*
 ### 💻 [Machine Learning](#machine-learning)
 ### 🔢 [Statistics](#statistics)
 ### 👩‍💻 [Coding](#coding)
