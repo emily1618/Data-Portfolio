@@ -57,10 +57,10 @@ Unsupervised machine learning finds all kinds of unknown patterns in data. Also 
 #### Missing Values
 - KNN Imputer: There are different ways to handle missing data. Some methods such as removing the entire observation if it has a missing value or replacing the missing values with mean, median, or mode values. However, these methods can waste valuable data or reduce the variability of your dataset. In contrast, KNN Imputer maintains the value and variability of your datasets, and yet it is more precise and efficient than using the average values: https://medium.com/@kyawsawhtoon/a-guide-to-knn-imputation-95e2dc496e
 Needs to normalize data before applying KNN
-- Fill na: dataset['Some column']= dataset['Some column'].fillna(0)
-- Fill with mean: dataset['some column']=dataset['some column'].fillna((dataset['some column'].mean()))
-- Fill with nearby value: dataset['some column'] = dataset[‘some volumn'].fillna(method='ffill')
-- Don’t forget to df_filling_mean.fillna(value = df_filling_mean.mean(), inplace = True)
+- Fill na: `dataset['Some column']= dataset['Some column'].fillna(0)`
+- Fill with mean: `dataset['some column']=dataset['some column'].fillna((dataset['some column'].mean()))`
+- Fill with nearby value: `dataset['some column'] = dataset[‘some volumn'].fillna(method='ffill')`
+- Don’t forget to `df_filling_mean.fillna(value = df_filling_mean.mean(), inplace = True)`
 [Back to Top](#machine-learning)
 
 
