@@ -90,6 +90,7 @@ print('Test set score: {:.4f}'.format(clf.score(X_test, y_test)))```
 - 3 Extract features
   - Use domain expertise
   - Feature ranking, selection
+    - LightGBM: a gradient boosting framework that uses tree based learning algorithm.
   - Feature collinearity
     - If the features are collinear, providing the model with the same information could potentially result in model confusion. Simply drop one of the collinear inputs. If both inputs are important to understand, it is advised to train two separate models with each collinear feature
    - Removing zero-variance features
@@ -138,16 +139,8 @@ y_pred = nbModel_grid.predict(X_test)
 print(y_pred)
 ```
 
-  - LightGBM library faster than XGBoost
-     - A gradient boosting framework that uses tree based learning algorithm.
-    - Better accuracy.
-    - Capable of handling large-scale data. It is not advisable to use LGBM on small datasets. Light GBM is sensitive to overfitting and can easily overfit small data.
-    - https://www.kaggle.com/prashant111/lightgbm-classifier-in-python
 
-
-
- 
-- 9 Predictions, Confusion matrix and accuracy score
+- 9 Confusion matrix and accuracy score
 
 - 10 Predict on new dataset
   - ![what to do after confusion matrix](https://user-images.githubusercontent.com/62857660/155050708-70d3312a-14e2-4710-8afa-64ca4f7bb23f.jpg)
@@ -155,8 +148,12 @@ print(y_pred)
 
 #### Feature Selection
 [Back to Top](#machine-learning)
-![feature](https://user-images.githubusercontent.com/62857660/155051328-8c9f20ce-3beb-4fa0-88bf-940ee2fa52b1.jpg)
 
+- Better accuracy.
+- Capable of handling large-scale data. It is not advisable to use LGBM on small datasets. Light GBM is sensitive to overfitting and can easily overfit small data.
+- https://www.kaggle.com/prashant111/lightgbm-classifier-in-python
+- 
+![feature](https://user-images.githubusercontent.com/62857660/155051328-8c9f20ce-3beb-4fa0-88bf-940ee2fa52b1.jpg)
 
 `
 import lightgbm as lgb
