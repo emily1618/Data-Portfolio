@@ -4,8 +4,6 @@
 ##### Author: Emi Ly
 
 ##### Date: Feb 2022
-
-##### [Tableau Dashboard] Coming Soon
 #
 
 ### 💻 [Machine Learning](#machine-learning)
