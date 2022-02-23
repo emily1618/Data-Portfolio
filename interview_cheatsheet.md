@@ -123,7 +123,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random
 - 7 Model and pipeline
 - 8 Parameter tuning
   - It is difficult to know which combination of hyperparameters will work best based only on theory because there are complex interactions between hyperparameters. Hence the need for hyperparameter tuning: the only way to find the optimal hyperparameter values is to try many different combinations on a dataset.
-  - ```
+```
 param_grid_nb = {
   'var_smoothing': np.logspace(0,-9, num=100)
 }
@@ -137,6 +137,7 @@ print(nbModel_grid.best_estimator_)
 y_pred = nbModel_grid.predict(X_test)
 print(y_pred)
 ```
+
   - LightGBM library faster than XGBoost
      - A gradient boosting framework that uses tree based learning algorithm.
     - Better accuracy.
