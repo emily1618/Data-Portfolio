@@ -1,4 +1,6 @@
 # Interview Cheatsheet For Entry Level Data Analyst Jobs
+#### Overview of the concept from theory, statistics, machine learning model, SQL, and coding. I created this notebook to prepare for interview. Not all concept is covered. Source is everywhere from google search to class room lecture slides. I will update this constantly.
+
 ##### Author: Emi Ly
 
 ##### Date: Feb 2022
@@ -6,7 +8,6 @@
 ##### [Tableau Dashboard] Coming Soon
 #
 
-*Overview of the concept from theory, statistics, machine learning model, SQL, and coding. I created this notebook to prepare for interview. Not all concept is covered. Source is everywhere from google search to class room lecture slides. I will update this constantly.*
 ### 💻 [Machine Learning](#machine-learning)
 ### 🔢 [Statistics](#statistics)
 ### 👩‍💻 [Coding](#coding)
