@@ -300,6 +300,12 @@ pc = pca.fit_transform(X)
 ## Statistics 
 - Coming Soon
 - A/B testing
+- Variance 
+  - how spread out the dataset is
+  - we need variance to make predictions
+- Std
+  - low std, close to the mean
+  - high std, far to the mean
 
 
 ## Coding
