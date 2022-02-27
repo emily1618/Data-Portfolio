@@ -1,6 +1,6 @@
 # INTRODUCTION
 
-To begin, there are two ongoing problems for this Houston non-profit organization that raised the concern for the skateholders:
+To begin, there are two ongoing problems for this Houston non-profit organization raising concern for all skateholders including funders, the board and the public:
 
 - Decreasing enrollment for the Financial Opportunity Center, where clients come in to improve their financial means by attending financial workshop and job training.
 - Increasing public benefit assistance in the utility assistance category but lack of staffs working on cases and more detailed requirement from the funders.
