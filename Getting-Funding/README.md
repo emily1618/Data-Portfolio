@@ -29,3 +29,13 @@ We were facing problems such as:
 - Using data to predict how many staffs are needed during the busiest months.
 
 - **Even though it's a non-profit, the center will still need to run like a for-profit business to sustain. Only way is to increase enrollment so the center can increase funding. More enrollment means the center is growing and able to help the Houston community efficiently. This  will allow the center to request for additional fundings from exisiting/new funders. I will be exploring the data provided by this FOC from 2012 to 2022 to provide insights on how to increase enrollment.**
+
+# DATA CLEANING
+#### Excel
+#### Python
+#### Tableau
+![foc tableau 1](https://user-images.githubusercontent.com/62857660/155892768-6813897a-2749-4143-a6bf-67f6c5c2e399.jpg)![foc tableau 2](https://user-images.githubusercontent.com/62857660/155892776-402fa81c-6d29-4fd9-a4f1-34f717395839.jpg)![foc tableau 3](https://user-images.githubusercontent.com/62857660/155892780-c5ee532d-249f-488f-ad28-cf1925703ca2.jpg)
+
+
+
+
