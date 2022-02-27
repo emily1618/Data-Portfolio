@@ -30,9 +30,11 @@ We were facing problems such as:
 
 - **Even though it's a non-profit, the center will still need to run like a for-profit business to sustain. Only way is to increase enrollment so the center can increase funding. More enrollment means the center is growing and able to help the Houston community efficiently. This  will allow the center to request for additional fundings from exisiting/new funders. I will be exploring the data provided by this FOC from 2012 to 2022 to provide insights on how to increase enrollment.**
 
-# DATA CLEANING
+# DATA CLEANING and QUERY
 ### Excel
+### SQL
 ### Python
+
 
 # DATA VISUALIZATION
 
