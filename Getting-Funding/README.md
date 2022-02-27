@@ -1,6 +1,6 @@
 # INTRODUCTION
 
-To begin, there are two ongoing problems for this Houston non-profit organization raising concern for all skateholders including funders, the board and the public:
+To begin, there are two ongoing problems for this Houston non-profit organization raising concern for all skateholders including funders, the board, and the public:
 
 - Decreasing enrollment for the Financial Opportunity Center, where clients come in to improve their financial means by attending financial workshop and job training.
 - Increasing public benefit assistance in the utility assistance category but lack of staffs working on cases and more detailed requirement from the funders.
@@ -24,6 +24,5 @@ We were facing problems such as:
 - I also secured **100%** funding from another source for two years without annual contract renewal (which is typically require to submit RFP and renew each year based on performance).
 
 ### What I will do:
-- I will be exploring the data provided by this FOC from 2012 to 2022 to provide insights on how to increase enrollment. 
 - Using data to predict how many staffs are needed during the busiest months.
-- Using data to check demographic and trends to increase revenue for FOC.
+- **Even though it's a non-profit, the center will still need to run like a for-profit business to sustain. Only way is to increase enrollment so the center can increase funding. Additional enrollment shows the center is expanding and able to help the Houston community efficiently. This  will allow the center to seek additional fundings from exisiting or new funders. I will be exploring the data provided by this FOC from 2012 to 2022 to provide insights on how to increase enrollment.**
