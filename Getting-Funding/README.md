@@ -34,7 +34,10 @@ We were facing problems such as:
 #### Excel
 #### Python
 #### Tableau
-![foc tableau 1](https://user-images.githubusercontent.com/62857660/155892768-6813897a-2749-4143-a6bf-67f6c5c2e399.jpg)![foc tableau 2](https://user-images.githubusercontent.com/62857660/155892776-402fa81c-6d29-4fd9-a4f1-34f717395839.jpg)![foc tableau 3](https://user-images.githubusercontent.com/62857660/155892780-c5ee532d-249f-488f-ad28-cf1925703ca2.jpg)
+
+![foc tableau 1](https://user-images.githubusercontent.com/62857660/155892862-d54135e9-b85e-4e14-8b35-afd8580d43f2.jpg)![foc tableau 2](https://user-images.githubusercontent.com/62857660/155892866-dfdc6cb5-8a18-49b0-b5db-1b7e86e9759e.jpg)![foc tableau 3](https://user-images.githubusercontent.com/62857660/155892869-82cef871-8548-4eb5-bf2f-14ef51fbf019.jpg)
+
+
 
 
 
