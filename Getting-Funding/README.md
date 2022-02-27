@@ -20,7 +20,9 @@ We were facing problems such as:
 
 ### What I completed :
 ✅ I replaced the system from a 10 years old paper system/storage into eletronic version including online application and online scheduling. The data is stored in the cloud and is udpated automatically instead of manually typing in every week into Access. Report can be downloaded and generated under minutes.
+
 ✅ Using data insight and visualization, I negotiated an new contract with the funder, increasing pay per application by **100%** for the utility assistance program. 
+
 ✅ I also secured **100%** funding from another source for two years without annual contract renewal (which is typically require to submit RFP and renew each year based on performance).
 
 ### What I will do:
