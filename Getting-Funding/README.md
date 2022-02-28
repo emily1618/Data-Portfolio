@@ -9,7 +9,7 @@
 ### [Excel](#excel-cleaning)
 ### [SQL](#sql-query)
 ### [Python](#python-eda)
-### [Viz](#viz)
+### [Viz](#viz-in-tableau)
 
 #
 
@@ -77,19 +77,19 @@ The dataset is first cleaned in Excel including but not limited to the following
 
 Using `describe()` in Python, I run into more issue with the numerical data so the dataset needs to be examine and clean further in Excel. 
 
-#
+
 ## SQL QUERY
 
 - Updating
 
-#
+
 ## Python EDA
 
 ##### Increase Funding For CEAP notebook- https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/ceap.ipynb
 ##### Increase Enrollment for FOC notebook- https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/foc%20-%20ongoing.ipynb - Ongoing
 
-#
-## Viz
+
+## Viz iin Tableau
 
 #### Using Data To Increase Enrollment
 
