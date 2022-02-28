@@ -30,41 +30,51 @@ We were facing problems such as:
 
 - **Even though it's a non-profit, the center will still need to run like a for-profit business to sustain. Only way is to increase enrollment so the center can increase funding. More enrollment means the center is growing and able to help the Houston community efficiently. This  will allow the center to request for additional fundings from exisiting/new funders. I will be exploring the data provided by this FOC from 2012 to 2022 to provide insights on how to increase enrollment.**
 
-# DATA CLEANING and QUERY
+### DATA
+Because the dataset contains real client names and information. This notebook is public, hence some of the code are commented out so no df containing the client name will be printed.
+![Capture](https://user-images.githubusercontent.com/62857660/156033093-aa8462b4-7eca-4aab-9460-2e4a98549c73.jpg)
+
+
 ### Excel
 
-- The dataset is first cleaned in Excel including but not limited to the following:
+The dataset is first cleaned in Excel including but not limited to the following:
 - birthday data type
 - birthday entered wrong (eg: 1/1/5674, 12-5/1968, 123/2/1970)
 - birthday not completed
 - using letter O instead of number 0 in dates
-- spell out birthday month
+- spell out birthday month (eg: August, 30,)
 - numerical currency data that's written out (eg: $300/month, 500 job + $400 ssi)
+- currency having . and , in wrong places (eg: 6.66.7, 134,05)
 - number stored as object or the number is stored as text (use `=VALUE()`) to convert back. Use `=IF(AK2="","",VALUE(AK2))` to convert to float number in excel if containing NaN in rows.
 - extremely high monthly income
 - negative birthday
 - negative income
-- find all and replace to fix spelling in the utility company columns
+- find all and replace to fix spelling in the utility company columns to keep it consistent (eg: V24/7, v 247, V247 company)
 - turn name into cap for first letter using `=PROPER`
 - grab the year off birthday using `=TEXT(cell, "yyyy")`
 - use `=LEFT()` or `=RIGHT()` to grab the specific number for household size-long
+- use text to column to fix values
 
 Using `describe()` in Python, I run into more issue with the numerical data so the dataset needs to be examine and clean further in Excel. 
 
 
 ### SQL
 
+- Updating
+
 
 ### Python
 
+- 
 
-# DATA VISUALIZATION
+
+# Viz: Using Data To Increase Enrollment
 
 🎨[Click Here For Tabealu Public Viz: Using Data To Increase FOC Enrollment](https://public.tableau.com/app/profile/emily.liang7497/viz/IncreaseMemberEnrollmentUsingData/Dashboard1?publish=yes)
 
 ![foc tableau 1](https://user-images.githubusercontent.com/62857660/155892915-05e6715a-b578-453e-8df6-2ff8829c2a94.jpg)![foc tableau 2](https://user-images.githubusercontent.com/62857660/155892917-2dcf8192-2a26-4cab-9231-8d9c3ccf6ecd.jpg)![foc tableau 3](https://user-images.githubusercontent.com/62857660/155892919-7eac5787-699b-44ae-b371-ddcaea1dd40b.jpg)
 
-
+# Viz: Using Data to Increase Funding
 
 
 
