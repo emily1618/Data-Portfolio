@@ -5,11 +5,11 @@
 ##### Date: Feb 28, 2022
 
 ### [Intro](#introduction)
-### [Data](#data)
-### [Excel](#excel)
-### [SQL](#sql)
-### [Python](#python)
-### [Viz](#viz)
+### [Data](#dataset)
+### [Excel](#excel-cleaning)
+### [SQL](#sql-query)
+### [Python](#python-eda)
+### [Viz](#tableau-viz)
 
 #
 
@@ -48,7 +48,7 @@ We were facing problems such as:
 
 #
 
-## Data
+## DATASET
 
 There will be **two** dataset. One is FOC client enrollment data and one is CEAP utility assistant client data from 2021. Each dataset will be analyzed seperately. 
 
@@ -56,7 +56,7 @@ There will be **two** dataset. One is FOC client enrollment data and one is CEAP
 ![Capture](https://user-images.githubusercontent.com/62857660/156033093-aa8462b4-7eca-4aab-9460-2e4a98549c73.jpg)
 
 
-## EXCEL
+## EXCEL CLEANING
 
 The dataset is first cleaned in Excel including but not limited to the following:
 - birthday data type
@@ -79,18 +79,18 @@ The dataset is first cleaned in Excel including but not limited to the following
 Using `describe()` in Python, I run into more issue with the numerical data so the dataset needs to be examine and clean further in Excel. 
 
 
-## SQL
+## SQL QUERY
 
 - Updating
 
 
-## Python
+## Python EDA
 
 ##### Increase Funding For CEAP notebook- https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/ceap.ipynb
 ##### Increase Enrollment for FOC notebook- https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/foc%20-%20ongoing.ipynb - Ongoing
 
 
-## Viz
+## Tableau Viz
 
 #### Using Data To Increase Enrollment
 
