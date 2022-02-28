@@ -410,6 +410,27 @@ sns.distplot(df['VAR1'], color='g', bins=100, hist_kws={'alpha': 0.4});
 
 ![displot](https://user-images.githubusercontent.com/62857660/155054804-18a72861-60cf-4996-965d-a047cb210de8.jpg)
 
+```
+fig = plt.figure(figsize=(10,4))
+
+ax1 = fig.add_subplot(121)
+ax1.hist(df['Birth Year'], bins=20, color='g')
+ax1.set_title('hits x users histogram')
+
+dfxx = df['Birth Year'].describe().to_frame().round(2)
+
+ax2 = fig.add_subplot(122)
+font_size=12
+bbox=[0, 0, 1, 1]
+ax2.axis('off')
+mpl_table = ax2.table(cellText = dfxx.values, rowLabels = dfxx.index, bbox=bbox, colLabels=dfxx.columns)
+mpl_table.auto_set_font_size(False)
+mpl_table.set_fontsize(font_size)
+```
+![download](https://user-images.githubusercontent.com/62857660/155908924-943d26f0-f03e-49d2-9a5f-85653052f72f.png)
+
+
+
 - SNS heatmap
 ```sns.heatmap(corr[(corr >= 0.01) | (corr <= -0.01)], 
  cmap='viridis', vmax=1.0, vmin=-1.0, linewidths=0.1,
