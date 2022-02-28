@@ -4,7 +4,7 @@ To begin, there are two ongoing problems for this Houston non-profit organizatio
 
 ➡ Decreasing enrollment for the Financial Opportunity Center, where clients come in to improve their financial means by attending financial workshop and job training.
 
-➡ Increasing need for families around the center to get utility assistance, but lack of manpower working on the cases and applications take longer time to process due to more strict funder requirement.
+➡ Increasing need for families around the center to get utility assistance, but lack of manpower working on the cases and applications take longer time to process due stricter funder requirement.
 
 The center's FOC is funded by few major non-profit organizations in the Greater Houston area. One of them, United Way, is to create the opportunity for individuals and families in the Greater Houston community to thrive. United Way will focus on and invest in high-quality programs focused on serving ALICE (Asset Limited, Income Constrained, Employed) and those living below the Federal Poverty Level.  One of the programs, the Financial Opportunity Center (FOC) is a career and personal financial service center that focus on the financial bottom line for the ALICE population. FOC provides families with services across three areas:
 
