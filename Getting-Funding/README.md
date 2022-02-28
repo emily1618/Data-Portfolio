@@ -1,4 +1,18 @@
+# Use Data Insight to Increase Funding and Enrollment For a Houston Non-Profit
+
+##### Author: Emi Ly
+
+##### Date: Feb 28, 2022
+
+#
+
 # INTRODUCTION
+
+### 📊 [Data](#data)
+### 🌦 [Excel](#excel)
+### 💯 [SQL](#sql)
+### 🌟 [Python](#python)
+### Viz[Viz](#viz)
 
 To begin, there are two ongoing problems for this Houston non-profit organization raising concern for all skate holders including funders, the board, and the public:
 
@@ -75,13 +89,15 @@ Using `describe()` in Python, I run into more issue with the numerical data so t
 ##### Increase Enrollment for FOC notebook- https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/foc%20-%20ongoing.ipynb - Ongoing
 
 
-# Viz: Using Data To Increase Enrollment
+# Viz
+
+#### Using Data To Increase Enrollment
 
 🎨[Click Here For Tabealu Public Viz: Using Data To Increase FOC Enrollment](https://public.tableau.com/app/profile/emily.liang7497/viz/IncreaseMemberEnrollmentUsingData/Dashboard1?publish=yes)
 
 ![foc tableau 1](https://user-images.githubusercontent.com/62857660/155892915-05e6715a-b578-453e-8df6-2ff8829c2a94.jpg)![foc tableau 2](https://user-images.githubusercontent.com/62857660/155892917-2dcf8192-2a26-4cab-9231-8d9c3ccf6ecd.jpg)![foc tableau 3](https://user-images.githubusercontent.com/62857660/155892919-7eac5787-699b-44ae-b371-ddcaea1dd40b.jpg)
 
-# Viz: Using Data to Increase Funding
+#### Using Data to Increase Funding
 
 
 
