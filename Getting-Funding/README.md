@@ -13,7 +13,7 @@
 
 #
 
-## INTRODUCTION
+## 1.INTRODUCTION
 
 To begin, there are two ongoing problems for this Houston non-profit organization raising concern for all skate holders including funders, the board, and the public:
 
@@ -56,7 +56,7 @@ There will be **two** dataset. One is FOC client enrollment data and one is CEAP
 ![Capture](https://user-images.githubusercontent.com/62857660/156033093-aa8462b4-7eca-4aab-9460-2e4a98549c73.jpg)
 
 
-## Excel
+## EXCEL
 
 The dataset is first cleaned in Excel including but not limited to the following:
 - birthday data type
