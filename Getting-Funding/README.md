@@ -12,7 +12,7 @@ The center's FOC is funded by few major non-profit organizations in the Greater 
 2. Financial Education and Coaching
 3. Public Benefits Access
 
-For some times, our center's FOC has been struggling with decreasing enrollment, especially in 1 and 2 above. Under 3. Public Benefits Access, one of the primary sub-programs is LIHEAP, which helps pay 12 months of electricity and gas for lower income families. With global rising temperature (especially in TX!) and increased energy cost to cool the homes, this is necessary and popular benefit program in the Houston.
+For some times, our center's FOC has been struggling with decreasing enrollment, especially in 1 and 2 above. Under 3. Public Benefits Access, one of the primary sub-programs is CEAP, which helps pay 12 months of electricity and gas for lower income families. With global rising temperature (especially in TX!) and increased energy cost to cool the homes, this is necessary and popular benefit program in the Houston.
 
 We were facing problems such as:
 - Not enough staffs during the busy season to handle the number of clients and process the applications. 
