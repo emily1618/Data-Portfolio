@@ -463,6 +463,9 @@ for i in num_col:
 - Coming Soon
 
 ## SQL
+- VLOOKUP always start with the left most column, using INDEX and MATCH isntead
+- `VLOOKUP(value to look for, range to look in, column number of the value to return, apprximate or exact match [TRUE/FALSE])`
+- `=INDEX(array or reference, MATCH(value to look up,lookup_array,[match_type]) `
 - `=VLOOKUP(A17,C2:H14,4,FALSE)` will have the same result as `=INDEX(F2:F14, MATCH(A17,C2:C14,0))`
 ![Capture](https://user-images.githubusercontent.com/62857660/156065004-5b03b355-d079-4fdb-ada0-72b83fae1d2a.JPG)
 
