@@ -5,7 +5,7 @@
 ##### Date: Feb 28, 2022
 
 ### [Intro](#introduction)
-### [Data](#data-source)
+### [Data](#data)
 ### [Excel](#excel)
 ### [SQL](#sql)
 ### [Python](#python)
@@ -13,7 +13,7 @@
 
 #
 
-## 1.INTRODUCTION
+## INTRODUCTION
 
 To begin, there are two ongoing problems for this Houston non-profit organization raising concern for all skate holders including funders, the board, and the public:
 
@@ -48,7 +48,7 @@ We were facing problems such as:
 
 #
 
-## Data Source
+## Data
 
 There will be **two** dataset. One is FOC client enrollment data and one is CEAP utility assistant client data from 2021. Each dataset will be analyzed seperately. 
 
