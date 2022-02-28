@@ -74,6 +74,7 @@ The dataset is first cleaned in Excel including but not limited to the following
 - grab the year off birthday using `=TEXT(cell, "yyyy")`
 - use `=LEFT()` or `=RIGHT()` to grab the specific number for household size-long
 - use text to column to fix values
+- `=DOLLAR()` to convert currency if needed
 
 Using `describe()` in Python, I run into more issue with the numerical data so the dataset needs to be examine and clean further in Excel. 
 
