@@ -72,7 +72,7 @@ Using `describe()` in Python, I run into more issue with the numerical data so t
 ### Python
 
 - [Increase Funding For CEAP notebook:](https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/ceap.ipynb)
-- [Increase Enrollment for FOC notebook:](https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/foc%20-%20ongoing.ipynb)
+# [Increase Enrollment for FOC notebook:](https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/foc%20-%20ongoing.ipynb)
 
 
 # Viz: Using Data To Increase Enrollment
