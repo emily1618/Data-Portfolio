@@ -4,15 +4,16 @@
 
 ##### Date: Feb 28, 2022
 
+### [Intro](#introduction)
+### [Data](#data)
+### [Excel](#excel)
+### [SQL](#sql)
+### [Python](#python)
+### [Viz](#viz)
+
 #
 
-# INTRODUCTION
-
-### 📊 [Data](#data)
-### 🌦 [Excel](#excel)
-### 💯 [SQL](#sql)
-### 🌟 [Python](#python)
-### Viz[Viz](#viz)
+## INTRODUCTION
 
 To begin, there are two ongoing problems for this Houston non-profit organization raising concern for all skate holders including funders, the board, and the public:
 
@@ -47,7 +48,7 @@ We were facing problems such as:
 
 #
 
-### DATA
+## DATA
 
 There will be **two** dataset. One is FOC client enrollment data and one is CEAP utility assistant client data from 2021. Each dataset will be analyzed seperately. 
 
@@ -55,7 +56,7 @@ There will be **two** dataset. One is FOC client enrollment data and one is CEAP
 ![Capture](https://user-images.githubusercontent.com/62857660/156033093-aa8462b4-7eca-4aab-9460-2e4a98549c73.jpg)
 
 
-### Excel
+## Excel
 
 The dataset is first cleaned in Excel including but not limited to the following:
 - birthday data type
@@ -78,18 +79,18 @@ The dataset is first cleaned in Excel including but not limited to the following
 Using `describe()` in Python, I run into more issue with the numerical data so the dataset needs to be examine and clean further in Excel. 
 
 
-### SQL
+## SQL
 
 - Updating
 
 
-### Python
+## Python
 
 ##### Increase Funding For CEAP notebook- https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/ceap.ipynb
 ##### Increase Enrollment for FOC notebook- https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/foc%20-%20ongoing.ipynb - Ongoing
 
 
-# Viz
+## Viz
 
 #### Using Data To Increase Enrollment
 
