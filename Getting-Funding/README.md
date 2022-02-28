@@ -9,7 +9,7 @@
 ### [Excel](#excel-cleaning)
 ### [SQL](#sql-query)
 ### [Python](#python-eda)
-### [Viz](#tableau-viz)
+### [Viz](#viz)
 
 #
 
@@ -47,7 +47,6 @@ We were facing problems such as:
 - **Even though it's a non-profit, the center will still need to run like a for-profit business to sustain. Only way is to increase enrollment so the center can increase funding. More enrollment means the center is growing and able to help the Houston community efficiently. This  will allow the center to request for additional funding from existing/new funders. I will be exploring the data provided by this FOC from 2012 to 2022 to provide insights on how to increase enrollment.**
 
 #
-
 ## DATASET
 
 There will be **two** dataset. One is FOC client enrollment data and one is CEAP utility assistant client data from 2021. Each dataset will be analyzed seperately. 
@@ -55,7 +54,7 @@ There will be **two** dataset. One is FOC client enrollment data and one is CEAP
 🚫 Because the dataset contains real client names and information. This notebook is public, hence some of the code are commented out so no df containing the client name will be printed. Snippet of CEAP dataset:
 ![Capture](https://user-images.githubusercontent.com/62857660/156033093-aa8462b4-7eca-4aab-9460-2e4a98549c73.jpg)
 
-
+#
 ## EXCEL CLEANING
 
 The dataset is first cleaned in Excel including but not limited to the following:
@@ -78,19 +77,19 @@ The dataset is first cleaned in Excel including but not limited to the following
 
 Using `describe()` in Python, I run into more issue with the numerical data so the dataset needs to be examine and clean further in Excel. 
 
-
+#
 ## SQL QUERY
 
 - Updating
 
-
+#
 ## Python EDA
 
 ##### Increase Funding For CEAP notebook- https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/ceap.ipynb
 ##### Increase Enrollment for FOC notebook- https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/foc%20-%20ongoing.ipynb - Ongoing
 
-
-## Tableau Viz
+#
+## Viz
 
 #### Using Data To Increase Enrollment
 
