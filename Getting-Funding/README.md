@@ -37,15 +37,17 @@ We were facing problems such as:
 - birthday data type
 - birthday entered wrong (eg: 1/1/5674, 12-5/1968, 123/2/1970)
 - birthday not completed
+- using letter O instead of number 0 in dates
 - spell out birthday month
-- number stored as object or the number is stored as text (use =value()) to convert back. Use =IF(AK2="","",VALUE(AK2)) to convert to float number in excel if containing NaN in rows.
+- numerical currency data that's written out (eg: $300/month, 500 job + $400 ssi)
+- number stored as object or the number is stored as text (use `=VALUE()`) to convert back. Use `=IF(AK2="","",VALUE(AK2))` to convert to float number in excel if containing NaN in rows.
 - extremely high monthly income
 - negative birthday
 - negative income
 - find all and replace to fix spelling in the utility company columns
-- turn name into cap for first letter using =proper
-- grab the year off birthday using =TEXT(cell, "yyyy")
-- use =LEFT() or =RIGHT() to grab the specific number for household size-long
+- turn name into cap for first letter using `=PROPER`
+- grab the year off birthday using `=TEXT(cell, "yyyy")`
+- use `=LEFT()` or `=RIGHT()` to grab the specific number for household size-long
 
 Using `describe()` in Python, I run into more issue with the numerical data so the dataset needs to be examine and clean further in Excel. 
 
