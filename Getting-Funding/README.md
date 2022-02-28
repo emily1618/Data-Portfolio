@@ -1,4 +1,4 @@
-# Use Data Insight to Increase Funding and Enrollment For a Houston Non-Profit
+# Increase Funding and Enrollment For a Houston Non-Profit
 
 ##### Author: Emi Ly
 
