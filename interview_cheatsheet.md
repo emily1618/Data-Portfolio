@@ -418,6 +418,21 @@ sns.distplot(df['VAR1'], color='g', bins=100, hist_kws={'alpha': 0.4});
 
 ![heatmap](https://user-images.githubusercontent.com/62857660/155054824-69356c18-ea92-4ff4-ac04-899b591d5e66.png)
 
+- SNS for df.describe()
+```
+num_col = df._get_numeric_data().columns
+
+describe_num_df = df.describe(include=['int64','float64'])
+describe_num_df.reset_index(inplace=True)
+# To remove any variable from plot
+describe_num_df = describe_num_df[describe_num_df['index'] != 'count']
+for i in num_col:
+  if i in ['index']:
+    continue
+  sns.factorplot(x='index', y=i, data=describe_num_df, figsize=(25, 10))
+  plt.show()
+```
+
 ## Coding
 - Coming Soon
 
