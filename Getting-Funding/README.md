@@ -4,7 +4,7 @@
 
 ##### Date: Feb 28, 2022
 
-### [Intro](#1-introduction)
+### [1.Intro](#1-introduction)
 ### [Data](#2-data)
 ### [Excel](#excel)
 ### [SQL](#sql)
@@ -48,7 +48,7 @@ We were facing problems such as:
 
 #
 
-## 2.DATA
+## 2.Data
 
 There will be **two** dataset. One is FOC client enrollment data and one is CEAP utility assistant client data from 2021. Each dataset will be analyzed seperately. 
 
