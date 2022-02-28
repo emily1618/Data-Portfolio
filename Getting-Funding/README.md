@@ -9,7 +9,7 @@
 ### [Excel](#excel-cleaning)
 ### [SQL](#sql-query)
 ### [Python](#python-eda)
-### [Presentation](#presentation)
+### [Presentation](#presentation-viz)
 
 #
 
@@ -89,7 +89,7 @@ Using `describe()` in Python, I run into more issue with the numerical data so t
 ##### Increase Enrollment for FOC notebook- https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/foc%20-%20ongoing.ipynb - Ongoing
 
 
-## Presentation
+## Presentation Viz
 
 #### Using Data To Increase Enrollment 🎨[Click Here For Tabealu Public Viz: Using Data To Increase FOC Enrollment](https://public.tableau.com/app/profile/emily.liang7497/viz/IncreaseMemberEnrollmentUsingData/Dashboard1?publish=yes)
 
