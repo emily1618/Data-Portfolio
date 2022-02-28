@@ -371,10 +371,10 @@ life_cycle = pd.DataFrame(randn(8,5),index = 'Land Seismic Geology Drilling Comp
 
 ![list out column name](https://user-images.githubusercontent.com/62857660/155054706-5a0bccd3-c27e-41f1-9928-ad83a4f32fa9.jpg)
 
-- If this drop is going to be permanent, please make sure to include `inplace = True`. To drop rows, use axis = 0 (which is the default in Python’s pandas) and to drop columns, use axis = 1 .
+If this drop is going to be permanent, please make sure to include `inplace = True`. To drop rows, use axis = 0 (which is the default in Python’s pandas) and to drop columns, use axis = 1 .
 ```life_cycle.drop(labels = ['Cycle_Total','Cycle_1_2_Mult'], axis=1, inplace=True)```
 
-- Sum numbers in column and skip the NaN
+Sum numbers in column and skip the NaN
 ```
 df["sum_a_and_b"] = df[["a", "b"]].sum(axis=1)
 ```
@@ -383,17 +383,17 @@ df["sum_a_and_b"] = df[["a", "b"]].sum(axis=1)
 #### Loc vs iloc
 [Back to Top](#coding)
 
-- loc is label based
-- iloc is index based
+loc is label based
+iloc is index based
 
 ![loc iloc](https://user-images.githubusercontent.com/62857660/155054577-708bbdce-0b1c-4e69-8768-70374ec3552f.png)
 
 
-- loc:
+loc:
 
 ![loc](https://user-images.githubusercontent.com/62857660/155054621-b8b67eb6-1d91-474b-8f6f-7a7bd3fbf690.png)
 
-- iloc:
+iloc:
 ```matrix.iloc[[0,2,4],[0,2,4]]```
 
 ![iloc](https://user-images.githubusercontent.com/62857660/155054741-624ee0ba-d287-4542-b669-51c845928858.jpg)
