@@ -9,7 +9,7 @@
 ### 💻 [Machine Learning](#machine-learning)
 ### 🔢 [Statistics](#statistics)
 ### 👩‍💻 [Coding](#coding)
-### 📊 [SQL](#sql)
+### 📊 [SQL and Excel](#sql)
 ### 🎨 [Tableau](#tableau)
 ### 📺 [Business](#business)
 
@@ -463,7 +463,8 @@ for i in num_col:
 - Coming Soon
 
 ## SQL
-- Coming Soon
+- `=VLOOKUP(A17,C2:H14,4,FALSE)` will have the same result as `=INDEX(F2:F14, MATCH(A17,C2:C14,0))`
+![Capture](https://user-images.githubusercontent.com/62857660/156064889-1f248434-49e4-4c94-a9d0-007cd9f13160.JPG)
 
 ## Tableau 
 - Coming Soon
