@@ -64,17 +64,27 @@ We were facing problems such as:
 There will be **two** dataset. One is FOC client enrollment data from 2012 to 2022 and one is CEAP utility assistant client data from 2020 to 2021. Each dataset will be analyzed seperately. 
 
 **FOC DATASET:**
+
 Accuracy: data is accurate because the center verified client information with their ID. For each training/consulation, the staff will need to make a record to be counted for. 
+
 Relevancy: data is revelant because there are paperwork,document, and credit check to verify client information.
+
 Completeness: data is not complete, there many missing data which need further investigation.
+
 Timeliness: data is up to date.
+
 Consistency:the data is consistent. Data is enter through Salesforce platform. The platform should have consistent format. 
 
 **CEAP DATASET:**
+
 Accuracy: data is accurate because the center verified client information with their ID and proper income documents. For each application, the staff will need to make a record to be counted for credit. 
+
 Relevancy: data is revelant because there are paperwork, document, and credit check to verify client information for the intend use of giving them utility assistance.
+
 Completeness: there is minimal missing data, less than 2.5%.
+
 Timeliness: data is up to date.
+
 Consistency:the data is consistent after some format cleaning in excel and python. 
 
 🚫 Because the dataset contains real client names and information. This notebook is public, hence some of the code are commented out so no df containing the client name will be printed. Snippet of CEAP dataset:
