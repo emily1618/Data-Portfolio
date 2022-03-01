@@ -33,18 +33,23 @@ We were facing problems such as:
 - Not enough staffs during the busy season to handle the number of clients and process the applications. 
 - The organization also is using an outdated system that was in place 7+ years ago. 
 
-### FOC Problem Notes and Metrics :
+### Break down of FOC problem:
 - Enrollment is counted when a client successfully completed an zoom or in-person orientation, a soft credit check, and signed paperwork.
 - There is specific time frame, but generally, the center would like the client to complete all consultation, training, exit with a job OR improving credit score within 6  months to one year.
 - Decreasing enrollment started drastically falling since 2017. 2016 is the high. 
 - The other departments in the center also have experiencing decline in enrollment (eg: child care center), but not as steep of a decline as FOC. FOC also received the most fundings out of all other departments. 
-- The average age of FOC enrollment is the 40 group and there is a slight decrease in age throughout the year. Need to check race demographic data later. revleanc
-- 
+- The average age of FOC enrollment is the 40 group and there is a slight decrease in age throughout the year. Need to check race demographic data later. 
+- There are few possible causes. One may be the center to outreaching to the wrong group of clients. Second, the quality and number of job taining classes (need further analysis on the quality and outcome of the classes), and maybe there is less of ALICE population around the center (need data to support this claim). 
+- Metric is user enrollment and successful exit. Successful exit is defined by client improved their credit score, completion of the a job training, and landing a job relvant to the training. 
+- Outreach idea to increase enrollment and launching the ideas. What are the cost of outreach and manpower requirement? How much of a percentage increase in enrollment we want to see based on the budget? 
 
 
-
-### CEAP Notes:
-- 
+### Break down of CEAP problem:
+- Metric is pay per application and staff hours needed to complete application. 
+- The funding is pay per application. The more the application the center can complete, the higher the revenue. The revenue is capped at a maximum of 2000 applications per year but potential to amend the contract for higher amount is very possible (confirmed by funder and they would like the center to do more applications). 
+- If the center is able to process application efficiently in a timely manner, then the staff can outreach more to gain more client for more applications for more pay per application
+- Measure of success, increase pay per application and reduce staff hours needed to complete application or hire additional staffs should processing time stay the same. 
+- what are the cost and manpower requirement? How many applications we need to complete to justify hiring an additional staff even with the rate increased? Maybe using season data entry. 
 
 ### What I completed :
 ✔ I replaced the system from a 10 years old paper system/storage into electronic version including online application and online scheduling. The data is stored in the cloud and is updated automatically instead of manually typing in every week into Access. Report can be downloaded and generated under minutes.
