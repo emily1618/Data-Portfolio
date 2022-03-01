@@ -33,6 +33,18 @@ We were facing problems such as:
 - Not enough staffs during the busy season to handle the number of clients and process the applications. 
 - The organization also is using an outdated system that was in place 7+ years ago. 
 
+### FOC Problem Notes and Metrics :
+- Enrollment is counted when a client successfully completed an zoom or in-person orientation, a soft credit check, and signed paperwork.
+- There is specific time frame, but generally, the center would like the client to complete all consultation, training, exit with a job OR improving credit score within 6  months to one year.
+- Decreasing enrollment started drastically falling since 2017. 2016 is the high. 
+- The other departments in the center also have experiencing decline in enrollment (eg: child care center), but not as steep of a decline as FOC. FOC also received the most fundings out of all other departments. 
+- The average age of FOC enrollment is the 40 group and there is a slight decrease in age throughout the year. Need to check race demographic data later. revleanc
+- 
+
+
+
+### CEAP Notes:
+- 
 
 ### What I completed :
 ✔ I replaced the system from a 10 years old paper system/storage into electronic version including online application and online scheduling. The data is stored in the cloud and is updated automatically instead of manually typing in every week into Access. Report can be downloaded and generated under minutes.
@@ -49,10 +61,26 @@ We were facing problems such as:
 #
 ## DATASET
 
-There will be **two** dataset. One is FOC client enrollment data and one is CEAP utility assistant client data from 2021. Each dataset will be analyzed seperately. 
+There will be **two** dataset. One is FOC client enrollment data from 2012 to 2022 and one is CEAP utility assistant client data from 2020 to 2021. Each dataset will be analyzed seperately. 
+
+**FOC DATASET:**
+Accuracy: data is accurate because the center verified client information with their ID. For each training/consulation, the staff will need to make a record to be counted for. 
+Relevancy: data is revelant because there are paperwork,document, and credit check to verify client information.
+Completeness: data is not complete, there many missing data which need further investigation.
+Timeliness: data is up to date.
+Consistency:the data is consistent. Data is enter through Salesforce platform. The platform should have consistent format. 
+
+**CEAP DATASET:**
+Accuracy: data is accurate because the center verified client information with their ID and proper income documents. For each application, the staff will need to make a record to be counted for credit. 
+Relevancy: data is revelant because there are paperwork, document, and credit check to verify client information for the intend use of giving them utility assistance.
+Completeness: there is minimal missing data, less than 2.5%.
+Timeliness: data is up to date.
+Consistency:the data is consistent after some format cleaning in excel and python. 
 
 🚫 Because the dataset contains real client names and information. This notebook is public, hence some of the code are commented out so no df containing the client name will be printed. Snippet of CEAP dataset:
 ![Capture](https://user-images.githubusercontent.com/62857660/156033093-aa8462b4-7eca-4aab-9460-2e4a98549c73.jpg)
+
+
 
 #
 ## EXCEL CLEANING
