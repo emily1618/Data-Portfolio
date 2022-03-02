@@ -76,6 +76,8 @@ Under fit
 
 print('Test set score: {:.4f}'.format(clf.score(X_test, y_test)))```
   - ![fit](https://user-images.githubusercontent.com/62857660/155050192-fa6ff06c-5271-43a9-8054-cdb5464b0404.jpg)
+ 
+ - This is an example of the bias - variance tradeoff in machine learning. A model with high variance has learned the training data very well but often cannot generalize to new points in the test set. On the other hand, a model with high bias has not learned the training data very well because it does not have enough complexity. This model will also not perform well on new points.
 
 
 #### Dimension Reduction
@@ -295,6 +297,9 @@ pca = PCA(n_components=3)
 
 pc = pca.fit_transform(X)
 ```
+
+#### Random Forest
+Limiting the depth of a single decision tree is one way we can try to make a less biased model. Another option is to use an entire forest of trees, training each one on a random subsample of the training data. The final model then takes an average of all the individual decision trees to arrive at a classification. This is the idea behind the random forest.
 
 
 ## Statistics 
