@@ -476,6 +476,7 @@ for i in num_col:
 - `=VLOOKUP(A17,C2:H14,4,FALSE)` will have the same result as `=INDEX(F2:F14, MATCH(A17,C2:C14,0))`
 ![Capture](https://user-images.githubusercontent.com/62857660/156065004-5b03b355-d079-4fdb-ada0-72b83fae1d2a.JPG)
 - Get random date and time in a range '=RANDBETWEEN(DATE(2020,1,1),DATE(2020,12,31))+RANDBETWEEN(TIME(9,0,0)*10000,TIME(23,0,0)*10000)/10000'
+- Get random text `=CHOOSE(RANDBETWEEN(1,3),"Value1","Value2","Value3")`
 
 
 ## Tableau 
