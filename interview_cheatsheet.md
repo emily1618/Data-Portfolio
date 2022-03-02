@@ -45,6 +45,8 @@
 
 [PCA](#pca)
 
+[Random Forest](#random-forest)
+
 #### Supervised vs Unsupervised
 - Supervised: Input and output data are provided 
   - A supervised learning model produces an accurate result. It allows you to collect data or produce a data output from the previous experience. The drawback of this model is that decision boundaries might be overstrained if your training set doesn't have examples that you want to have in a class.
