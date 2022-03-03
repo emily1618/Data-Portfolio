@@ -19,9 +19,17 @@
 
 
 ## MACHINE LEARNING
+An application of Artificial Intelligence wherein the systems get the ability to automatically learn and improve based on experience (past data) 
+- Classification. yes or no
+  - naive bayyes, logistic regression - for simpler data
+  - decision tree, random forest - for complicated data. large data use random forest
+- Regression. predict price
+- Clustering. product recommendation
+- Source:https://www.youtube.com/watch?v=RmajweUFKvM
+
 [Supervised-vs-Unsupervised](#supervised-vs-unsupervised)
 
-[Resampling](#resampling)
+[Entropy and Resampling](#resampling)
 
 [Missing Values](#missing-values)
 
@@ -49,16 +57,22 @@
 
 [Random Forest](#random-forest)
 
+[Decision Tree](#decision-tree)
+
 #### Supervised vs Unsupervised
 - Supervised: Input and output data are provided 
-  - A supervised learning model produces an accurate result. It allows you to collect data or produce a data output from the previous experience. The drawback of this model is that decision boundaries might be overstrained if your training set doesn't have examples that you want to have in a class.
-- Unsupervised: Input data are provided
+  - A supervised learning model produces an accurate result. It allows you to collect data or produce a data output from the previous experience. The drawback of this model is that decision boundaries might be overstrained if your training set doesn't have examples that you want to have in a class. Usage: bank loan approval
+- Unsupervised: Input data are provided. Group like things togehter:
   - In the case of images and videos, unsupervised algorithms can rapidly classify and cluster data using far fewer features than humans might specify, making data processing even faster and more efficient.
 Unsupervised machine learning finds all kinds of unknown patterns in data. Also helps you to find features that can be useful for categorization. It is easier to get unlabeled data from a computer than labeled data, which needs manual intervention. Unsupervised learning solves the problem by learning the data and classifying it without any labels. 
+- Reinforcement: Input data one at a time. Machine learning has to adjust accordling. 
 
 
 #### Resampling
 - Resampling methods are very useful and beneficial in statistics and machine learning to fit more accurate models, model selection and parameter tuning. Involve repeatedly drawing samples from a dataset and calculating statistics and metrics on each of those samples in order to obtain further information. Use `from sklearn.utils import resample`
+- Entropy: measure of randomness in dataset
+- ![entropy](https://user-images.githubusercontent.com/62857660/156621431-6e07b9df-1368-48f5-b8ca-5baad6fda963.JPG)
+
 
 #### Missing Values
 - KNN Imputer: There are different ways to handle missing data. Some methods such as removing the entire observation if it has a missing value or replacing the missing values with mean, median, or mode values. However, these methods can waste valuable data or reduce the variability of your dataset. In contrast, KNN Imputer maintains the value and variability of your datasets, and yet it is more precise and efficient than using the average values: https://medium.com/@kyawsawhtoon/a-guide-to-knn-imputation-95e2dc496e
@@ -76,8 +90,9 @@ Needs to normalize data before applying KNN
 Under fit
   - An underfit model has high bias and low variance.
 - A model with high variance means it fits the training data very well but does a poor job predicting the testing data. It other words, it memorizes the training data very well and is not able to predict the test data due to low generalization.
-  - Over fit
-  - An overfit model means it has high variance and low bias.
+Over fit
+  - An overfit model means it has high variance (unsable due to small variation) and low bias (hard to work with new data).
+  - Capture too much noise. Solving for one specific incident intead of general solution
   - Checking for overfitting. If score is close, may not be a case of overfitting
   - ```print('Training set score: {:.4f}'.format(clf.score(X_train, y_train)))
 
@@ -215,6 +230,10 @@ X = X.drop(to_drop, axis=1)
 - Each column represents the instances in an actual class.
 - ![confusion](https://user-images.githubusercontent.com/62857660/155051392-1d96187e-70d7-418f-8f19-cc2d91e7f3ab.jpg)
 
+Source: https://www.youtube.com/watch?v=prWyZhcktn4&list=PLEiEAq2VkUULYYgj13YHUWmRePqiu8Ddy&index=17
+
+Precision: how often is it right. TP/(TP+FP)
+Recall: How often doe the model predict the correct positive values. TP/(TP+FN)
 
 #### F1 Score
 
@@ -233,6 +252,9 @@ F score of 1 indicates a perfect balance as precision and the recall are inverse
 
 #### Accuracy
 [Back to Top](#machine-learning)
+
+How often is our classifier is right: sum of all true values divided by total values
+
 - Accuracy is used when the True Positives and True negatives are more important while F1-score is used when the False Negatives and False Positives are crucial.
  ```
 from sklearn.metrics import accuracy_score
@@ -241,6 +263,7 @@ score_knn = accuracy_score(y_test, y_pred_knn)
 print("accuracy score: %0.3f" % score_knn)
 
 ```
+
 
 
 #### Cross Validation
@@ -307,6 +330,14 @@ pc = pca.fit_transform(X)
 
 #### Random Forest
 Limiting the depth of a single decision tree is one way we can try to make a less biased model. Another option is to use an entire forest of trees, training each one on a random subsample of the training data. The final model then takes an average of all the individual decision trees to arrive at a classification. This is the idea behind the random forest.
+
+#### Decision Tree
+Each branch of tree represents a possible decision. Can be use on classification and regression. Reduce entropy and caculate the gain. 
+
+![node](https://user-images.githubusercontent.com/62857660/156621764-1048de9b-f744-4d98-bed3-bf8b37e54be3.JPG)
+
+Good: Simple to understand and data prep, able to handle numerical and categorical, non linear paramter don't affect performance
+Bad: Can be overfit
 
 
 ## Statistics 
