@@ -323,6 +323,8 @@ Limiting the depth of a single decision tree is one way we can try to make a les
 ## Coding
 [Theory](#theory)
 
+[Pandas](#pandas)
+
 [Numpy](#numpy)
 
 [Dataframe](#dataframe)
@@ -334,6 +336,13 @@ Limiting the depth of a single decision tree is one way we can try to make a les
 
 #### Theory:
 The primary difference between vectors and matrices is that vectors are 1d array while matrices are 2d arrays.
+
+#### Pandas:
+`pd.concat` to join columns`
+`print(f'Feature Columns: {", ".join(features)}\nLabel Column: {labels}')`
+![cc](https://user-images.githubusercontent.com/62857660/156618078-9914bb93-9ac8-47ca-93ff-906b91d052ae.JPG)
+
+
 
 
 #### Numpy:
