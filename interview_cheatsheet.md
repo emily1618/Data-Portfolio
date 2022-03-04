@@ -531,10 +531,12 @@ for i in num_col:
 
 ![excel](https://user-images.githubusercontent.com/62857660/156689379-525f143b-c94d-413b-99aa-166cdd13b9b9.png)
 
-- `TRIM` to trim out white spaces
+- `=TRIM()` to trim out white spaces
 - Change numbers to other format
 
 ![excel2](https://user-images.githubusercontent.com/62857660/156702577-6ecd31b6-f8d2-452c-83c2-fe66e8b76c32.png)
+
+- `=CONCAT("First","","Last")` to get a space between first and last word
 
 
 
