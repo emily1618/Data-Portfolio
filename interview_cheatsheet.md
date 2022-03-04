@@ -542,6 +542,8 @@ for i in num_col:
 
 ![excel3](https://user-images.githubusercontent.com/62857660/156708541-7f80669d-add6-4d2b-b446-1cb6d321330b.jpg)
 
+- Use data validation to only limit values other user can input
+
 
 
 
