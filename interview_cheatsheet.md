@@ -10,7 +10,7 @@
 ### 🔢 [Statistics](#statistics)
 ### 👩‍💻 [Coding](#coding)
 ### 📊 [SQL](#sql)
-### 📉 [Excel)(#excel)
+### 📉 [Excel](#excel)
 ### 🎨 [Tableau](#tableau)
 ### 📺 [Business](#business)
 
@@ -526,6 +526,17 @@ for i in num_col:
 ![Capture](https://user-images.githubusercontent.com/62857660/156065004-5b03b355-d079-4fdb-ada0-72b83fae1d2a.JPG)
 - Get random date and time in a range '=RANDBETWEEN(DATE(2020,1,1),DATE(2020,12,31))+RANDBETWEEN(TIME(9,0,0)*10000,TIME(23,0,0)*10000)/10000'
 - Get random text `=CHOOSE(RANDBETWEEN(1,3),"Value1","Value2","Value3")`
+- Remove duplicates: Data -> next to Text to Column -> click the remove duplicate icon
+- Use `filter` to see the different spelling of the same thing, then filter them out to fix it:
+
+![excel](https://user-images.githubusercontent.com/62857660/156689379-525f143b-c94d-413b-99aa-166cdd13b9b9.png)
+
+- `TRIM` to trim out white spaces
+- Change numbers to other format
+
+![excel2](https://user-images.githubusercontent.com/62857660/156702577-6ecd31b6-f8d2-452c-83c2-fe66e8b76c32.png)
+
+
 
 
 ## Tableau 
