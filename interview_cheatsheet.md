@@ -9,7 +9,8 @@
 ### 💻 [Machine Learning](#machine-learning)
 ### 🔢 [Statistics](#statistics)
 ### 👩‍💻 [Coding](#coding)
-### 📊 [SQL and Excel](#sql)
+### 📊 [SQL](#sql)
+### 📉 [Excel)(#excel)
 ### 🎨 [Tableau](#tableau)
 ### 📺 [Business](#business)
 
@@ -516,6 +517,8 @@ for i in num_col:
 - Coming Soon
 
 ## SQL
+
+## Excel
 - VLOOKUP always start with the left most column, using INDEX and MATCH isntead
 - `VLOOKUP(value to look for, range to look in, column number of the value to return, apprximate or exact match [TRUE/FALSE])`
 - `=INDEX(array or reference, MATCH(value to look up,lookup_array,[match_type]) `
