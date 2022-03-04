@@ -540,7 +540,7 @@ for i in num_col:
 - `=CONCAT("First","","Last")` to get a space between first and last word
 - Condtional formatting
 
-![excel3](https://user-images.githubusercontent.com/62857660/156708400-efd1ea59-f5b7-401f-b63c-570455fd8253.jpg)
+![excel3](https://user-images.githubusercontent.com/62857660/156708541-7f80669d-add6-4d2b-b446-1cb6d321330b.jpg)
 
 
 
