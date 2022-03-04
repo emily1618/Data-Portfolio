@@ -523,6 +523,7 @@ for i in num_col:
 - `VLOOKUP(value to look for, range to look in, column number of the value to return, apprximate or exact match [TRUE/FALSE])`
 - `=INDEX(array or reference, MATCH(value to look up,lookup_array,[match_type]) `
 - `=VLOOKUP(A17,C2:H14,4,FALSE)` will have the same result as `=INDEX(F2:F14, MATCH(A17,C2:C14,0))`
+  - index, match, match is powerful tool
 ![Capture](https://user-images.githubusercontent.com/62857660/156065004-5b03b355-d079-4fdb-ada0-72b83fae1d2a.JPG)
 - Get random date and time in a range '=RANDBETWEEN(DATE(2020,1,1),DATE(2020,12,31))+RANDBETWEEN(TIME(9,0,0)*10000,TIME(23,0,0)*10000)/10000'
 - Get random text `=CHOOSE(RANDBETWEEN(1,3),"Value1","Value2","Value3")`
@@ -537,6 +538,10 @@ for i in num_col:
 ![excel2](https://user-images.githubusercontent.com/62857660/156702577-6ecd31b6-f8d2-452c-83c2-fe66e8b76c32.png)
 
 - `=CONCAT("First","","Last")` to get a space between first and last word
+- Condtional formatting
+
+![excel3](https://user-images.githubusercontent.com/62857660/156708400-efd1ea59-f5b7-401f-b63c-570455fd8253.jpg)
+
 
 
 
