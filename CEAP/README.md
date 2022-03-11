@@ -33,11 +33,10 @@ In this folder, we will explore the CEAP program. We were facing problems such a
 
 
 #### Break down of CEAP problem:
-- Metric is pay per application and staff hours needed to complete the application. 
-- The funding is paid per application. Therefore, the more the center's application can complete, the higher the revenue. However, the payment is capped at a maximum of 2000 applications per year. Still, the potential to amend the contract for a higher amount is possible (the funder confirmed that they would like the center to make more applications). 
-- If the center can process applications efficiently promptly, then the staff can outreach more to gain more clients for more applications for more pay per application
-Measure success, increase pay per application, and reduce staff hours needed to complete the application or hire additional staff should processing time stay the same. 
-- what is the cost and staffing requirement? How many applications do we need to complete to justify hiring an additional staff even with the rate increased? 
+- KPI to considered: # of applicatons, pay per application, # of staff required to run the program successfully
+- The funding is paid per application. Therefore, the more the center's application can complete, the higher the revenue. 
+- If the center can process applications efficiently promptly, then the staff can outreach more to gain more clients.
+- How many applications do we need to complete to justify hiring an additional staff even with the rate increased? 
 
 #### What I completed:
 ✔ I replaced the system from a 7+ years old paper system/storage into an electronic version, including online application and online scheduling. The data is stored in JotForm and entered automatically by the clients instead of a staff manually typing in every week into Access. In addition, the report can be downloaded and generated in minutes.
