@@ -51,17 +51,17 @@ In this folder, we will explore the CEAP program. We were facing problems such a
 #
 ## CEAP DATASET
 
-**CEAP DATASET: Application data from 2020 to 2021**
+Application data from 2020 to 2021
 
-- Accuracy: data is accurate because the center verified client information with their ID/passport/perm card and proper income documents. 
+Accuracy: data is accurate because the center verified client information with their ID/passport/perm card and proper income documents. 
 
-- Relevancy: data is relevant because clients need to submit official documents pertinent to their application to apply for utility assistance.
+Relevancy: data is relevant because clients need to submit official documents pertinent to their application to apply for utility assistance.
 
-- Completeness: there is minimal missing data, less than 2.5% in one couple of columns.
+Completeness: there is minimal missing data, less than 2.5% in one couple of columns.
 
-- Timeliness: data is up to date. Clients need to sign and date their applications.
+Timeliness: data is up to date. Clients need to sign and date their applications.
 
-- Consistency: the data is consistent after cleaning in excel and python. 
+Consistency: the data is consistent after cleaning in excel and python. 
 
 🚫 Because the dataset contains real client names and information. This notebook is public hence some of the codes are commented out, so no df containing the client name will be printed. The snippet of CEAP dataset:
 
