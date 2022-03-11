@@ -113,6 +113,9 @@ Using `describe()` in Python, I run into more issue with the numerical data so t
 
 #### 🎞[Funding Proposal Video Presentation: Funding Proposal 2022](https://youtu.be/g8oMgNmdNMU)
 
+![youtube](https://user-images.githubusercontent.com/62857660/157914623-20016f30-066c-4d44-a0f7-dac22052401f.JPG)
+
+
 #### 🎨[Tabealu Public Viz: Using Data To Increase Funding]https://public.tableau.com/app/profile/emily1618/viz/UtilityApplicationDashboardClientData/Dashboard1
 
 ![dash](https://user-images.githubusercontent.com/62857660/157909225-af830b0e-2fb7-4681-9619-58bb572f31d8.JPG)
