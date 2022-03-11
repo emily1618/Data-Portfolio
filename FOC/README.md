@@ -103,10 +103,6 @@ Using `describe()` in Python, I run into more issue with the numerical data so t
 ## FOC DASHBOARD AND RECOMMENDATION
 
 
-#### Using Data To Increase Enrollment 🎨[Click Here For Tabealu Public Viz: Using Data To Increase FOC Enrollment](https://public.tableau.com/app/profile/emily.liang7497/viz/IncreaseMemberEnrollmentUsingData/Dashboard1?publish=yes)
-
-![foc tableau 1](https://user-images.githubusercontent.com/62857660/155892915-05e6715a-b578-453e-8df6-2ff8829c2a94.jpg)![foc tableau 2](https://user-images.githubusercontent.com/62857660/155892917-2dcf8192-2a26-4cab-9231-8d9c3ccf6ecd.jpg)![foc tableau 3](https://user-images.githubusercontent.com/62857660/155892919-7eac5787-699b-44ae-b371-ddcaea1dd40b.jpg)
-
 #### Recommendation:
 
 1. June is the month with the most enrollment. A marketing campaign can be put in place in February/March leading up to June, so the center can "catch" some potential clients in May and maximize enrollment potential in June. The FOC should look into the November enrollment spike to have a mini-marketing campaign in September leading up to November.
@@ -119,5 +115,9 @@ Using `describe()` in Python, I run into more issue with the numerical data so t
 4. Instead of concentrating on the main zip code(77036). The FOC can pick 2 to 3 more zip codes and market their services to those zip. 
 
 5. As technology advances, the FOC can create an educational plan offering more digital literacy classes. The average age is 50 for the digital literacy category. The long-term goal is to reduce the public benefit assistance needs for the 60 age group once the 50 age group clients enter into 60's. 
+
+#### Using Data To Increase Enrollment 🎨[Click Here For Tabealu Public Viz: Using Data To Increase FOC Enrollment](https://public.tableau.com/app/profile/emily.liang7497/viz/IncreaseMemberEnrollmentUsingData/Dashboard1?publish=yes)
+
+![foc tableau 1](https://user-images.githubusercontent.com/62857660/155892915-05e6715a-b578-453e-8df6-2ff8829c2a94.jpg)![foc tableau 2](https://user-images.githubusercontent.com/62857660/155892917-2dcf8192-2a26-4cab-9231-8d9c3ccf6ecd.jpg)![foc tableau 3](https://user-images.githubusercontent.com/62857660/155892919-7eac5787-699b-44ae-b371-ddcaea1dd40b.jpg)
 
 
