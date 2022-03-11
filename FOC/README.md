@@ -31,14 +31,12 @@ We will explore the FOC problem in this folder. Please find the CEAP problem and
 
 
 ### Break down of FOC problem:
+- KPI to considered: # of enrollment and # of successful exit
 - Enrollment is counted when a client completes a zoom or in-person orientation, a soft credit check, and signed paperwork.
-- There is a specific time frame, but generally, the center would like the client to complete all consultation, training, exit with a job, OR improve credit score within six months to one year.
-- Decreasing enrollment started drastically falling since 2017. 2016 is high. 
-- The other departments in the center also have been experiencing a decline in enrollment (e.g.: child care center), but not as steep of a decline as FOC. FOC also received the most funding out of all other departments. 
-- The average age of FOC enrollment is the 40 group, and there is a slight decrease throughout the year. I need to check race demographic data later. 
-- There are a few possible causes. One may be the center to outreaching to the wrong group of clients. Second, the quality and number of job training classes (need further analysis on the quality and outcome of the types), and maybe there is less of ALICE population around the center (need data to support this claim). 
-- Metric is user enrollment and successful exit. The client defines a successful exit if improved their credit score, completing the job training, and landing a job relevant to the training. 
-- Outreach idea to increase enrollment and launch the ideas. What is the cost of outreach and staffing requirements? How much of a percentage increase in enrollment do we want to see based on the budget?
+- Successful exit is when the client complete a financial coaching consultation, job or class training, improve credit score or exit with a job within six months to one year.
+- Decreasing enrollment started drastically falling since 2017. 
+- FOC received the most funding out of all other departments. 
+- There are a few possible causes. One of them is the center is outreaching to the wrong demographic group. 
 
 
 #### What I completed:
@@ -49,7 +47,7 @@ We will explore the FOC problem in this folder. Please find the CEAP problem and
 #
 ## FOC DATASET
 
-Enrollment data from 2012 to 2022
+Enrollment data from 2012 to 2022.
 
 Accuracy: data is accurate because the center verified client information with their ID. For each training/consultation, the staff will need to record to be counted for. 
 
@@ -98,7 +96,7 @@ Using `describe()` in Python, I run into more issue with the numerical data so t
 
 
 ### Python EDA Notebook:
-- https://github.com/emily1618/Data-Portfolio/blob/main/CEAP/ceap.ipynb
+- 
 
 
 #
