@@ -5,13 +5,11 @@
 ##### Date: Feb 28, 2022
 
 ### [Problem](#problem)
-### [Dataset](#dataset)
-### [Data Cleaning](#data-cleaning)
-### [Analysis](#analysis)
-### [Dashboard and Presentation](#dashboard-and-presentation)
-### [Test](#test)
+### [Dataset](#ceap-dataset)
+### [Data Cleaning](#ceap-data-cleaning)
+### [Analysis](#ceap-analysis)
+### [Dashboard and Presentation](#ceap-dashboard-and-presentation)
 
-#
 
 ## PROBLEM
 
@@ -52,7 +50,7 @@ Measure success, increase pay per application, and reduce staff hours needed to 
 - Using data to predict how many staffs are needed during the busiest months.
 
 #
-## DATASET
+## CEAP DATASET
 
 **CEAP DATASET: Application data from 2020 to 2021**
 
@@ -73,7 +71,7 @@ Measure success, increase pay per application, and reduce staff hours needed to 
 
 
 #
-## DATA CLEANING
+## CEAP DATA CLEANING
 
 The dataset is first cleaned in Excel including but not limited to the following:
 - birthday data type
@@ -98,7 +96,7 @@ Using `describe()` in Python, I run into more issue with the numerical data so t
 
 
 #
-## ANALYSIS
+## CEAP ANALYSIS
 
 ### SQL
 - Updating
@@ -109,7 +107,7 @@ Using `describe()` in Python, I run into more issue with the numerical data so t
 
 
 #
-## DASHBOARD AND PRESENTATION
+## CEAP DASHBOARD AND PRESENTATION
 
 #### 🎞[Funding Proposal Video Presentation: Funding Proposal 2022](https://youtu.be/g8oMgNmdNMU)
 
@@ -122,6 +120,4 @@ Using `describe()` in Python, I run into more issue with the numerical data so t
 
 
 
-
-# test
 
