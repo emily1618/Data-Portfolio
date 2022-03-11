@@ -73,22 +73,39 @@ Consistency: the data is consistent after cleaning in excel and python.
 ## CEAP DATA CLEANING
 
 The dataset is first cleaned in Excel including but not limited to the following:
+
 birthday data type
-birthday entered wrong (eg: 1/1/5674, 12-5/1968, 123/2/1970)
+
+birthday entered wrong (eg: 1/1/5674, 12-5/1968, 123/2/1970, Agust 5)
+
 birthday not completed
+
 using letter O instead of number 0 in dates
+
 spell out birthday month (eg: August, 30,)
+
 numerical currency data that's written out (eg: $300/month, 500 job + $400 ssi)
+
 currency having . and , in wrong places (eg: 6.66.7, 134,05)
+
 number stored as object or the number is stored as text (use `=VALUE()`) to convert back. Use `=IF(AK2="","",VALUE(AK2))` to convert to float number in excel if containing NaN in rows.
+
 extremely high monthly income
+
 negative birthday
+
 negative income
+
 find all and replace to fix spelling in the utility company columns to keep it consistent (eg: V24/7, v 247, V247 company)
+
 turn name into cap for first letter using `=PROPER`
+
 grab the year off birthday using `=TEXT(cell, "yyyy")`
+
 use `=LEFT()` or `=RIGHT()` to grab the specific number for household size-long
+
 use text to column to fix values
+
 `=DOLLAR()` to convert currency if needed
 
 
