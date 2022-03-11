@@ -9,6 +9,7 @@
 ### [Data Cleaning](#data-cleaning)
 ### [Analysis](#analysis)
 ### [Dashboard and Presentation](#dashboard-and-presentation)
+### [Test](#test)
 
 #
 
@@ -103,7 +104,8 @@ Using `describe()` in Python, I run into more issue with the numerical data so t
 - Updating
 
 
-### Python EDA Notebook: https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/ceap.ipynb
+### Python EDA Notebook:
+- https://github.com/xtenix88/Data-Portfolio/blob/main/Getting-Funding/ceap.ipynb
 
 
 #
@@ -118,5 +120,5 @@ Using `describe()` in Python, I run into more issue with the numerical data so t
 
 
 
-
+## test
 
