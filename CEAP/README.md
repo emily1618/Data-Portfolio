@@ -111,7 +111,7 @@ Using `describe()` in Python, I run into more issue with the numerical data so t
 #
 ## DASHBOARD AND PRESENTATION
 
-#### 🎞[Funding Proposal Video Presentation: Funding Proposal 2022]()
+#### 🎞[Funding Proposal Video Presentation: Funding Proposal 2022](https://youtu.be/g8oMgNmdNMU)
 
 #### 🎨[Tabealu Public Viz: Using Data To Increase Funding]https://public.tableau.com/app/profile/emily1618/viz/UtilityApplicationDashboardClientData/Dashboard1
 
