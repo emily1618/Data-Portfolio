@@ -96,7 +96,7 @@ Using `describe()` in Python, I run into more issue with the numerical data so t
 
 
 ### Python EDA Notebook:
-- 
+- https://github.com/emily1618/Data-Portfolio/blob/main/FOC/foc%20EDA.ipynb
 
 
 #
