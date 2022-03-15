@@ -611,8 +611,27 @@ Make sure to include parenthsis
 - Coming Soon
 
 ## Business
-- Coming Soon
-- KPI
-- Project Management
+KPI
+- Key Performance Indicators (KPI) are used to measure a business's performance over a set period of time. The data analyst must decode this information and present it in easy-to-understand terms, allowing organizations to develop more powerful strategies.
+
+What Are the 5 Key Performance Indicators?
+- Revenue growth.
+- Revenue per client.
+- Profit margin.
+- Client retention rate.
+- Customer satisfaction.
+
+More KPI examples
+- Customer Acquisition Cost. Customer Lifetime Value. Customer Satisfaction Score. Sales Target % (Actual/Forecast) ...
+- Revenue per FTE. Revenue per Customer. Operating Margin. Gross Margin. ...
+- ROA (Return on Assets) Current Ratio (Assets/Liabilities) Debt to Equity Ratio. Working Capital.
+
+KPI in SEO
+- https://en.ryte.com/magazine/google-analytics-these-are-the-10-most-important-kpis-for-your-website
+![internal-kpis](https://user-images.githubusercontent.com/62857660/158462004-fec4c104-cd64-4763-8b7c-706efe68c3c5.jpg)
+
+
+SCRUM
+-
 
 [Back to Top](#machine-learning)
