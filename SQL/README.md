@@ -6,3 +6,6 @@
 ](https://www.udemy.com/course/advanced-sql-mysql-for-analytics-business-intelligence/learn/lecture/16450492?start=0#overview)
 
 3. Udacity SQL course by MODE
+
+### Youtuber
+1. [AlexTheAnalyst](https://www.youtube.com/watch?v=K1WeoKxLZ5o&list=PLUaB-1hjhk8EBZNL4nx4Otoa5Wb--rEpU)
