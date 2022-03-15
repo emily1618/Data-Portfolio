@@ -1,5 +1,5 @@
-## what is SQL?
-- SQL is the standard programming language used to design, create and manage relational databases. Relational systems are made up of a set of tables containing rows and columns of data. 
+## What is SQL?
+SQL is the standard programming language used to design, create and manage relational databases. Relational systems are made up of a set of tables containing rows and columns of data. 
 
 
 ### Courses I'm learning or learned from:
