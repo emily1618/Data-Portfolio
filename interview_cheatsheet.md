@@ -375,15 +375,13 @@ day_mapper = {0: "Monday", 1:"Tuesday", 2:"Wednesday", 3:"Thursday", 4:"Friday",
 
 data_import["DayOfWeek"] = data_import["Date"].map(lambda x: day_mapper[x.dayofweek])
 `
-- using `~`
+- using `~`, if the data is in the conditions, using ~ get rid of those data
 `
-# if the data is in the conditions, using ~ get rid of those data
- 
 full_calendar = [~full_calendar["Weekday"].isin(["Saturday","Sunday"])]
 `
 
 - `.to_clipboard()` takes the dataframe and copy/paste to your excel
-- 
+
 
 
 #### Pandas:
