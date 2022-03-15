@@ -534,25 +534,30 @@ for i in num_col:
 - Coming Soon
 
 ## SQL
-- Ensure data integrity: only the data you want entered is entered, and only certain users are able to enter data into the database.
-- Ensure domains: set of values following documentations, consistent data types
-- Normalization is important so the data can follow logical route and query efficiently. Without normalization, database systems can be inaccurate, slow, and inefficient. Four GOALS:
+Ensure data integrity: only the data you want entered is entered, and only certain users are able to enter data into the database.
+
+Ensure domains: set of values following documentations, consistent data types
+
+Normalization is important so the data can follow logical route and query efficiently. Without normalization, database systems can be inaccurate, slow, and inefficient. Four GOALS:
   -  arranging data into logical groupings such that each group describes a small part of the whole;
   -  minimizing the amount of duplicate data stored in a database;
   -  organizing the data such that, when you modify it, you make the change in only one place;
   -  building a database in which you can access and manipulate the data quickly and efficiently without compromising the integrity of the data.
 
 
-- LIKE This allows you to perform operations similar to using WHERE and =, but for cases when you might not know exactly what you are looking for.
+LIKE This allows you to perform operations similar to using WHERE and =, but for cases when you might not know exactly what you are looking for.
   -  frequently used with %
   -  % is a wildcard, eg: `WHERE name LIKE %google%` is any characters, then contain the text 'google', then any characters after
-- IN This allows you to perform operations similar to using WHERE and =, but for more than one condition.
+  
+IN This allows you to perform operations similar to using WHERE and =, but for more than one condition.
   - like OR, but cleaner
   - `WHERE name IN ('Walmart', 'Target', 'Nordstrom')`
-- NOT This is used with IN and LIKE to select all of the rows NOT LIKE or NOT IN a certain condition.
-- `WHERE column BETWEEN 6 AND 10` is a cleaner version of `WHERE column >= 6 AND column <= 10`
+  
+NOT This is used with IN and LIKE to select all of the rows NOT LIKE or NOT IN a certain condition.
+`WHERE column BETWEEN 6 AND 10` is a cleaner version of `WHERE column >= 6 AND column <= 10`
   - BETWEEN endpoint values are included, but tricky for dates. To get all orders in 2016, use `occurred_at BETWEEN '2016-01-01' AND '2017-01-01'`
-- Make sure to include parenthsis
+  
+Make sure to include parenthsis
   - `select name from accounts
      where name like 'C%' Or name like 'W%' AND (primary_poc like '%ana%' OR primary_poc like '%Ana%') AND (primary_poc not like '%eana');` 
   - ```SELECT * FROM accounts
@@ -560,6 +565,9 @@ for i in num_col:
            AND ((primary_poc LIKE '%ana%' OR primary_poc LIKE '%Ana%') 
            AND primary_poc NOT LIKE '%eana%');```
   - ABOVE IS NOT THE SAME!!!
+
+
+
 
 ## Excel
 - VLOOKUP always start with the left most column, using INDEX and MATCH isntead
