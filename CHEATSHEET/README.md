@@ -632,6 +632,8 @@ KPI in SEO
 
 
 SCRUM
--
+-  Framework for developing, delivering, and sustaining products in a complex environment.
+-  The key difference between Agile and Scrum is that while Agile is a project management philosophy that utilizes a core set of values or principles, Scrum is a specific Agile methodology that is used to facilitate a projec
+-  Scrum is an Agile project management methodology involving a small team led by a Scrum master, whose main job is to remove all obstacles to getting work done. Work is done in short cycles called sprints, and the team meets daily to discuss current tasks and any roadblocks that need clearing.
 
 [Back to Top](#machine-learning)
