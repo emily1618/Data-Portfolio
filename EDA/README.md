@@ -12,7 +12,7 @@
   - Detect outliers and anomalies(if any)
   - Test underlying assumptions
   - Determine the optimal factor settings
-- [Source](https://www.analyticsvidhya.com/blog/2021/08/how-to-perform-exploratory-data-analysis-a-guide-for-beginners/)
+- https://www.analyticsvidhya.com/blog/2021/08/how-to-perform-exploratory-data-analysis-a-guide-for-beginners/
 
 
 ### R
@@ -20,10 +20,10 @@
 - ggplot2 package for visualizations
 - corrplot package for correlation plot
 - Some other basic functions to manipulate data like strsplit (), cbind (), matrix () and so on.
-- [Source](https://towardsdatascience.com/exploratory-data-analysis-in-r-for-beginners-fe031add7072)
-- [Source 2](https://choonghyunryu.github.io/dlookr_vignette/EDA.html)
+- https://towardsdatascience.com/exploratory-data-analysis-in-r-for-beginners-fe031add7072
+- https://choonghyunryu.github.io/dlookr_vignette/EDA.html
 
 ### Python
-- [Source[(https://www.kaggle.com/ekami66/detailed-exploratory-data-analysis-with-python)
+- https://www.kaggle.com/ekami66/detailed-exploratory-data-analysis-with-python
 
 
