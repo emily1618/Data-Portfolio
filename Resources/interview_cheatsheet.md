@@ -353,7 +353,7 @@ Bad: Can be overfit
 
 
 ## Coding
-[Theory](#theory)
+[General](#general)
 
 [Pandas](#pandas)
 
@@ -366,15 +366,14 @@ Bad: Can be overfit
 [SNS](#sns)
 
 
-#### Theory:
+#### General:
 The primary difference between vectors and matrices is that vectors are 1d array while matrices are 2d arrays.
 
 - lambda function: perform a function on every row of the dataset
-`
-day_mapper = {0: "Monday", 1:"Tuesday", 2:"Wednesday", 3:"Thursday", 4:"Friday", 5:"Saturday", 6:"Sunday"}
+`day_mapper = {0: "Monday", 1:"Tuesday", 2:"Wednesday", 3:"Thursday", 4:"Friday", 5:"Saturday", 6:"Sunday"}`
 
-data_import["DayOfWeek"] = data_import["Date"].map(lambda x: day_mapper[x.dayofweek])
-`
+`data_import["DayOfWeek"] = data_import["Date"].map(lambda x: day_mapper[x.dayofweek])`
+
 - using `~`, if the data is in the conditions, using ~ get rid of those data
 `
 full_calendar = [~full_calendar["Weekday"].isin(["Saturday","Sunday"])]
