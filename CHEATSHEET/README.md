@@ -548,6 +548,7 @@ Normalization is important so the data can follow logical route and query effici
 LIKE This allows you to perform operations similar to using WHERE and =, but for cases when you might not know exactly what you are looking for.
   -  frequently used with %
   -  % is a wildcard, eg: `WHERE name LIKE %google%` is any characters, then contain the text 'google', then any characters after
+  -  if name column is first name space last name, to get last name start with any letter, use `WHERE table.name_column LIKE '% A%'`
   
 IN This allows you to perform operations similar to using WHERE and =, but for more than one condition.
   - like OR, but cleaner
@@ -565,6 +566,10 @@ Make sure to include parenthsis
            AND ((primary_poc LIKE '%ana%' OR primary_poc LIKE '%Ana%') 
            AND primary_poc NOT LIKE '%eana%');```
   - ABOVE IS NOT THE SAME!!!
+
+- INNER join result may be the same if flip the table on a LEFT join
+- If you have two or more columns in your SELECT that have the same name after the table name such as accounts.name and sales_reps.name you will need to alias them. Otherwise it will only show one of the columns. You can alias them like accounts.name AS AcountName, sales_rep.name AS SalesRepName
+- UNION and UNION ALL, CROSS JOIN, and the tricky SELF JOIN.
 
 
 
