@@ -528,6 +528,14 @@ for i in num_col:
 - NOT This is used with IN and LIKE to select all of the rows NOT LIKE or NOT IN a certain condition.
 - `WHERE column BETWEEN 6 AND 10` is a cleaner version of `WHERE column >= 6 AND column <= 10`
   - BETWEEN endpoint values are included, but tricky for dates. To get all orders in 2016, use `occurred_at BETWEEN '2016-01-01' AND '2017-01-01'`
+- Make sure to include parenthsis
+  - `select name from accounts
+     where name like 'C%' Or name like 'W%' AND (primary_poc like '%ana%' OR primary_poc like '%Ana%') AND (primary_poc not like '%eana');` 
+  - `SELECT * FROM accounts
+      WHERE (name LIKE 'C%' OR name LIKE 'W%') 
+           AND ((primary_poc LIKE '%ana%' OR primary_poc LIKE '%Ana%') 
+           AND primary_poc NOT LIKE '%eana%');`
+  - ABOVE IS NOT THE SAME!!!
 
 ## Excel
 - VLOOKUP always start with the left most column, using INDEX and MATCH isntead
