@@ -578,9 +578,11 @@ Make sure to include parenthsis
            AND primary_poc NOT LIKE '%eana%');```
   - ABOVE IS NOT THE SAME!!!
 
-- INNER join result may be the same if flip the table on a LEFT join
-- If you have two or more columns in your SELECT that have the same name after the table name such as accounts.name and sales_reps.name you will need to alias them. Otherwise it will only show one of the columns. You can alias them like accounts.name AS AcountName, sales_rep.name AS SalesRepName
-- UNION and UNION ALL, CROSS JOIN, and the tricky SELF JOIN.
+INNER join result may be the same if flip the table on a LEFT join.
+
+If you have two or more columns in your SELECT that have the same name after the table name such as accounts.name and sales_reps.name you will need to alias them. Otherwise it will only show one of the columns. You can alias them like accounts.name AS AcountName, sales_rep.name AS SalesRepName
+
+UNION and UNION ALL, CROSS JOIN, and the tricky SELF JOIN.
 
 
 
