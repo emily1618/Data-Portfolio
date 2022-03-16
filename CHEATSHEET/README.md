@@ -546,6 +546,10 @@ Normalization is important so the data can follow logical route and query effici
 
 AVG ignores the NULL values
 
+DISTINCT to group by columns without aggregation
+
+
+
 USE MIN and MAX for date range
  - When was the earliest order ever placed? `SELECT MIN(occurred_at)`
  - hen did the most recent (latest) web_event occur? `SELECT MAX(occurred_at`
