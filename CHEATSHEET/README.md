@@ -544,7 +544,14 @@ Normalization is important so the data can follow logical route and query effici
   -  organizing the data such that, when you modify it, you make the change in only one place;
   -  building a database in which you can access and manipulate the data quickly and efficiently without compromising the integrity of the data.
 
+AVG ignores the NULL values
 
+USE MIN and MAX for date range
+ - When was the earliest order ever placed? `SELECT MIN(occurred_at)`
+ - hen did the most recent (latest) web_event occur? `SELECT MAX(occurred_at`
+ 
+SELECT MIN(occurred_at) 
+FROM orders;
 LIKE This allows you to perform operations similar to using WHERE and =, but for cases when you might not know exactly what you are looking for.
   -  frequently used with %
   -  % is a wildcard, eg: `WHERE name LIKE %google%` is any characters, then contain the text 'google', then any characters after
