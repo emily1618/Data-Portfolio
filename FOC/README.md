@@ -25,7 +25,7 @@ The center's FOC is funded by a few major non-profit organizations in the Greate
 2. Financial Education and Coaching
 3. Public Benefits Access
 
-For some time, our center's FOC has been struggling with decreasing enrollment, especially in 1 and 2 above.  FOC is receiving the largest amount of funding out of all departments. *If FOC is unable to meet the program goal this year, the funder will reduce or drop the funding entirely, jeopardizing the whole organization's financial position as a whole.* Under 3. Public Benefits Access, one of the primary sub-programs is CEAP, which helps pay 12 months of electricity and gas for lower-income families. With rising global temperature (especially in TX!) and increased energy costs to cool the homes, this is a necessary and popular benefit program in Houston.
+For some time, our center's FOC has been struggling with decreasing enrollment, especially in 1 and 2 above.  FOC is receiving the largest amount of funding out of all departments. **If FOC is unable to meet the program goal this year, the funder will reduce or drop the funding entirely, jeopardizing the whole organization's financial position as a whole.** Under 3. Public Benefits Access, one of the primary sub-programs is CEAP, which helps pay 12 months of electricity and gas for lower-income families. With rising global temperature (especially in TX!) and increased energy costs to cool the homes, this is a necessary and popular benefit program in Houston.
 
 We will explore the FOC problem in this folder. Please find the CEAP problem and analysis at: https://github.com/emily1618/Data-Portfolio/tree/main/CEAP
 
