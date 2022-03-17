@@ -548,7 +548,20 @@ AVG ignores the NULL values
 
 DISTINCT to group by columns without aggregation
 
+WHERE and HAVING
+```
+GROUP BY a.id, a.name, w.channel
+HAVING COUNT(*) > 6 AND w.channel = 'facebook'
+ORDER BY use_of_channel;
+```
+same as
 
+```
+where w.channel = 'facebook'
+group by a.name, w.channel
+having count(w.id) > 6
+order by channel_count;
+```
 
 USE MIN and MAX for date range
  - When was the earliest order ever placed? `SELECT MIN(occurred_at)`
