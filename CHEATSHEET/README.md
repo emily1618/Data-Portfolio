@@ -11,7 +11,7 @@
 ### 👩‍💻 [Coding](#coding)
 ### 📊 [SQL](#sql)
 ### 📉 [Excel](#excel)
-### 🎨 [Tableau](#tableau)
+### 🎨 [Tableau + Power BI](#tableau-and-power-bi)
 ### 📺 [Business](#business)
 
 
@@ -633,8 +633,8 @@ UNION and UNION ALL, CROSS JOIN, and the tricky SELF JOIN.
 
 
 
-## Tableau 
-- Coming Soon
+## Tableau and Power BI
+- Slicer in Power BI works similiar to the filter in Tableau
 
 ## Business
 KPI
