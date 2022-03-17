@@ -636,6 +636,9 @@ UNION and UNION ALL, CROSS JOIN, and the tricky SELF JOIN.
 ## Tableau and Power BI
 - Slicer in Power BI works similiar to the filter in Tableau
 
+![powerbi](https://user-images.githubusercontent.com/62857660/158744343-c905f3dc-1bc0-4721-9924-45281f0069ad.png)
+
+
 ## Business
 KPI
 - Key Performance Indicators (KPI) are used to measure a business's performance over a set period of time. The data analyst must decode this information and present it in easy-to-understand terms, allowing organizations to develop more powerful strategies.
