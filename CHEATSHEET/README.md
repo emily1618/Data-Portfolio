@@ -597,6 +597,25 @@ If you have two or more columns in your SELECT that have the same name after the
 
 UNION and UNION ALL, CROSS JOIN, and the tricky SELF JOIN.
 
+DATE is databases are in YYYY-MM-DD 00:00:00
+![1](https://user-images.githubusercontent.com/62857660/158932927-464bdeff-5266-4ef4-a255-a8fec70a0d04.png)
+
+![2](https://user-images.githubusercontent.com/62857660/158932933-a512fc05-36b6-4fdf-8782-2a53b31c96e3.png)
+
+CASE statement can in in the SELECT phrase
+
+If you use aggregate, you must put them in a GROUP BY. You can also group by case statement columns
+```
+select  
+   CASE WHEN total >= 2000 THEN 'At least 2000'
+   	    When total Between 1000 and 2000 then 'Between 1000 and 2000'
+            ELSE 'Less and 1000' END AS order_level,
+     count(*) order_count
+FROM orders
+group by order_level;
+```
+![Screenshot 2022-03-17 223456](https://user-images.githubusercontent.com/62857660/158932909-9c0a7b95-7abc-48bd-ade4-7c4552a69fcf.png)
+
 
 
 
