@@ -648,6 +648,17 @@ ORDER BY 3 DESC;
 ```
 ![Screenshot 2022-03-17 231453](https://user-images.githubusercontent.com/62857660/158936380-3f94dad0-cb0d-463a-a7f9-285120a0526e.png)
 
+Subquery
+If you are only returning a single value, you might use that value in a logical statement like WHERE, HAVING, or even SELECT - the value could be nested within a CASE statement. You should not include an alias when you write a subquery in a conditional statement. This is because the subquery is treated as an individual value (or set of values in the IN case) rather than as a table.
+```
+SELECT AVG(standard_qty) avg_std, AVG(gloss_qty) avg_gls, AVG(poster_qty) avg_pst, SUM(total_amt_usd)
+FROM orders
+WHERE DATE_TRUNC('month', occurred_at) = 
+     (SELECT DATE_TRUNC('month', MIN(occurred_at)) FROM orders);
+```
+![12](https://user-images.githubusercontent.com/62857660/159071589-ff229023-16bc-429f-9ccd-a8da8f3e5eea.JPG)
+
+
 
 
 #
