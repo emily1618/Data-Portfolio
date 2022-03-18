@@ -658,6 +658,7 @@ WHERE DATE_TRUNC('month', occurred_at) =
 ```
 ![12](https://user-images.githubusercontent.com/62857660/159071589-ff229023-16bc-429f-9ccd-a8da8f3e5eea.JPG)
 
+Sometimes, you will need to join a table with a subquery table
 
 
 
