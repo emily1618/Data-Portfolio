@@ -616,8 +616,41 @@ group by order_level;
 ```
 ![Screenshot 2022-03-17 223456](https://user-images.githubusercontent.com/62857660/158932909-9c0a7b95-7abc-48bd-ade4-7c4552a69fcf.png)
 
+Identify top sales rep by # of orders
+```
+select s.name as sales_name, count(o.id) as orders, 
+		case when count(o.id) > 200 then 'top'
+        else 'not' end as level
+from sales_reps s
+join accounts a
+on s.id = a.sales_rep_id
+join orders o
+on a.id = o.account_id
+group by s.name
+order by count(o.id) desc;
+```
+![Screenshot 2022-03-17 230905](https://user-images.githubusercontent.com/62857660/158935889-745cf705-50c1-4408-b3a8-832c3b5dcf8b.png)
 
 
+Top sales rep based on total sales
+```
+SELECT s.name, COUNT(*), SUM(o.total_amt_usd) total_spent, 
+     CASE WHEN COUNT(*) > 200 OR SUM(o.total_amt_usd) > 750000 THEN 'top'
+     WHEN COUNT(*) > 150 OR SUM(o.total_amt_usd) > 500000 THEN 'middle'
+     ELSE 'low' END AS sales_rep_level
+FROM orders o
+JOIN accounts a
+ON o.account_id = a.id 
+JOIN sales_reps s
+ON s.id = a.sales_rep_id
+GROUP BY s.name
+ORDER BY 3 DESC;
+```
+![Screenshot 2022-03-17 231453](https://user-images.githubusercontent.com/62857660/158936380-3f94dad0-cb0d-463a-a7f9-285120a0526e.png)
+
+
+
+#
 
 ## Excel
 - VLOOKUP always start with the left most column, using INDEX and MATCH isntead
