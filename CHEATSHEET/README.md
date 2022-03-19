@@ -178,7 +178,8 @@ print(y_pred)
 - Better accuracy.
 - Capable of handling large-scale data. It is not advisable to use LGBM on small datasets. Light GBM is sensitive to overfitting and can easily overfit small data.
 - https://www.kaggle.com/prashant111/lightgbm-classifier-in-python
-- 
+- Although `GridSearchCV` has numerous benefits, you may not want to spend too much time and effort perfectly tuning your model. A better use of time may be to investigate your features further. Feature engineering and selecting subsets of features can increase (or decrease) the performance of your model tremendously. 
+
 ![feature](https://user-images.githubusercontent.com/62857660/155051328-8c9f20ce-3beb-4fa0-88bf-940ee2fa52b1.jpg)
 
 `
