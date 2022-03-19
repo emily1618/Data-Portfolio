@@ -149,6 +149,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random
 - 7 Model and pipeline
 - 8 Parameter tuning
   - It is difficult to know which combination of hyperparameters will work best based only on theory because there are complex interactions between hyperparameters. Hence the need for hyperparameter tuning: the only way to find the optimal hyperparameter values is to try many different combinations on a dataset.
+  - After spending hours on cleaning the data to fit your model and tuning the parameters using GridSearchCV, you may come to find that all that hypertuning didn’t improve your model performance by very much.If you took a whole day to test out parameters and only improved your model accuracy by 0.5%, perhaps that wasn’t the best use of your time.
 ```
 param_grid_nb = {
   'var_smoothing': np.logspace(0,-9, num=100)
