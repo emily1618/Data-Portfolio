@@ -167,6 +167,9 @@ print(y_pred)
 
 
 - 9 Confusion matrix and accuracy score
+Score for training data: `print(f'Model Accuracy: {tree.score(X_train, y_train)}')`
+
+Score for testing data: `score_tree = accuracy_score(y_test, y_pred2)*100`
 
 - 10 Predict on new dataset
   - ![what to do after confusion matrix](https://user-images.githubusercontent.com/62857660/155050708-70d3312a-14e2-4710-8afa-64ca4f7bb23f.jpg)
