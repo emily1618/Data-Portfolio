@@ -665,7 +665,20 @@ WHERE DATE_TRUNC('month', occurred_at) =
 ```
 ![12](https://user-images.githubusercontent.com/62857660/159071589-ff229023-16bc-429f-9ccd-a8da8f3e5eea.JPG)
 
-Sometimes, you will need to join a table with a subquery table
+Sometimes, you will need to join a table with a subquery table and you can use CTE
+```
+WITH table1 AS (
+          SELECT *
+          FROM web_events),
+
+     table2 AS (
+          SELECT *
+          FROM accounts)
+SELECT *
+FROM table1
+JOIN table2
+ON table1.account_id = table2.id;
+```
 
 
 
