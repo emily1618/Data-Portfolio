@@ -1,5 +1,5 @@
 # Interview Cheatsheet For Entry Level Data Analyst Jobs
-#### I created this notebook to prepare for interview. The infomration is an overview of the concept from theory, statistics, machine learning model, SQL, and coding. Not all concept is covered. Source is everywhere from google search to class room lecture slides. I will continue update this. 
+#### I created this notebook to prepare for an interview. The information is an overview of the concept from theory, statistics, machine learning model, SQL, and coding. Not all concept is covered. The source is everywhere from google search to classroom lecture slides. I will continually update this. 
 
 ##### Author: Emi Ly
 
@@ -63,15 +63,15 @@ An application of Artificial Intelligence wherein the systems get the ability to
 #### Supervised vs Unsupervised
 - Supervised: Input and output data are provided 
   - A supervised learning model produces an accurate result. It allows you to collect data or produce a data output from the previous experience. The drawback of this model is that decision boundaries might be overstrained if your training set doesn't have examples that you want to have in a class. Usage: bank loan approval
-- Unsupervised: Input data are provided. Group like things togehter:
+- Unsupervised: Input data are provided. Group like things together:
   - In the case of images and videos, unsupervised algorithms can rapidly classify and cluster data using far fewer features than humans might specify, making data processing even faster and more efficient.
 Unsupervised machine learning finds all kinds of unknown patterns in data. Also helps you to find features that can be useful for categorization. It is easier to get unlabeled data from a computer than labeled data, which needs manual intervention. Unsupervised learning solves the problem by learning the data and classifying it without any labels. 
-- Reinforcement: Input data one at a time. Machine learning has to adjust accordling. 
+- Reinforcement: Input data one at a time. Machine learning has to adjust accordingly. 
 
 
 #### Resampling
-- Resampling methods are very useful and beneficial in statistics and machine learning to fit more accurate models, model selection and parameter tuning. Involve repeatedly drawing samples from a dataset and calculating statistics and metrics on each of those samples in order to obtain further information. Use `from sklearn.utils import resample`
-- Entropy: measure of randomness in dataset
+- Resampling methods are very useful and beneficial in statistics and machine learning to fit more accurate models, model selection, and parameter tuning. Involve repeatedly drawing samples from a dataset and calculating statistics and metrics on each of those samples in order to obtain further information. Use `from sklearn.utils import resample`
+- Entropy: the measure of randomness in the dataset
 - ![entropy](https://user-images.githubusercontent.com/62857660/156621431-6e07b9df-1368-48f5-b8ca-5baad6fda963.JPG)
 
 
@@ -92,15 +92,15 @@ Under fit
   - An underfit model has high bias and low variance.
 - A model with high variance means it fits the training data very well but does a poor job predicting the testing data. It other words, it memorizes the training data very well and is not able to predict the test data due to low generalization.
 Over fit
-  - An overfit model means it has high variance (unsable due to small variation) and low bias (hard to work with new data).
-  - Capture too much noise. Solving for one specific incident intead of general solution
-  - Checking for overfitting. If score is close, may not be a case of overfitting
+  - An overfit model means it has high variance (unstable due to small variation) and low bias (hard to work with new data).
+  - Capture too much noise. Solving for one specific incident instead of the general solution
+  - Checking for overfitting. If the score is close, may not be a case of overfitting
   - ```print('Training set score: {:.4f}'.format(clf.score(X_train, y_train)))
 
 print('Test set score: {:.4f}'.format(clf.score(X_test, y_test)))```
   - ![fit](https://user-images.githubusercontent.com/62857660/155050192-fa6ff06c-5271-43a9-8054-cdb5464b0404.jpg)
  
- - This is an example of the bias - variance tradeoff in machine learning. A model with high variance has learned the training data very well but often cannot generalize to new points in the test set. On the other hand, a model with high bias has not learned the training data very well because it does not have enough complexity. This model will also not perform well on new points.
+ - This is an example of the bias-variance tradeoff in machine learning. A model with high variance has learned the training data very well but often cannot generalize to new points in the test set. On the other hand, a model with high bias has not learned the training data very well because it does not have enough complexity. This model will also not perform well on new points.
 
 
 #### Dimension Reduction
@@ -115,7 +115,7 @@ print('Test set score: {:.4f}'.format(clf.score(X_test, y_test)))```
 - 3 Extract features
   - Use domain expertise
   - Feature ranking, selection
-    - LightGBM: a gradient boosting framework that uses tree based learning algorithm.
+    - LightGBM: a gradient boosting framework that uses tree-based learning algorithm.
   - Feature collinearity
     - If the features are collinear, providing the model with the same information could potentially result in model confusion. Simply drop one of the collinear inputs. If both inputs are important to understand, it is advised to train two separate models with each collinear feature
    - Removing zero-variance features
@@ -123,7 +123,7 @@ print('Test set score: {:.4f}'.format(clf.score(X_test, y_test)))```
   - One hot encoding
 - 5 Scale data
   - The general rule of thumb is that algorithms that exploit distances or similarities between data samples, such as artificial neural network (ANN), KNN, support vector machine (SVM), and k-means clustering, are sensitive to feature transformations. 
-  - However, some tree-based algorithms such as decision tree (DT), RF, and GB are not affected by feature scaling. This is because tree-based models are not distance-based models and can easily handle varying range of features.
+  - However, some tree-based algorithms such as decision tree (DT), RF, and GB are not affected by feature scaling. This is because tree-based models are not distance-based models and can easily handle a varying range of features.
   - Feature normalization: Feature normalization guarantees that each feature will be scaled to [0,1] interval. 
   - Feature standardization (z-Score normalization): Standardization transforms each feature with Gaussian distribution to Gaussian distribution with a mean of 0 and a standard deviation of 1
   - In clustering algorithms such as k-means clustering, hierarchical clustering, density-based spatial clustering of applications with noise (DBSCAN), etc., standardization is important due to comparing feature similarities based on distance measures. On the other hand, normalization becomes more important with certain algorithms such as ANN and image processing .
@@ -149,7 +149,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.3, random
 - 7 Model and pipeline
 - 8 Parameter tuning
   - It is difficult to know which combination of hyperparameters will work best based only on theory because there are complex interactions between hyperparameters. Hence the need for hyperparameter tuning: the only way to find the optimal hyperparameter values is to try many different combinations on a dataset.
-  - After spending hours on cleaning the data to fit your model and tuning the parameters using GridSearchCV, you may come to find that all that hypertuning didn’t improve your model performance by very much.If you took a whole day to test out parameters and only improved your model accuracy by 0.5%, perhaps that wasn’t the best use of your time.
+  - After spending hours cleaning the data to fit your model and tuning the parameters using GridSearchCV, you may come to find that all that hyper tuning didn’t improve your model performance very much. If you took a whole day to test out parameters and only improved your model accuracy by 0.5%, perhaps that wasn’t the best use of your time.
 ```
 param_grid_nb = {
   'var_smoothing': np.logspace(0,-9, num=100)
@@ -181,7 +181,7 @@ Score for testing data: `score_tree = accuracy_score(y_test, y_pred2)*100`
 - Better accuracy.
 - Capable of handling large-scale data. It is not advisable to use LGBM on small datasets. Light GBM is sensitive to overfitting and can easily overfit small data.
 - https://www.kaggle.com/prashant111/lightgbm-classifier-in-python
-- Although `GridSearchCV` has numerous benefits, you may not want to spend too much time and effort perfectly tuning your model. A better use of time may be to investigate your features further. Feature engineering and selecting subsets of features can increase (or decrease) the performance of your model tremendously. 
+- Although `GridSearchCV` has numerous benefits, you may not want to spend too much time and effort perfectly tuning your model. Better use of time may be to investigate your features further. Feature engineering and selecting subsets of features can increase (or decrease) the performance of your model tremendously. 
 
 ![feature](https://user-images.githubusercontent.com/62857660/155051328-8c9f20ce-3beb-4fa0-88bf-940ee2fa52b1.jpg)
 
@@ -252,7 +252,7 @@ print(classification_report(y_test, y_pred_knn))
 - average returns the average without considering the proportion for each label in the dataset. weighted returns the average considering the proportion for each label in the dataset.
 -  Precision (tp / (tp + fp) ) measures the ability of a classifier to identify only the correct instances for each class.
 -  Recall (tp / (tp + fn) is the ability of a classifier to find all correct instances per class. 
-F score of 1 indicates a perfect balance as precision and the recall are inversely related. A high F1 score is useful where both high recall and precision is important. 
+F score of 1 indicates a perfect balance as precision and recall are inversely related. A high F1 score is useful where both high recall and precision is important. 
 - Support is the number of actual occurrences of the class in the test data set. Imbalanced support in the training data may indicate the need for stratified sampling or rebalancing.
 
 
@@ -269,7 +269,9 @@ score_knn = accuracy_score(y_test, y_pred_knn)
 print("accuracy score: %0.3f" % score_knn)
 
 ```
+Score for training data: `print(f'Model Accuracy: {tree.score(X_train, y_train)}')`
 
+Score for testing data: `score_tree = accuracy_score(y_test, y_pred2)*100`
 
 
 #### Cross Validation
@@ -286,7 +288,7 @@ print("accuracy score: %0.3f" % score_knn)
 - The algorithm can be used to solve both classification and regression problem 
 - The advantage of nearest-neighbor classification is its simplicity. There are only two choices a user must make: (1) the number of neighbors, k, and (2) the distance metric to be used. Common choices of distance metrics include Euclidean distance and city-block Manhattan distance.
 - K-NN is a lazy learner because it doesn't learn a discriminative function from the training data but “memorizes” the training dataset instead. 
-- KNN works well with smaller datasets because it is a lazy learner. It needs to store all the data and then make a decision only at run time. So if the dataset is large, there will be a lot of processing which may adversely impact the performance of the algorithm. Each input variable can be considered a dimension of a p-dimensional input space. In high dimensions, points that may be similar may have very large distances.
+- KNN works well with smaller datasets because it is a lazy learner. It needs to store all the data and then make a decision only at run time. So if the dataset is large, there will be a lot of processing which may adversely impact the performance of the algorithm. Each input variable can be considered a dimension of p-dimensional input space. In high dimensions, points that may be similar may have very large distances.
 - It is advised to use the KNN algorithm for multiclass classification if the number of samples of the data is less than 50,000. 
 - How we choose k: parameter tuning. Improve accuracy. We can use the square root of n (number of samples) or choose an odd value of k.
 - Sample: https://www.youtube.com/watch?v=4HKqjENq9OU
@@ -309,14 +311,14 @@ y_pred_knn
 ![Bayes-Theorem](https://user-images.githubusercontent.com/62857660/155053920-a5f71f97-98c3-401f-afc2-3770f14b2dde.png)
 ![download](https://user-images.githubusercontent.com/62857660/155053935-18afc22b-ecea-4aae-8188-0f84db6d1d89.png)
 
-- It predicts membership probabilities for each class such as the probability that given record or data point belongs to a particular class.
+- It predicts membership probabilities for each class such as the probability that a given record or data point belongs to a particular class.
 - Typical applications include filtering spam, classifying documents, face recognition, weather prediction, news classification, medical diagnosis. It works well with high-dimensional data such as text classification, email spam detection.
 - Naive Bayes is called naive because it assumes that each input variable is independent. This is a strong assumption and unrealistic for real data. In some cases, speed is preferred over higher accuracy.
 - https://www.youtube.com/watch?v=l3dZ6ZNFjo0&t=28s
 - 3 types of Naive Bayes models: Gaussian, Multinomial, and Bernoulli. 
   - Gaussian Naive Bayes – This is a variant of Naive Bayes which supports continuous values and has an assumption that each class is normally distributed. 
   - Multinomial Naive Bayes – Has features as vectors where sample(feature) represents frequencies with which certain events have occurred.
-    - Multinomial naive Bayes assumes to have feature vector where each element represents the number of times it appears (or, very often, its frequency). ... The Gaussian Naive Bayes, instead, is based on a continuous distribution and it's suitable for more generic classification tasks.
+    - Multinomial naive Bayes assumes to have a feature vector where each element represents the number of times it appears (or, very often, its frequency). ... The Gaussian Naive Bayes, instead, is based on a continuous distribution and it's suitable for more generic classification tasks.
 ```
 GB = GaussianNB()
 GB.fit(X_train, y_train)
@@ -338,11 +340,11 @@ pc = pca.fit_transform(X)
 Limiting the depth of a single decision tree is one way we can try to make a less biased model. Another option is to use an entire forest of trees, training each one on a random subsample of the training data. The final model then takes an average of all the individual decision trees to arrive at a classification. This is the idea behind the random forest.
 
 #### Decision Tree
-Each branch of tree represents a possible decision. Can be use on classification and regression. Reduce entropy and caculate the gain. 
+Each branch of the tree represents a possible decision. Can be used on classification and regression. Reduce entropy and calculate the gain. 
 
 ![node](https://user-images.githubusercontent.com/62857660/156621764-1048de9b-f744-4d98-bed3-bf8b37e54be3.JPG)
 
-Good: Simple to understand and data prep, able to handle numerical and categorical, non linear paramter don't affect performance
+Good: Simple to understand and data prep, able to handle numerical and categorical, non-linear parameter don't affect performance
 Bad: Can be overfit
 
 
@@ -350,8 +352,8 @@ Bad: Can be overfit
 - Coming Soon
 - A/B testing
 - Variance 
-  - how spread out the dataset is
-  - we need variance to make predictions
+  - how to spread out the dataset is
+  - we need a variance to make predictions
 - Std
   - low std, close to the mean
   - high std, far to the mean
@@ -372,7 +374,7 @@ Bad: Can be overfit
 
 
 #### General:
-The primary difference between vectors and matrices is that vectors are 1d array while matrices are 2d arrays.
+The primary difference between vectors and matrices is that vectors are 1d arrays while matrices are 2d arrays.
 
 - lambda function: perform a function on every row of the dataset
 
@@ -450,7 +452,7 @@ life_cycle = pd.DataFrame(randn(8,5),index = 'Land Seismic Geology Drilling Comp
 If this drop is going to be permanent, please make sure to include `inplace = True`. To drop rows, use axis = 0 (which is the default in Python’s pandas) and to drop columns, use axis = 1 .
 ```life_cycle.drop(labels = ['Cycle_Total','Cycle_1_2_Mult'], axis=1, inplace=True)```
 
-Sum numbers in column and skip the NaN
+Sum numbers in a column and skip the NaN
 ```
 df["sum_a_and_b"] = df[["a", "b"]].sum(axis=1)
 ```
@@ -460,7 +462,7 @@ df["sum_a_and_b"] = df[["a", "b"]].sum(axis=1)
 [Back to Top](#coding)
 
 loc is label based
-iloc is index based
+iloc is index-based
 
 ![loc iloc](https://user-images.githubusercontent.com/62857660/155054577-708bbdce-0b1c-4e69-8768-70374ec3552f.png)
 
@@ -539,11 +541,11 @@ for i in num_col:
 - Coming Soon
 
 ## SQL
-Ensure data integrity: only the data you want entered is entered, and only certain users are able to enter data into the database.
+Ensure data integrity: only the data you want to be entered is entered, and only certain users are able to enter data into the database.
 
-Ensure domains: set of values following documentations, consistent data types
+Ensure domains: a set of values following documentations, consistent data types
 
-Normalization is important so the data can follow logical route and query efficiently. Without normalization, database systems can be inaccurate, slow, and inefficient. Four GOALS:
+Normalization is important so the data can follow logical routes and queries efficiently. Without normalization, database systems can be inaccurate, slow, and inefficient. Four GOALS:
   -  arranging data into logical groupings such that each group describes a small part of the whole;
   -  minimizing the amount of duplicate data stored in a database;
   -  organizing the data such that, when you modify it, you make the change in only one place;
@@ -568,7 +570,7 @@ having count(w.id) > 6
 order by channel_count;
 ```
 
-USE MIN and MAX for date range
+USE MIN and MAX for the date range
  - When was the earliest order ever placed? `SELECT MIN(occurred_at)`
  - hen did the most recent (latest) web_event occur? `SELECT MAX(occurred_at`
  
@@ -577,7 +579,7 @@ FROM orders;
 LIKE This allows you to perform operations similar to using WHERE and =, but for cases when you might not know exactly what you are looking for.
   -  frequently used with %
   -  % is a wildcard, eg: `WHERE name LIKE %google%` is any characters, then contain the text 'google', then any characters after
-  -  if name column is first name space last name, to get last name start with any letter, use `WHERE table.name_column LIKE '% A%'`
+  -  if name column is first name space last name, to get the last name start with any letter, use `WHERE table.name_column LIKE '% A%'`
   
 IN This allows you to perform operations similar to using WHERE and =, but for more than one condition.
   - like OR, but cleaner
@@ -587,7 +589,7 @@ NOT This is used with IN and LIKE to select all of the rows NOT LIKE or NOT IN a
 `WHERE column BETWEEN 6 AND 10` is a cleaner version of `WHERE column >= 6 AND column <= 10`
   - BETWEEN endpoint values are included, but tricky for dates. To get all orders in 2016, use `occurred_at BETWEEN '2016-01-01' AND '2017-01-01'`
   
-Make sure to include parenthsis
+Make sure to include parenthesis
   - `select name from accounts
      where name like 'C%' Or name like 'W%' AND (primary_poc like '%ana%' OR primary_poc like '%Ana%') AND (primary_poc not like '%eana');` 
   - ```SELECT * FROM accounts
@@ -598,7 +600,7 @@ Make sure to include parenthsis
 
 INNER join result may be the same if flip the table on a LEFT join.
 
-If you have two or more columns in your SELECT that have the same name after the table name such as accounts.name and sales_reps.name you will need to alias them. Otherwise it will only show one of the columns. You can alias them like accounts.name AS AcountName, sales_rep.name AS SalesRepName
+If you have two or more columns in your SELECT that have the same name after the table name such as accounts.name and sales_reps.name you will need to alias them. Otherwise, it will only show one of the columns. You can alias them like accounts.name AS AcountName, sales_rep.name AS SalesRepName
 
 UNION and UNION ALL, CROSS JOIN, and the tricky SELF JOIN.
 
@@ -607,7 +609,7 @@ DATE is databases are in YYYY-MM-DD 00:00:00
 
 ![2](https://user-images.githubusercontent.com/62857660/158932933-a512fc05-36b6-4fdf-8782-2a53b31c96e3.png)
 
-CASE statement can in in the SELECT phrase
+CASE statement can in the SELECT phrase
 
 If you use aggregate, you must put them in a GROUP BY. You can also group by case statement columns
 ```
@@ -670,11 +672,11 @@ Sometimes, you will need to join a table with a subquery table
 #
 
 ## Excel
-- VLOOKUP always start with the left most column, using INDEX and MATCH isntead
-- `VLOOKUP(value to look for, range to look in, column number of the value to return, apprximate or exact match [TRUE/FALSE])`
+- VLOOKUP always start with the left-most column, using INDEX and MATCH instead
+- `VLOOKUP(value to look for, range to look in, column number of the value to return, approximate or exact match [TRUE/FALSE])`
 - `=INDEX(array or reference, MATCH(value to look up,lookup_array,[match_type]) `
 - `=VLOOKUP(A17,C2:H14,4,FALSE)` will have the same result as `=INDEX(F2:F14, MATCH(A17,C2:C14,0))`
-  - index, match, match is powerful tool
+  - index, match, the match is a powerful tool
 ![Capture](https://user-images.githubusercontent.com/62857660/156065004-5b03b355-d079-4fdb-ada0-72b83fae1d2a.JPG)
 
 ![excel4](https://user-images.githubusercontent.com/62857660/156849317-c7d62a25-08f3-4d3e-9415-6497b70f6d84.jpg)
@@ -687,7 +689,7 @@ Sometimes, you will need to join a table with a subquery table
 ![excel](https://user-images.githubusercontent.com/62857660/156689379-525f143b-c94d-413b-99aa-166cdd13b9b9.png)
 
 - `=TRIM()` to trim out white spaces
-- Change numbers to other format
+- Change numbers to another format
 
 ![excel2](https://user-images.githubusercontent.com/62857660/156702577-6ecd31b6-f8d2-452c-83c2-fe66e8b76c32.png)
 
@@ -696,14 +698,14 @@ Sometimes, you will need to join a table with a subquery table
 
 ![excel3](https://user-images.githubusercontent.com/62857660/156708541-7f80669d-add6-4d2b-b446-1cb6d321330b.jpg)
 
-- Use data validation to only limit values other user can input
+- Use data validation to only limit values another user can input
 
 
 
 
 
 ## Tableau and Power BI
-- Slicer in Power BI works similiar to the filter in Tableau
+- Slicer in Power BI works similar to the filter in Tableau
 
 ![powerbi](https://user-images.githubusercontent.com/62857660/158744343-c905f3dc-1bc0-4721-9924-45281f0069ad.png)
 
@@ -731,7 +733,7 @@ KPI in SEO
 
 SCRUM
 -  Framework for developing, delivering, and sustaining products in a complex environment.
--  The key difference between Agile and Scrum is that while Agile is a project management philosophy that utilizes a core set of values or principles, Scrum is a specific Agile methodology that is used to facilitate a projec
--  Scrum is an Agile project management methodology involving a small team led by a Scrum master, whose main job is to remove all obstacles to getting work done. Work is done in short cycles called sprints, and the team meets daily to discuss current tasks and any roadblocks that need clearing.
+-  The key difference between Agile and Scrum is that while Agile is a project management philosophy that utilizes a core set of values or principles, Scrum is a specific Agile methodology that is used to facilitate a project
+-  Scrum is an Agile project management methodology involving a small team led by a Scrum Master, whose main job is to remove all obstacles to getting work done. Work is done in short cycles called sprints, and the team meets daily to discuss current tasks and any roadblocks that need clearing.
 
 [Back to Top](#machine-learning)
