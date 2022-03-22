@@ -585,6 +585,13 @@ select name,
        right(name, length(name) - position(' ' in name)) as last
 from accounts;
 ```
+**OR**
+```
+SELECT  name,
+	LEFT(name, STRPOS(name, ' ')-1)  first, 
+	RIGHT(name, LENGTH(name) - STRPOS(name, ' ')) last
+ FROM accounts;
+ ```
 
 Remove space by replacing a space with no space `replace(name,' ','')`
 ```
