@@ -570,6 +570,35 @@ having count(w.id) > 6
 order by channel_count;
 ```
 
+USE UPPER if the result have both upper and lower, but you want upper instead
+```
+select left(upper(name), 1) as first_letter, count(*) as distribution
+from accounts
+group by first_letter
+order by first_letter;
+```
+
+Split first and last name if seperate by space
+```
+select name,
+       left(name, position(' ' in name)) as first,
+       right(name, length(name) - position(' ' in name)) as last
+from accounts;
+```
+
+Remove space by replacing a space with no space `replace(name,' ','')`
+```
+select primary_poc, 
+      concat(first,'.',last,'@',lower(replace(name,' ','')),'.com') as email
+from (select primary_poc,name,
+       left(primary_poc, position(' ' in primary_poc)) as first,
+       right(primary_poc, length(primary_poc) - position(' ' in primary_poc)) as last
+      from accounts) sub;
+```
+![Screenshot 2022-03-21 224358](https://user-images.githubusercontent.com/62857660/159403650-6091dfed-4943-453b-8171-c3d122ea88bd.png)
+
+
+
 USE MIN and MAX for the date range
  - When was the earliest order ever placed? `SELECT MIN(occurred_at)`
  - hen did the most recent (latest) web_event occur? `SELECT MAX(occurred_at`
