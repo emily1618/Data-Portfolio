@@ -738,6 +738,17 @@ FROM orders;
 Partition by
 ![Screenshot 2022-03-23 083949](https://user-images.githubusercontent.com/62857660/159712820-dba55540-3ee5-429f-9e85-9c912424fe58.png)
 
+Row() and Rank() difference is when two lines in a row have the same values, then Row() will give different number and Rank() will give the same number.
+Dense_Rank doesn't not skip the values, but Rank() skip it
+
+```
+SELECT id,
+       account_id,
+       total,
+       RANK() OVER (PARTITION BY account_id ORDER BY total DESC) AS total_rank
+FROM orders
+```
+![Screenshot 2022-03-23 085015](https://user-images.githubusercontent.com/62857660/159714953-fa5edef2-df80-4075-aa72-d5d6eb4f7087.png)
 
 #
 
