@@ -760,6 +760,10 @@ FROM orders
 ```
 ![Screenshot 2022-03-23 085015](https://user-images.githubusercontent.com/62857660/159714953-fa5edef2-df80-4075-aa72-d5d6eb4f7087.png)
 
+`Dense_Rank()`
+![dense](https://user-images.githubusercontent.com/62857660/159749834-013d079b-34d6-4779-857d-02300e8555fc.PNG)
+
+
 #
 
 ## Excel
