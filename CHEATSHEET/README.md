@@ -716,6 +716,27 @@ JOIN table2
 ON table1.account_id = table2.id;
 ```
 
+Coalesce with an anther id
+```
+SELECT COALESCE(o.id, a.id) filled_id, a.name, a.website, a.lat, a.long, a.primary_poc, a.sales_rep_id, o.*
+FROM accounts a
+LEFT JOIN orders o
+ON a.id = o.account_id
+WHERE o.total IS NULL;
+```
+
+A window function performs a calculation across a set of table rows that are somehow related to the current row. But unlike regular aggregate functions, use of a `window` function does not cause rows to become grouped into a single output row — the rows retain their separate identities. You can’t include window functions in a GROUP BY clause. Window functions are permitted only in the SELECT list and the ORDER BY clause of the query. They are forbidden elsewhere, such as in GROUP BY, HAVING and WHERE clauses.
+
+```
+SELECT standard_amt_usd,
+       date_trunc('year', occurred_at) as year,
+       SUM(standard_amt_usd) OVER (partition by date_trunc('year', occurred_at)  ORDER BY  occurred_at) AS running_total
+FROM orders;
+```
+![Screenshot 2022-03-22 235221](https://user-images.githubusercontent.com/62857660/159626513-5a11744e-f856-4fec-b61e-354b04f2ad07.png)
+
+Partition by
+![Screenshot 2022-03-23 083949](https://user-images.githubusercontent.com/62857660/159712820-dba55540-3ee5-429f-9e85-9c912424fe58.png)
 
 
 #
