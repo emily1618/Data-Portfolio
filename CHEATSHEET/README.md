@@ -351,6 +351,16 @@ Bad: Can be overfit
 ## Statistics 
 - Coming Soon
 - A/B testing
+	1. Hypothesis: By creating a new feature or improve a new existing feature, we want to increase the number of users by X percentage. Goal is to grow the user. The X percentage is a practical significance (bound and min detectable effect). If we did not able to reach the bound, then we have to decide if we want to launch this feature. 
+	2. Define a metric, success metrics vs guardrail metrics
+	3. Power Analysis - alpha, beta and delta to calculate sample size. Number of days/weeks to run the experiment
+	4. Ramp up the experiment - make sure the data we use is good enough
+	5. Interpret results - problems such as control group vs treatment group does not have statisical signifance
+	- Problems occurred other than looking at the data or p-value: most importantly, we want to make sure the data is trusthworthy! Second, we can look at segmentation. Third, funnel analysis. Forth, decomposition analysis (eg: daily active user can futher divide into new users or old users). Fifth, selection bias. 
+- Metrics
+	1. Primary metric: when you add/change a feature, it will directly impact your users. Eg: click through rate when increase a checkout button size
+	2. Secondary metric: same as primary, but not as important as primary, will assist along with primary. Eg: user checkout time reduced when button size increase
+	3. Guardrail metric: we want that the experiment do not affect this metric. Eg: avg sales price should not be affect bu the checkout button size increase
 - Variance 
   - how to spread out the dataset is
   - we need a variance to make predictions
