@@ -804,12 +804,20 @@ FROM orders
 
 ![powerbi](https://user-images.githubusercontent.com/62857660/158744343-c905f3dc-1bc0-4721-9924-45281f0069ad.png)
 
-- Parameter is a workbook variable that can replace a constant value in calculation, filter and reference line. Sort of like a subquery. Use parameter in Top N, moving average, date range, 
+- Parameter is a workbook variable that can replace a constant value in calculation, filter and reference line. Sort of like a subquery. Use parameter in Top N, moving average, choose date range, 
 
 ![Screenshot 2022-03-23 233503](https://user-images.githubusercontent.com/62857660/159844314-2659c566-2cce-48c5-854c-ed03f1cf1e10.png)
 ![1b](https://user-images.githubusercontent.com/62857660/159844323-5b6e74be-1971-4732-86aa-1c7ebf3ec276.png)![2](https://user-images.githubusercontent.com/62857660/159844336-c450cdf8-603e-4807-b11f-cb36912b8ff7.png)
 
 ![4](https://user-images.githubusercontent.com/62857660/159844352-49fa82f7-d2ca-4d4e-b2f3-8cc672cb6315.png)
+
+![5](https://user-images.githubusercontent.com/62857660/159847056-6bb4a78c-fd4e-497a-b032-f8b50eaca6e6.png)
+
+![6](https://user-images.githubusercontent.com/62857660/159847076-ca986bec-7cc3-4a3d-8bdf-12524bb1344f.png)![7](https://user-images.githubusercontent.com/62857660/159847081-d0ab5c96-d78b-4f34-9799-02ac4cdf1b7f.png)
+
+![8](https://user-images.githubusercontent.com/62857660/159847086-2c3876c6-75ba-4c93-828d-9464b600e5f1.png)
+
+![9](https://user-images.githubusercontent.com/62857660/159847093-da64b247-3cca-4cdc-8a65-4fcf759f4859.png)
 
 
 
