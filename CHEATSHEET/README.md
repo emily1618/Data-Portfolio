@@ -769,6 +769,19 @@ FROM orders
 `Dense_Rank()`
 ![dense](https://user-images.githubusercontent.com/62857660/159749834-013d079b-34d6-4779-857d-02300e8555fc.PNG)
 
+If you wanted to return unmatched rows only, which is useful for some cases of data assessment, you can isolate them by adding the following line to the end of the query: `WHERE Table_A.column_name IS NULL OR Table_B.column_name IS NULL`. Examples usage are: I've used full outer joins when attempting to find mismatched, orphaned data, from both of my tables and wanted all of my result set, not just matches.
+![full-outer-join-if-null](https://user-images.githubusercontent.com/62857660/159950748-d3736545-4ab9-4952-9237-638035c7750d.png)
+
+Details of `UNION` 
+- There must be the same number of expressions in both SELECT statements.
+- The corresponding expressions must have the same data type in the SELECT statements. For example: expression1 must be the same data type in both the first and second 
+SELECT statement.
+
+Expert Tip
+- UNION removes duplicate rows.
+- UNION ALL does not remove duplicate rows. **use more in real life**
+
+#
 
 #
 
