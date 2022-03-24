@@ -27,6 +27,12 @@ An application of Artificial Intelligence wherein the systems get the ability to
 - Regression. predict price
 - Clustering. product recommendation
 - Source:https://www.youtube.com/watch?v=RmajweUFKvM
+- Check run time using
+```
+- t0 = time()
+< your clf.fit() line of code >
+print "training time:", round(time()-t0, 3), "s"
+```
 
 [Supervised-vs-Unsupervised](#supervised-vs-unsupervised)
 
