@@ -804,8 +804,20 @@ FROM orders
 
 ![powerbi](https://user-images.githubusercontent.com/62857660/158744343-c905f3dc-1bc0-4721-9924-45281f0069ad.png)
 
+- Parameter is a workbook variable that can replace a constant value in calculation, filter and reference line. Sort of like a subquery. Use parameter in Top N, moving average, date range, 
+
+![Screenshot 2022-03-23 233503](https://user-images.githubusercontent.com/62857660/159844314-2659c566-2cce-48c5-854c-ed03f1cf1e10.png)
+![1b](https://user-images.githubusercontent.com/62857660/159844323-5b6e74be-1971-4732-86aa-1c7ebf3ec276.png)![2](https://user-images.githubusercontent.com/62857660/159844336-c450cdf8-603e-4807-b11f-cb36912b8ff7.png)
+
+![4](https://user-images.githubusercontent.com/62857660/159844352-49fa82f7-d2ca-4d4e-b2f3-8cc672cb6315.png)
+
+
+
 
 ## Business
+Moving Average
+- Allow to see the pattern in volatile data
+
 KPI
 - Key Performance Indicators (KPI) are used to measure a business's performance over a set period of time. The data analyst must decode this information and present it in easy-to-understand terms, allowing organizations to develop more powerful strategies.
 
