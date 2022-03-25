@@ -355,7 +355,18 @@ Bad: Can be overfit
 
 
 ## Statistics 
-- Coming Soon
+- Power: the higher the statistical power, the better the test is. Use in min sample size experiment
+	- Person infected with covid and test show positive, power of test
+- Type 1 Error: when we reject the true null hypothsis, conclude the findings are significant but in fact they occurred by chance. In A/B testing, observed difference when there is no different. 
+	- Person is not infected but test show positive
+- Type 2 Error: fail to reject the false null, conclude the findings are NOT significant but in fact they are. In A/B, observed no difference but there is difference.
+	- Person is infected but test show neegative
+- Confidence Interval: how variable the sample may be, an estimate of the true value (how often it will contain the true value). The probability that it will cover the true value is CI.
+	- Level of uncertainty when we estimate a value
+	- 95% of CI avg of height is 168 to 180cm. How likely? We're 95% confident that the range cover the true avg height. 
+- P-value: <0.5, reject the null. p>0.05, cannot reject null. in A/B, the smaller the p-value, more convinced there is a difference b/w the control and treatment.
+	- Can we conclude avg height is 175cm? p-value measure what data we observe and what conclussion we can draw. If p<0.05, we reject the avg ht is 175cm, 
+- Examples2
 - A/B testing
 	1. Hypothesis: By creating a new feature or improve a new existing feature, we want to increase the number of users by X percentage. Goal is to grow the user. The X percentage is a practical significance (bound and min detectable effect). If we did not able to reach the bound, then we have to decide if we want to launch this feature. 
 	2. Define a metric, success metrics vs guardrail metrics
