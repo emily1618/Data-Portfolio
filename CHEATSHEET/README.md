@@ -853,11 +853,20 @@ Expert Tip
 
 
 ## Business
+How to improve a product? Some steps:
+1. Clarify the question: Which feature are we focus on? How the feature actually work?
+2. Approach to improve: analyze the user journey map (think of yourself as the user and what would attract or prevent you from the product). Come up with any ideas! Another one is segment users into group
+3. Prioritize ideas: quantity analysis, EDA, cost-effective idea
+4. Define 1 to 2 success metrics
+
+
 Moving Average
 - Allow to see the pattern in volatile data
 
 KPI
 - Key Performance Indicators (KPI) are used to measure a business's performance over a set period of time. The data analyst must decode this information and present it in easy-to-understand terms, allowing organizations to develop more powerful strategies.
+- ![1](https://user-images.githubusercontent.com/62857660/160064954-97e21395-2fd4-4255-8d6d-427a0d19e1a4.png)
+
 
 What Are the 5 Key Performance Indicators?
 - Revenue growth.
