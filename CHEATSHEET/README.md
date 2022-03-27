@@ -362,6 +362,7 @@ Using kernel to transform 1D to 2D to 3D
 Advantage: high dimensional space (tokenzied word in doc) and naturally avoid overfitting
  ![Screenshot 2022-03-26 212932](https://user-images.githubusercontent.com/62857660/160264467-377a1ed9-1f6d-4037-98c3-f3de0f0a9db4.png)![Screenshot 2022-03-26 213039](https://user-images.githubusercontent.com/62857660/160264469-a48b2e8c-294f-4522-9cec-a8913b7191ce.png)
 
+![Screenshot 2022-03-26 224918](https://user-images.githubusercontent.com/62857660/160265828-41d44aef-f624-4671-9f56-bead9c760703.png)
 
 
 
