@@ -349,11 +349,31 @@ Limiting the depth of a single decision tree is one way we can try to make a les
 
 #### Decision Tree
 Each branch of the tree represents a possible decision. Can be used on classification and regression. Reduce entropy and calculate the gain. 
+Entropy controls how a DT decides where to split. Entropy measures the impurity in the dataset.
+Entropy = -Sum(Pi(log2)(Pi)) or 
+```
+import scipy.stats
+print scipy.stats.entropy([2,1],base=2)
+```
+
+![Screenshot 2022-03-26 234252](https://user-images.githubusercontent.com/62857660/160267198-2bf5ad2d-d73e-48fb-83d6-01d4ff65fe44.png)
+![Screenshot 2022-03-26 235136](https://user-images.githubusercontent.com/62857660/160267200-e653b7c5-c394-442e-a323-4d0b8b094e84.png)
+
+
+Information gain:
+Entropy(parent) - weight average Entropy(children)
+If information gain = 0, then not a good idea to split on that feature first. 
+Perfert purity = 1 
+https://www.youtube.com/watch?v=o75xNa_jwvg&feature=emb_logo
 
 ![node](https://user-images.githubusercontent.com/62857660/156621764-1048de9b-f744-4d98-bed3-bf8b37e54be3.JPG)
 
 Good: Simple to understand and data prep, able to handle numerical and categorical, non-linear parameter don't affect performance
 Bad: Can be overfit
+
+![Screenshot 2022-03-26 233426](https://user-images.githubusercontent.com/62857660/160266800-354687ad-4543-4e7d-bc99-02d07badc5c2.png)
+![Screenshot 2022-03-26 233822](https://user-images.githubusercontent.com/62857660/160266889-5398f444-ca1e-4c0f-899e-4007fd0826ea.png)
+
 
 #### Support Vector Machine
 Use in ace dectection, bioinformatics, images classification.
@@ -363,10 +383,16 @@ Advantage: high dimensional space (tokenzied word in doc) and naturally avoid ov
  ![Screenshot 2022-03-26 212932](https://user-images.githubusercontent.com/62857660/160264467-377a1ed9-1f6d-4037-98c3-f3de0f0a9db4.png)![Screenshot 2022-03-26 213039](https://user-images.githubusercontent.com/62857660/160264469-a48b2e8c-294f-4522-9cec-a8913b7191ce.png)
 
 ![Screenshot 2022-03-26 224918](https://user-images.githubusercontent.com/62857660/160265828-41d44aef-f624-4671-9f56-bead9c760703.png)
+![Screenshot 2022-03-26 230243](https://user-images.githubusercontent.com/62857660/160266105-ed6e89ca-c1f7-45f0-9b50-9d0be5f6541a.png)
 
+![Screenshot 2022-03-26 230613](https://user-images.githubusercontent.com/62857660/160266797-41717b99-deff-4895-822e-7d1843c7690e.png)
 
 
 [Source](https://www.youtube.com/watch?v=TtKF996oEl8)
+
+### Which one to choose?
+SVM might be slow if big dataset with lots of noise - https://www.youtube.com/watch?v=U9-ZsbaaGAs&t=47s
+Navies Bayes will be faster than SVM
 
 
 ## Statistics 
