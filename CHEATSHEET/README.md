@@ -66,6 +66,8 @@ print "training time:", round(time()-t0, 3), "s"
 
 [Decision Tree](#decision-tree)
 
+[Support Vector Machine](#support-vector-machine)
+
 #### Supervised vs Unsupervised
 - Supervised: Input and output data are provided 
   - A supervised learning model produces an accurate result. It allows you to collect data or produce a data output from the previous experience. The drawback of this model is that decision boundaries might be overstrained if your training set doesn't have examples that you want to have in a class. Usage: bank loan approval
@@ -352,6 +354,18 @@ Each branch of the tree represents a possible decision. Can be used on classific
 
 Good: Simple to understand and data prep, able to handle numerical and categorical, non-linear parameter don't affect performance
 Bad: Can be overfit
+
+#### Support Vector Machine
+Use in ace dectection, bioinformatics, images classification.
+Supervised for classfication and regression.
+Using kernel to transform 1D to 2D to 3D
+Advantage: high dimensional space (tokenzied word in doc) and naturally avoid overfitting
+ ![Screenshot 2022-03-26 212932](https://user-images.githubusercontent.com/62857660/160264467-377a1ed9-1f6d-4037-98c3-f3de0f0a9db4.png)![Screenshot 2022-03-26 213039](https://user-images.githubusercontent.com/62857660/160264469-a48b2e8c-294f-4522-9cec-a8913b7191ce.png)
+
+
+
+
+[Source](https://www.youtube.com/watch?v=TtKF996oEl8)
 
 
 ## Statistics 
