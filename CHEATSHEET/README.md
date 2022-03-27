@@ -36,6 +36,8 @@ print "training time:", round(time()-t0, 3), "s"
 
 [Supervised-vs-Unsupervised](#supervised-vs-unsupervised)
 
+[Sample Size](#sample-size)
+
 [Entropy and Resampling](#resampling)
 
 [Missing Values](#missing-values)
@@ -76,6 +78,11 @@ print "training time:", round(time()-t0, 3), "s"
 Unsupervised machine learning finds all kinds of unknown patterns in data. Also helps you to find features that can be useful for categorization. It is easier to get unlabeled data from a computer than labeled data, which needs manual intervention. Unsupervised learning solves the problem by learning the data and classifying it without any labels. 
 - Reinforcement: Input data one at a time. Machine learning has to adjust accordingly. 
 
+#### Sample Size
+More data >  Fine tune model
+
+![Screenshot 2022-03-27 135751](https://user-images.githubusercontent.com/62857660/160296481-2b5adbc7-a93d-4134-9f19-a9172c7daa3b.png)
+
 
 #### Resampling
 - Resampling methods are very useful and beneficial in statistics and machine learning to fit more accurate models, model selection, and parameter tuning. Involve repeatedly drawing samples from a dataset and calculating statistics and metrics on each of those samples in order to obtain further information. Use `from sklearn.utils import resample`
@@ -110,6 +117,7 @@ print('Test set score: {:.4f}'.format(clf.score(X_test, y_test)))```
  
  - This is an example of the bias-variance tradeoff in machine learning. A model with high variance has learned the training data very well but often cannot generalize to new points in the test set. On the other hand, a model with high bias has not learned the training data very well because it does not have enough complexity. This model will also not perform well on new points.
 
+- VIdeo explanation: https://www.youtube.com/watch?time_continue=69&v=W5uUYnSHDhM&feature=emb_logo
 
 #### Dimension Reduction
 - Dimensionality reduction is the process of reducing the number of variables by obtaining a set of important variables.
