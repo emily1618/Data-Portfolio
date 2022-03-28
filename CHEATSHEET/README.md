@@ -631,6 +631,8 @@ AVG ignores the NULL values
 
 DISTINCT to group by columns without aggregation
 
+LIKE and ILIKE(Protegre SQL). ILIKE is not case sensitive
+
 WHERE and HAVING
 ```
 GROUP BY a.id, a.name, w.channel
