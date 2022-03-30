@@ -843,7 +843,11 @@ Expert Tip
 - UNION removes duplicate rows.
 - UNION ALL does not remove duplicate rows. **use more in real life**
 
-#
+A JOIN combines result sets horizontally, a UNION appends result set vertically. The following picture illustrates the difference between UNION and JOIN:
+MySQL UNION vs JOIN
+![image](https://user-images.githubusercontent.com/62857660/160748020-413062a2-9345-475f-93e5-2d06f1a25c27.png)
+
+
 
 #
 
