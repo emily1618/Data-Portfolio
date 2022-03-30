@@ -15,5 +15,7 @@ SQL is the standard programming language used to design, create and manage relat
 
 5. University of Houston Database Management Class
 
+6. https://www.mysqltutorial.org/
+
 ### Youtuber
 1. [AlexTheAnalyst](https://www.youtube.com/watch?v=K1WeoKxLZ5o&list=PLUaB-1hjhk8EBZNL4nx4Otoa5Wb--rEpU)
