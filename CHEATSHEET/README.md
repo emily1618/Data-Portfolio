@@ -627,6 +627,10 @@ Normalization is important so the data can follow logical routes and queries eff
   -  organizing the data such that, when you modify it, you make the change in only one place;
   -  building a database in which you can access and manipulate the data quickly and efficiently without compromising the integrity of the data.
 
+![image](https://user-images.githubusercontent.com/62857660/160750604-f92728b6-06be-43f6-81cd-6f66e651f6c3.png)
+
+
+
 AVG ignores the NULL values
 
 DISTINCT to group by columns without aggregation
