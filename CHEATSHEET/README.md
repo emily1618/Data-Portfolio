@@ -1,4 +1,4 @@
-# Interview Cheatsheet For Entry Level Data Analyst Jobs
+# Interview Cheatsheet For Data Analyst Interviews 
 #### I created this notebook to prepare for an interview. The information is an overview of the concept from theory, statistics, machine learning model, SQL, and coding. Not all concept is covered. The source is everywhere from google search to classroom lecture slides. I will continually update this. 
 
 ##### Author: Emi Ly
@@ -425,15 +425,13 @@ Navies Bayes will be faster than SVM
 	- Can we conclude avg height is 175cm? p-value measure what data we observe and what conclussion we can draw. If p<0.05, we reject the avg ht is 175cm, 
 - α: significance level for the test. The proportion of the sample mean lying in the critical region. Probability of making an error.
 - ![image](https://user-images.githubusercontent.com/62857660/163731558-8fb36f08-8fc9-47a0-974f-42c84df29874.png)
-
-- Examples2
 - A/B testing
 	1. Hypothesis: By creating a new feature or improve a new existing feature, we want to increase the number of users by X percentage. Goal is to grow the user. The X percentage is a practical significance (bound and min detectable effect). If we did not able to reach the bound, then we have to decide if we want to launch this feature. 
 	2. Define a metric, success metrics vs guardrail metrics
 	3. Power Analysis - alpha, beta and delta to calculate sample size. Number of days/weeks to run the experiment
 	4. Ramp up the experiment - make sure the data we use is good enough
 	5. Interpret results - problems such as control group vs treatment group does not have statisical signifance
-	- Problems occurred other than looking at the data or p-value: most importantly, we want to make sure the data is trusthworthy! Second, we can look at segmentation. Third, funnel analysis. Forth, decomposition analysis (eg: daily active user can futher divide into new users or old users). Fifth, selection bias. 
+	- Problems occurred other than looking at the data or p-value: most importantly, we want to make sure the data is trusthworthy! Second, we can look at segmentation. Third, funnel analysis. Fourth, decomposition analysis (eg: daily active user can futher divide into new users or old users). Fifth, selection bias. 
 - Metrics
 	1. Primary metric: when you add/change a feature, it will directly impact your users. Eg: click through rate when increase a checkout button size
 	2. Secondary metric: same as primary, but not as important as primary, will assist along with primary. Eg: user checkout time reduced when button size increase
