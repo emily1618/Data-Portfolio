@@ -77,6 +77,7 @@ print "training time:", round(time()-t0, 3), "s"
   - In the case of images and videos, unsupervised algorithms can rapidly classify and cluster data using far fewer features than humans might specify, making data processing even faster and more efficient.
 Unsupervised machine learning finds all kinds of unknown patterns in data. Also helps you to find features that can be useful for categorization. It is easier to get unlabeled data from a computer than labeled data, which needs manual intervention. Unsupervised learning solves the problem by learning the data and classifying it without any labels. 
 - Reinforcement: Input data one at a time. Machine learning has to adjust accordingly. 
+- Neural networks, for the most part, are supervised. But they can certainly be used in an unsupervised way, such as AutoEncoders.
 
 #### Sample Size
 More data >  Fine tune model
