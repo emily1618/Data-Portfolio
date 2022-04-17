@@ -774,14 +774,18 @@ NOT This is used with IN and LIKE to select all of the rows NOT LIKE or NOT IN a
   - BETWEEN endpoint values are included, but tricky for dates. To get all orders in 2016, use `occurred_at BETWEEN '2016-01-01' AND '2017-01-01'`
   
 Make sure to include parenthesis
-  ```select name from accounts
-     where name like 'C%' Or name like 'W%' AND (primary_poc like '%ana%' OR primary_poc like '%Ana%') AND (primary_poc not like '%eana');
-     ``` 
-  ```SELECT * FROM accounts
+  ```
+  select name
+  from accounts
+  where name like 'C%' Or name like 'W%' AND (primary_poc like '%ana%' OR primary_poc like '%Ana%') AND (primary_poc not like '%eana');
+  ``` 
+  AND
+  ```
+  SELECT * FROM accounts
       WHERE (name LIKE 'C%' OR name LIKE 'W%') 
            AND ((primary_poc LIKE '%ana%' OR primary_poc LIKE '%Ana%') 
            AND primary_poc NOT LIKE '%eana%');
-   ```
+  ```
   - ABOVE IS NOT THE SAME!!!
 
 INNER join result may be the same if flip the table on a LEFT join.
@@ -841,8 +845,7 @@ ORDER BY 3 DESC;
 ```
 ![Screenshot 2022-03-17 231453](https://user-images.githubusercontent.com/62857660/158936380-3f94dad0-cb0d-463a-a7f9-285120a0526e.png)
 
-Subquery
-If you are only returning a single value, you might use that value in a logical statement like WHERE, HAVING, or even SELECT - the value could be nested within a CASE statement. You should not include an alias when you write a subquery in a conditional statement. This is because the subquery is treated as an individual value (or set of values in the IN case) rather than as a table.
+**Subquery If you are only returning a single value**, you might use that value in a logical statement like WHERE, HAVING, or even SELECT - the value could be nested within a CASE statement. You should not include an alias when you write a subquery in a conditional statement. This is because the subquery is treated as an individual value (or set of values in the IN case) rather than as a table.
 ```
 SELECT AVG(standard_qty) avg_std, AVG(gloss_qty) avg_gls, AVG(poster_qty) avg_pst, SUM(total_amt_usd)
 FROM orders
@@ -866,7 +869,7 @@ JOIN table2
 ON table1.account_id = table2.id;
 ```
 
-Coalesce with an anther id
+Coalesce with an another id
 ```
 SELECT COALESCE(o.id, a.id) filled_id, a.name, a.website, a.lat, a.long, a.primary_poc, a.sales_rep_id, o.*
 FROM accounts a
@@ -888,8 +891,8 @@ FROM orders;
 Partition by
 ![Screenshot 2022-03-23 083949](https://user-images.githubusercontent.com/62857660/159712820-dba55540-3ee5-429f-9e85-9c912424fe58.png)
 
-Row() and Rank() difference is when two lines in a row have the same values, then Row() will give different number and Rank() will give the same number.
-Dense_Rank doesn't not skip the values, but Rank() skip it
+**Row() and Rank() difference is when two lines in a row have the same values, then Row() will give different number and Rank() will give the same number.
+Dense_Rank doesn't not skip the values, but Rank() skip it**
 
 ```
 SELECT id,
@@ -904,7 +907,7 @@ FROM orders
 ![dense](https://user-images.githubusercontent.com/62857660/159749834-013d079b-34d6-4779-857d-02300e8555fc.PNG)
 
 If you wanted to return unmatched rows only, which is useful for some cases of data assessment, you can isolate them by adding the following line to the end of the query: `WHERE Table_A.column_name IS NULL OR Table_B.column_name IS NULL`. Examples usage are: I've used full outer joins when attempting to find mismatched, orphaned data, from both of my tables and wanted all of my result set, not just matches.
-![full-outer-join-if-null](https://user-images.githubusercontent.com/62857660/159950748-d3736545-4ab9-4952-9237-638035c7750d.png)
+
 
 Details of `UNION` 
 - There must be the same number of expressions in both SELECT statements.
@@ -928,7 +931,7 @@ MySQL UNION vs JOIN
 - `VLOOKUP(value to look for, range to look in, column number of the value to return, approximate or exact match [TRUE/FALSE])`
 - `=INDEX(array or reference, MATCH(value to look up,lookup_array,[match_type]) `
 - `=VLOOKUP(A17,C2:H14,4,FALSE)` will have the same result as `=INDEX(F2:F14, MATCH(A17,C2:C14,0))`
-  - index, match, the match is a powerful tool
+  - index, match, match is a powerful tool
 ![Capture](https://user-images.githubusercontent.com/62857660/156065004-5b03b355-d079-4fdb-ada0-72b83fae1d2a.JPG)
 
 ![excel4](https://user-images.githubusercontent.com/62857660/156849317-c7d62a25-08f3-4d3e-9415-6497b70f6d84.jpg)
@@ -1014,7 +1017,7 @@ KPI in SEO
 
 SCRUM
 -  Framework for developing, delivering, and sustaining products in a complex environment.
--  The key difference between Agile and Scrum is that while Agile is a project management philosophy that utilizes a core set of values or principles, Scrum is a specific Agile methodology that is used to facilitate a project
+-  The key difference between Agile and Scrum is that while **Agile is a project management philosophy that utilizes a core set of values or principles, Scrum is a specific Agile methodology that is used to facilitate a project.**
 -  Scrum is an Agile project management methodology involving a small team led by a Scrum Master, whose main job is to remove all obstacles to getting work done. Work is done in short cycles called sprints, and the team meets daily to discuss current tasks and any roadblocks that need clearing.
 
 Finance
