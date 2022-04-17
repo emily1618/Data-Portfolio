@@ -103,6 +103,9 @@ Needs to normalize data before applying KNN
 
 #### Bias and Variance, Overfit and Underfit
 
+- Variance tells us how much a quantity varies, magnitude
+- Covariance tells us direction in which two quantities vary with each other.
+- Correlation shows us both, the direction and magnitude
 - The inability of a ML model to capture the true relationship is called “bias.” Models with high bias are unable to capture the true relationship between input and output features, and it usually leads to oversimplification of the model.
 Under fit
   - An underfit model has high bias and low variance.
