@@ -417,15 +417,15 @@ https://www.youtube.com/watch?v=o75xNa_jwvg&feature=emb_logo
 
 ![node](https://user-images.githubusercontent.com/62857660/156621764-1048de9b-f744-4d98-bed3-bf8b37e54be3.JPG)
 
-Good: Simple to understand and data prep, able to handle numerical and categorical, non-linear parameter don't affect performance
-Bad: Can be overfit
+- Good: Simple to understand and data prep, able to handle numerical and categorical, non-linear parameter don't affect performance
+- Bad: Can be overfit
 
 ![Screenshot 2022-03-26 233426](https://user-images.githubusercontent.com/62857660/160266800-354687ad-4543-4e7d-bc99-02d07badc5c2.png)
 ![Screenshot 2022-03-26 233822](https://user-images.githubusercontent.com/62857660/160266889-5398f444-ca1e-4c0f-899e-4007fd0826ea.png)
 
 
 #### Support Vector Machine
-Use in ace dectection, bioinformatics, images classification.
+Use in face dectection, bioinformatics, images classification.
 Supervised for classfication and regression.
 Using kernel to transform 1D to 2D to 3D
 Advantage: high dimensional space (tokenzied word in doc) and naturally avoid overfitting
@@ -442,6 +442,9 @@ Advantage: high dimensional space (tokenzied word in doc) and naturally avoid ov
 ### Which one to choose?
 SVM might be slow if big dataset with lots of noise - https://www.youtube.com/watch?v=U9-ZsbaaGAs&t=47s
 Navies Bayes will be faster than SVM
+
+![image](https://user-images.githubusercontent.com/62857660/163733882-6eb16905-7e42-4e0a-b741-fd0c89cdf70c.png)
+
 
 
 ## Statistics 
@@ -517,6 +520,8 @@ Navies Bayes will be faster than SVM
 
 #### General:
 The primary difference between vectors and matrices is that vectors are 1d arrays while matrices are 2d arrays.
+
+map() is a method of Series and apply() is defined in both DataFrame and Series.
 
 - lambda function: perform a function on every row of the dataset
 
@@ -679,9 +684,6 @@ for i in num_col:
   plt.show()
 ```
 
-## Coding
-- Coming Soon
-
 ## SQL
 Ensure data integrity: only the data you want to be entered is entered, and only certain users are able to enter data into the database.
 
@@ -726,7 +728,7 @@ group by first_letter
 order by first_letter;
 ```
 
-Split first and last name if seperate by space
+**Split first and last name if seperate by space**
 ```
 select name,
        left(name, position(' ' in name)) as first,
@@ -756,11 +758,9 @@ from (select primary_poc,name,
 
 USE MIN and MAX for the date range
  - When was the earliest order ever placed? `SELECT MIN(occurred_at)`
- - hen did the most recent (latest) web_event occur? `SELECT MAX(occurred_at`
- 
-SELECT MIN(occurred_at) 
-FROM orders;
-LIKE This allows you to perform operations similar to using WHERE and =, but for cases when you might not know exactly what you are looking for.
+ - When did the most recent (latest) web_event occur? `SELECT MAX(occurred_at`
+
+LIKE allows you to perform operations similar to using WHERE and =, but for cases when you might not know exactly what you are looking for.
   -  frequently used with %
   -  % is a wildcard, eg: `WHERE name LIKE %google%` is any characters, then contain the text 'google', then any characters after
   -  if name column is first name space last name, to get the last name start with any letter, use `WHERE table.name_column LIKE '% A%'`
@@ -774,12 +774,14 @@ NOT This is used with IN and LIKE to select all of the rows NOT LIKE or NOT IN a
   - BETWEEN endpoint values are included, but tricky for dates. To get all orders in 2016, use `occurred_at BETWEEN '2016-01-01' AND '2017-01-01'`
   
 Make sure to include parenthesis
-  - `select name from accounts
-     where name like 'C%' Or name like 'W%' AND (primary_poc like '%ana%' OR primary_poc like '%Ana%') AND (primary_poc not like '%eana');` 
-  - ```SELECT * FROM accounts
+  ```select name from accounts
+     where name like 'C%' Or name like 'W%' AND (primary_poc like '%ana%' OR primary_poc like '%Ana%') AND (primary_poc not like '%eana');
+     ``` 
+  ```SELECT * FROM accounts
       WHERE (name LIKE 'C%' OR name LIKE 'W%') 
            AND ((primary_poc LIKE '%ana%' OR primary_poc LIKE '%Ana%') 
-           AND primary_poc NOT LIKE '%eana%');```
+           AND primary_poc NOT LIKE '%eana%');
+   ```
   - ABOVE IS NOT THE SAME!!!
 
 INNER join result may be the same if flip the table on a LEFT join.
