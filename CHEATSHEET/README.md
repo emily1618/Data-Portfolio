@@ -311,7 +311,13 @@ Score for testing data: `score_tree = accuracy_score(y_test, y_pred2)*100`
 
 
 #### Cross Validation
+A technique for evaluating ML models by training several ML models on subsets of the input data and evaluating them on the complementary subset of the data. Use cross-validation to detect overfitting.
 [Back to Top](#machine-learning)
+1. Divide the dataset into two parts: one for training, other for testing.
+2. Train the model on the training set.
+3. Validate the model on the test set.
+4. Repeat 1-3 steps a couple of times. 
+10-fold: Why? , the main reason is usually that you don't have enough samples.
 
 
 
