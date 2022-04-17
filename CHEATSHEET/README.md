@@ -24,7 +24,7 @@ An application of Artificial Intelligence wherein the systems get the ability to
 - Classification. yes or no
   - naive bayyes, logistic regression - for simpler data
   - decision tree, random forest - for complicated data. large data use random forest
-- Regression. predict price
+- Regression. predict price. Linear Regression is used to handle regression problems whereas Logistic regression is used to handle the classification problems. Linear regression provides a continuous output but Logistic regression provides discreet output
 - Clustering. product recommendation
 - Source:https://www.youtube.com/watch?v=RmajweUFKvM
 - Check run time using
