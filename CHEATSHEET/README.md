@@ -949,4 +949,13 @@ SCRUM
 -  The key difference between Agile and Scrum is that while Agile is a project management philosophy that utilizes a core set of values or principles, Scrum is a specific Agile methodology that is used to facilitate a project
 -  Scrum is an Agile project management methodology involving a small team led by a Scrum Master, whose main job is to remove all obstacles to getting work done. Work is done in short cycles called sprints, and the team meets daily to discuss current tasks and any roadblocks that need clearing.
 
+Finance
+- ROI or Return on Investment is calculated as:
+	- (Net Profit / Investment)*100
+
+![image](https://user-images.githubusercontent.com/62857660/163700242-58f18de8-495c-45c2-aa9c-13e44deaf3d0.png)
+
+![image](https://user-images.githubusercontent.com/62857660/163700307-bccbb249-5a20-4eb4-8c51-47df3fc4f2b4.png)
+
+
 [Back to Top](#machine-learning)
