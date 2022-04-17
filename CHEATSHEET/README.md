@@ -420,6 +420,9 @@ Navies Bayes will be faster than SVM
 	- 95% of CI avg of height is 168 to 180cm. How likely? We're 95% confident that the range cover the true avg height. 
 - P-value: <0.5, reject the null. p>0.05, cannot reject null. in A/B, the smaller the p-value, more convinced there is a difference b/w the control and treatment.
 	- Can we conclude avg height is 175cm? p-value measure what data we observe and what conclussion we can draw. If p<0.05, we reject the avg ht is 175cm, 
+- α: significance level for the test. The proportion of the sample mean lying in the critical region. Probability of making an error.
+- ![image](https://user-images.githubusercontent.com/62857660/163731558-8fb36f08-8fc9-47a0-974f-42c84df29874.png)
+
 - Examples2
 - A/B testing
 	1. Hypothesis: By creating a new feature or improve a new existing feature, we want to increase the number of users by X percentage. Goal is to grow the user. The X percentage is a practical significance (bound and min detectable effect). If we did not able to reach the bound, then we have to decide if we want to launch this feature. 
@@ -438,6 +441,27 @@ Navies Bayes will be faster than SVM
 - Std
   - low std, close to the mean
   - high std, far to the mean
+ - Hypotheisis Testing
+	- Descriptive statistics summarize the characteristics of a data set. 
+	- Inferential statistics allow you to test a hypothesis and infer about the population from the sample.
+	- Null hypothesis (H₀): The status quo,  = OR ≤ OR ≥
+	- The alternate hypothesis (H₁): The challenge to the status quo, ≠ OR > OR <
+	- ![image](https://user-images.githubusercontent.com/62857660/163731572-d9db0e8d-f8d6-4edd-915a-a5cc0827262f.png)
+- z vs t
+![image](https://user-images.githubusercontent.com/62857660/163731594-c6053183-a4ec-4760-818a-2634ae916ade.png)
+	- Z-test compare population averages to a sample’s. 
+	- How far, in standard deviations, a data point is from the average of a data set. 
+	- n > 30. Useful when the standard deviation is known.
+	- T-test determine if there is a statistically significant comparison between the 2 independent sample groups. 
+		-  T-test asks whether the comparison between the averages of 2 groups is unlikely to have occurred due to random chance. 
+- Normal distribution
+	- Normal distribution, also known as the Gaussian distribution
+	- Symmetric about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean.
+	- Left skewed, bell shape to right, Median > Mean.
+	- Right skewed, bell shape to left, Median > Median
+- Student t disttribution
+	- Probability distribution that is similar to the normal distribution with its bell shape but has heavier tails. 
+	- For small sample
 
 
 ## Coding
