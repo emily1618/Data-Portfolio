@@ -371,6 +371,12 @@ print(classification_report(y_test, predictions))
 ```
 
 #### PCA
+- Simplifies the complexity in high-dimensional data while retaining trends and patterns. 
+- Transforming the data into fewer dimensions, which act as summaries of features
+- Benefits include reduction of noise in the data, feature selection (to a certain extent), and the ability to produce independent, uncorrelated features of the data.
+- Use in exploratory data analysis, dimensionality reduction, information compression, data de-noising.
+- Cluster analysis groups observations while PCA groups variables rather than observations. PCA can be used as a final method to reduce the number of variables to conduct another analysis, such as regression.
+
 ```
 from sklearn.decomposition import PCA
 pca = PCA(n_components=3)
