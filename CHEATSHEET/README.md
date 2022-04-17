@@ -415,6 +415,8 @@ Navies Bayes will be faster than SVM
 	- Person is not infected but test show positive
 - Type 2 Error: fail to reject the false null, conclude the findings are NOT significant but in fact they are. In A/B, observed no difference but there is difference.
 	- Person is infected but test show neegative
+![image](https://user-images.githubusercontent.com/62857660/163731866-5d7b22a9-65ec-42b1-a1d3-5cf2ac564ae4.png)
+
 - Confidence Interval: how variable the sample may be, an estimate of the true value (how often it will contain the true value). The probability that it will cover the true value is CI.
 	- Level of uncertainty when we estimate a value
 	- 95% of CI avg of height is 168 to 180cm. How likely? We're 95% confident that the range cover the true avg height. 
