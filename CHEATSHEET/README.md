@@ -384,7 +384,7 @@ pca = PCA(n_components=3)
 pc = pca.fit_transform(X)
 ```
 #### Clustering
-Cluster Analysis in Data Mining is find =the group of objects which are similar to each other in the group but are different from the object in other groups.
+Cluster Analysis in Data Mining is find the group of objects similar to each other in the group but are different from the object in other groups.
 	- The data is messed up and unstructured. It cannot be analyzed quickly, and that is why the clustering of information is useful.
 	- Cluster analysis is a statistical approach that presupposes no prior knowledge of the market or customer behavior. Some cluster analysis methods produce somewhat different findings each timebecause there is no one-size-fits-all method to data analysis.
 	- A cluster refers to a collection of data points aggregated together because of certain similarities. You'll define a target number k, which refers to the number of centroids you need in the dataset.
