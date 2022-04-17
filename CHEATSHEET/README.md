@@ -105,6 +105,7 @@ Needs to normalize data before applying KNN
 
 - Variance tells us how much a quantity varies, magnitude
 - Covariance tells us direction in which two quantities vary with each other.
+	- If 2 quantities have a positive covariance, they increase/decrease together.
 - Correlation shows us both, the direction and magnitude
 - The inability of a ML model to capture the true relationship is called “bias.” Models with high bias are unable to capture the true relationship between input and output features, and it usually leads to oversimplification of the model.
 Under fit
