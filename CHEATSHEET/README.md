@@ -56,6 +56,8 @@ print "training time:", round(time()-t0, 3), "s"
 
 [Accuracy](#accuracy)
 
+[Regression MAE and RMSE](#regression-mae-and-rmse)
+
 [Cross Validation](#cross-validation)
 
 [KNN](#knn)
@@ -67,6 +69,8 @@ print "training time:", round(time()-t0, 3), "s"
 [Random Forest](#random-forest)
 
 [Decision Tree](#decision-tree)
+
+[Cluster](#clustering)
 
 [Support Vector Machine](#support-vector-machine)
 
@@ -92,6 +96,7 @@ More data >  Fine tune model
 
 
 #### Missing Values
+- Linear regression for nurmerical data, logistical regression for categorical data.
 - KNN Imputer: There are different ways to handle missing data. Some methods such as removing the entire observation if it has a missing value or replacing the missing values with mean, median, or mode values. However, these methods can waste valuable data or reduce the variability of your dataset. In contrast, KNN Imputer maintains the value and variability of your datasets, and yet it is more precise and efficient than using the average values: https://medium.com/@kyawsawhtoon/a-guide-to-knn-imputation-95e2dc496e
 Needs to normalize data before applying KNN
 - Fill na: `dataset['Some column']= dataset['Some column'].fillna(0)`
@@ -140,8 +145,10 @@ print('Test set score: {:.4f}'.format(clf.score(X_test, y_test)))```
   - Feature collinearity
     - If the features are collinear, providing the model with the same information could potentially result in model confusion. Simply drop one of the collinear inputs. If both inputs are important to understand, it is advised to train two separate models with each collinear feature
    - Removing zero-variance features
+   - Can use a Pearson ratio >.90
 - 4 Dummy variables for categorical vars
-  - One hot encoding
+  - One hot encoding, but may produce more features
+  - get.dummy
 - 5 Scale data
   - The general rule of thumb is that algorithms that exploit distances or similarities between data samples, such as artificial neural network (ANN), KNN, support vector machine (SVM), and k-means clustering, are sensitive to feature transformations. 
   - However, some tree-based algorithms such as decision tree (DT), RF, and GB are not affected by feature scaling. This is because tree-based models are not distance-based models and can easily handle a varying range of features.
@@ -294,6 +301,14 @@ Score for training data: `print(f'Model Accuracy: {tree.score(X_train, y_train)}
 
 Score for testing data: `score_tree = accuracy_score(y_test, y_pred2)*100`
 
+#### Regression MAE and RMSE
+- Linear regression is a regression model that estimates the relationship between one independent variable and one dependent variable using a straight line
+- Regression model metrics: Root Mean Squared Error (RMSE)and Mean Absolute Error (MAE) 
+- For an ideal model, RMSE/MAE=0 and R2 score = 1
+- RMSE has the benefit of penalizing large errors more so can be more appropriate in some case
+
+![image](https://user-images.githubusercontent.com/62857660/163732849-b0385a93-b32e-4d34-9d80-380f5350a1d1.png)
+
 
 #### Cross Validation
 [Back to Top](#machine-learning)
@@ -356,6 +371,15 @@ pca = PCA(n_components=3)
 
 pc = pca.fit_transform(X)
 ```
+#### Clustering
+Cluster Analysis in Data Mining is find =the group of objects which are similar to each other in the group but are different from the object in other groups.
+	- The data is messed up and unstructured. It cannot be analyzed quickly, and that is why the clustering of information is useful.
+	- Cluster analysis is a statistical approach that presupposes no prior knowledge of the market or customer behavior. Some cluster analysis methods produce somewhat different findings each timebecause there is no one-size-fits-all method to data analysis.
+	- A cluster refers to a collection of data points aggregated together because of certain similarities. You'll define a target number k, which refers to the number of centroids you need in the dataset.
+	![image](https://user-images.githubusercontent.com/62857660/163732733-32a6e0b7-f6e7-4436-9c04-e4a3a21941f0.png)
+
+Applications of Data Mining Cluster Analysis
+There are many uses of Data clustering analysis such as image processing, data analysis, pattern recognition, market research and many more. Using Data clustering, companies can discover new groups in the database of customers. Classification of data can also be done based on patterns of purchasing.
 
 #### Random Forest
 Limiting the depth of a single decision tree is one way we can try to make a less biased model. Another option is to use an entire forest of trees, training each one on a random subsample of the training data. The final model then takes an average of all the individual decision trees to arrive at a classification. This is the idea behind the random forest.
