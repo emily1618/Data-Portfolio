@@ -33,6 +33,8 @@ An application of Artificial Intelligence wherein the systems get the ability to
 < your clf.fit() line of code >
 print "training time:", round(time()-t0, 3), "s"
 ```
+- Data mining mines actionable information while making use of sophisticated mathematical algorithms
+- Data profiling derives information about data quality to discover anomalies in the dataset.
 
 [Supervised-vs-Unsupervised](#supervised-vs-unsupervised)
 
@@ -931,6 +933,7 @@ MySQL UNION vs JOIN
 #
 
 ## Excel
+- A PivotTable is an interactive way to quickly summarize large amounts of data.
 - VLOOKUP always start with the left-most column, using INDEX and MATCH instead
 - `VLOOKUP(value to look for, range to look in, column number of the value to return, approximate or exact match [TRUE/FALSE])`
 - `=INDEX(array or reference, MATCH(value to look up,lookup_array,[match_type]) `
@@ -987,6 +990,23 @@ MySQL UNION vs JOIN
 
 
 ## Business
+1. Predictive data analytics - identify trends, correlations, and causation. The category can be further broken down into predictive modeling and statistical modeling; however, it’s important to know that the two go hand in hand.
+
+For example, an advertising campaign for t-shirts on Facebook could apply predictive analytics to determine how closely conversion rate correlates with a target audience’s geographic area, income bracket, and interests. From there, predictive modeling could be used to analyze the statistics for two (or more) target audiences, and provide possible revenue values for each demographic.
+
+2. Prescriptive data analytics
+Prescriptive analytics is where AI and big data combine to help predict outcomes and identify what actions to take. “What if we try this?” and “What is the best action?” You can test the correct variables and even suggest new variables that offer a higher chance of generating a positive outcome.
+
+3. Diagnostic data analytics
+Diagnostic data analytics is the process of examining data to understand cause and event or why something happened. Techniques such as drill down, data discovery, data mining, and correlations are often employed.
+
+Discover and alerts notify of a potential issue before it occurs, for example, an alert about a lower amount of staff hours, which could result in a decrease in closed deals. 
+
+4. Descriptive data analytics
+Descriptive analytics are the backbone of reporting—it’s impossible to have business intelligence (BI) tools and dashboards without it. It addresses basic questions of “how many, when, where, and what.”
+
+Ad hoc reports, on the other hand, are designed by you and usually aren’t scheduled. They are generated when there is a need to answer a specific business question. 
+
 How to improve a product? Some steps:
 1. Clarify the question: Which feature are we focus on? How the feature actually work?
 2. Approach to improve: analyze the user journey map (think of yourself as the user and what would attract or prevent you from the product). Come up with any ideas! Another one is segment users into group
