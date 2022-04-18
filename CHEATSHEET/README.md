@@ -990,17 +990,23 @@ MySQL UNION vs JOIN
 
 
 ## Business
-1. Predictive data analytics - identify trends, correlations, and causation. The category can be further broken down into predictive modeling and statistical modeling; however, it’s important to know that the two go hand in hand.
+Data Structure:
+1.Linear: arrays, lists
+2.Tree: binary, heaps, space partitioning etc.
+3.Hash: distributed hash table, hash tree etc.
+4.Graphs: decision, directed, acyclic etc.
 
-For example, an advertising campaign for t-shirts on Facebook could apply predictive analytics to determine how closely conversion rate correlates with a target audience’s geographic area, income bracket, and interests. From there, predictive modeling could be used to analyze the statistics for two (or more) target audiences, and provide possible revenue values for each demographic.
+Predictive data analytics - identify trends, correlations, and causation. The category can be further broken down into predictive modeling and statistical modeling; however, it’s important to know that the two go hand in hand.
 
-2. Prescriptive data analytics
+	- For example, an advertising campaign for t-shirts on Facebook could apply predictive analytics to determine how closely conversion rate correlates with a target audience’s geographic area, income bracket, and interests. From there, predictive modeling could be used to analyze the statistics for two (or more) target audiences, and provide possible revenue values for each demographic.
+
+Prescriptive data analytics
 Prescriptive analytics is where AI and big data combine to help predict outcomes and identify what actions to take. “What if we try this?” and “What is the best action?” You can test the correct variables and even suggest new variables that offer a higher chance of generating a positive outcome.
 
-3. Diagnostic data analytics
+Diagnostic data analytics
 Diagnostic data analytics is the process of examining data to understand cause and event or why something happened. Techniques such as drill down, data discovery, data mining, and correlations are often employed.
 
-Discover and alerts notify of a potential issue before it occurs, for example, an alert about a lower amount of staff hours, which could result in a decrease in closed deals. 
+	- Discover and alerts notify of a potential issue before it occurs, for example, an alert about a lower amount of staff hours, which could result in a decrease in closed deals. 
 
 4. Descriptive data analytics
 Descriptive analytics are the backbone of reporting—it’s impossible to have business intelligence (BI) tools and dashboards without it. It addresses basic questions of “how many, when, where, and what.”
