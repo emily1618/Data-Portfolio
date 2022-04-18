@@ -388,7 +388,11 @@ Cluster Analysis in Data Mining is find the group of objects similar to each oth
 - The data is messed up and unstructured. It cannot be analyzed quickly, and that is why the clustering of information is useful.
 - Cluster analysis is a statistical approach that presupposes no prior knowledge of the market or customer behavior. Some cluster analysis methods produce somewhat different findings each timebecause there is no one-size-fits-all method to data analysis.
 - A cluster refers to a collection of data points aggregated together because of certain similarities. You'll define a target number k, which refers to the number of centroids you need in the dataset.
+- **k-means clustering** may be used for unsupervised machine learning. 
+	- Classifying unlabeled data into a predetermined k number  of clusters based on similarities.
+
 ![image](https://user-images.githubusercontent.com/62857660/163732733-32a6e0b7-f6e7-4436-9c04-e4a3a21941f0.png)
+
 
 Applications of Data Mining Cluster Analysis
 There are many uses of Data clustering analysis such as image processing, data analysis, pattern recognition, market research and many more. Using Data clustering, companies can discover new groups in the database of customers. Classification of data can also be done based on patterns of purchasing.
