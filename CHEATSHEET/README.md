@@ -76,6 +76,8 @@ print "training time:", round(time()-t0, 3), "s"
 
 [Support Vector Machine](#support-vector-machine)
 
+[Neural Network](#neural-network)
+
 #### Supervised vs Unsupervised
 - Supervised: Input and output data are provided 
   - A supervised learning model produces an accurate result. It allows you to collect data or produce a data output from the previous experience. The drawback of this model is that decision boundaries might be overstrained if your training set doesn't have examples that you want to have in a class. Usage: bank loan approval
@@ -445,6 +447,14 @@ Advantage: high dimensional space (tokenzied word in doc) and naturally avoid ov
 
 [Source](https://www.youtube.com/watch?v=TtKF996oEl8)
 
+### Neural Network
+- Neural network is part of deep learning inside machine learning
+- Take in take -> train themselves to recognize the data -> Output
+- Face recognition, predict stock prices, music composition
+
+![image](https://user-images.githubusercontent.com/62857660/163901863-682cc1b4-b4b4-4349-b42c-00af2b192259.png)
+
+
 ### Which one to choose?
 SVM might be slow if big dataset with lots of noise - https://www.youtube.com/watch?v=U9-ZsbaaGAs&t=47s
 Navies Bayes will be faster than SVM
@@ -522,6 +532,8 @@ Navies Bayes will be faster than SVM
 [loc vs iloc](#loc-vs-iloc)
 
 [SNS](#sns)
+
+[Python Interview](#python-interview)
 
 
 #### General:
@@ -689,6 +701,9 @@ for i in num_col:
   sns.factorplot(x='index', y=i, data=describe_num_df, figsize=(25, 10))
   plt.show()
 ```
+
+#### Python Interview
+https://www.youtube.com/watch?v=DEwgZNC-KyE&t=17s
 
 ## SQL
 Ensure data integrity: only the data you want to be entered is entered, and only certain users are able to enter data into the database.
