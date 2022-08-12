@@ -535,6 +535,8 @@ Navies Bayes will be faster than SVM
 
 [SNS](#sns)
 
+[Matplotlib](#matplotlib)
+
 [Python Interview](#python-interview)
 
 
@@ -704,7 +706,7 @@ for i in num_col:
   plt.show()
 ```
 
-Anatomy of Matplotlib
+#### Matplotlib
 ![image](https://user-images.githubusercontent.com/62857660/184421961-0bdaf446-d642-425c-a8cc-271d4b1efbbd.png)
 
 
