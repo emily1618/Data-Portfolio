@@ -307,6 +307,9 @@ Score for testing data: `score_tree = accuracy_score(y_test, y_pred2)*100`
 
 ![image](https://user-images.githubusercontent.com/62857660/184422131-4e9cb440-45e3-462a-a5dc-c856302c6a42.png)
 
+![image](https://user-images.githubusercontent.com/62857660/184422884-41ae12c3-9bd7-4bb0-8468-bec887209af6.png)
+
+
 #### Regression MAE and RMSE
 - Linear regression is a regression model that estimates the relationship between one independent variable and one dependent variable using a straight line
 - Regression model metrics: Root Mean Squared Error (RMSE)and Mean Absolute Error (MAE) 
