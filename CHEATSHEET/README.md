@@ -273,6 +273,11 @@ Source: https://www.youtube.com/watch?v=prWyZhcktn4&list=PLEiEAq2VkUULYYgj13YHUW
 Precision: how often is it right. TP/(TP+FP)
 Recall: How often doe the model predict the correct positive values. TP/(TP+FN)
 
+![image](https://user-images.githubusercontent.com/62857660/185642319-a2453105-67af-41ec-85a3-64a28005ac77.png)
+
+![image](https://user-images.githubusercontent.com/62857660/185642276-88c9285f-6222-4b0e-987d-788b67fc0e29.png)
+
+
 #### F1 Score
 
 `
